@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시그널트리</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./js/script.js" />
+  </head>
+  <body>
+    <nav>
+      <h1 class="logo"><img src="img/logo2.png" alt="" /></h1>
+      <ul class="dep1">
+        <li class="nav_site">
+          <figure><img src="img/site.png" alt="" /></figure>
+          <ul class="dep2">
+            <li>현장정보</li>
+          </ul>
+        </li>
+        <li class="nav_data">
+          <figure><img src="img/data.png" alt="" /></figure>
+          <ul class="dep2">
+            <li>데이터</li>
+            <li>전체현장</li>
+            <li>전체 데이터</li>
+          </ul>
+        </li>
+        <li class="nav_sensor">
+          <figure><img src="img/sensor.png" alt="" /></figure>
+          <ul class="dep2">
+            <li>센서</li>
+            <li>센서정보관리</li>
+          </ul>
+        </li>
+        <li class="nav_irr">
+          <figure><img src="img/watering.png" alt="" /></figure>
+          <ul class="dep2">
+            <li>관수</li>
+            <li>관수정보관리</li>
+          </ul>
+        </li>
+        <li class="nav_set">
+          <figure><img src="img/setting.png" alt="" /></figure>
+          <ul class="dep2">
+            <li>설정</li>
+            <li>센서설정</li>
+            <li>기관관리</li>
+            <li>지역관리</li>
+            <li>사용자관리</li>
+          </ul>
+        </li>
+        <li class="nav_user">
+          <figure><img src="img/user.png" alt="" /></figure>
+          <ul class="dep2">
+            <li>개인정보 관리</li>
+            <li>회원정보 수정</li>
+          </ul>
+        </li>
+        <li class="nav_customer">
+          <figure><img src="img/customer.png" alt="" /></figure>
+          <ul class="dep2">
+            <li>고객센터</li>
+            <li>공지사항</li>
+            <li>1:1 문의</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <section class="main">
+      <div class="tg_box">
+        <ul class="tg_head">
+          <li>
+            <p>천안신방삼부르르르르르</p>
+            <figure></figure>
+            <div><strong>0%</strong></div>
+          </li>
+          <li>
+            <p>천안신방삼부르르르르르</p>
+            <figure></figure>
+            <div><strong>15</strong>%</div>
+          </li>
+        </ul>
+        <ul class="tg_body">
+          <li>
+            <p>천안신방삼부르르르르르</p>
+            <figure></figure>
+            <div><strong>15%</strong>%</div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <script>
+      $(function () {
+        $(".dep1>li").hover(function () {
+          $(this).toggleClass("active");
+          $(this).children().stop().toggleClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
