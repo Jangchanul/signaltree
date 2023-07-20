@@ -8,7 +8,7 @@
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./js/script.js" />
+    <script src="./js/script.js"></script>
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=tioe75vg3s"></script>
   </head>
   <body>
@@ -541,36 +541,6 @@
       </article>
     </section>
     <script>
-      $(function () {
-        $(".dep1>li").hover(function () {
-          $(this).toggleClass("active");
-          $(this).children().stop().toggleClass("active");
-        });
-        $(".tg_bt").click(function(){
-          $(this).toggleClass("active");
-          $(this).siblings().toggleClass("active");
-        });
-        $(".bt_guide").click(function(){
-          $(".modal").show();
-        });
-        $(".bg").click(function(){
-          $(".modal").hide();  
-          $("#menuToggle input:checkbox").prop("checked", false);
-        });
-        $(".bt_ok").click(function(){
-          $(".modal").hide();
-        });
-        $(".bt_close").click(function(){
-          $(".modal").hide();
-        });
-        $(".m_menu .mid>li div").click(function(){
-          $(this).toggleClass("active");
-          $(this).siblings().slideToggle();
-        });
-        $(".m_menu .touch_line").click(function(){
-          $(this).parent().css('touch-action','pan-y');
-        });
-      });
       var mapOptions = {
           center: new naver.maps.LatLng(37.3595704, 127.105399),
           zoom: 10

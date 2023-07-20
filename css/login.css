@@ -60,6 +60,7 @@
 }
 .login #text_id,
 .login #text_pw {
+  background-color: #FFF;
   display: block;
   width: 100%;
   border-radius: 3.125rem;
@@ -109,6 +110,7 @@
   display: inline-block;
   color: #fff;
   font-size: 1rem;
+  padding-left: 5px;
 }
 .info_box {
   display: flex;
@@ -162,7 +164,7 @@
   z-index: 1;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 800px) {
   .logo {
     display: none;
   }
@@ -191,6 +193,7 @@
   .login #text_id,
   .login #text_pw {
     padding: 3.333vw 11.111vw;
+    background-color: #fff;
   }
   .login input[type="email"] {
     background-size: 4.444vw;

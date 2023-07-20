@@ -560,7 +560,8 @@
     background-color: #f7f8fa;
     box-sizing: border-box;
     box-shadow: -10px 0px 6px -2px rgba(217, 217, 217, 0.8);
-    display: none;
+    transition: all 0.3s;
+    height: 0;
   }
   .m_main .side_head {
     display: flex;
@@ -717,20 +718,4 @@
     background-color: #c4cbd6;
     margin: 0 auto;
   }
-  .guide_pop{
-    width: 92%;
-    padding: 5.556vw;
-    box-sizing: border-box;
-  }
-  .guide_pop h4{
-    display: none;
-  }
-  .guide_pop li{
-    display: block;
-    margin-bottom: 3.333vw;
-  }
-  .guide_pop li div{margin-bottom: 2.778vw;width: 100%;}
-  .guide_pop li>p{font-size: 3.889vw;}
-  .guide_pop strong{font-size: 4.444vw;}
-  .guide_pop ul{max-height: 80vh;overflow-y: scroll;}
 }

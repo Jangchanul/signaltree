@@ -13,7 +13,7 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/login.css" />
-    <link rel="stylesheet" href="./js/script.js" />
+    <script src="./js/script.js"></script>
   </head>
   <body>
     <section class="login">
@@ -42,10 +42,21 @@
               <a href="find_id.html" class="w_dot">아이디 찾기</a>
               <a href="find_pw.html" class="w_dot">비밀번호 찾기</a>
             </div>
-            <a href="join.html" class="w_dot">회원가입</a>
+            <a href="register.html" class="w_dot">회원가입</a>
           </div>
         </div>
       </div>
     </section>
+    <!-- 아뒤비번틀렸을때 -->
+    <div class="modal">
+      <div class="bg"></div>
+      <div class="wrong_pop">
+        <button class="bt_close" type="button"><img src="./img/close.png" alt=""></button>
+        <figure><img src="./img/wrong.png" alt=""></figure>
+        <p>아이디 또는 비밀번호를<br>잘못 입력했습니다.</p>
+        <button class="bt_ok" type="button">확인</button>
+      </div>
+    </div>
+    <!-- 아뒤비번틀렸을때 -->
   </body>
 </html>

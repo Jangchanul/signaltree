@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시그널트리</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/register.css" />
+</head>
+
+<body>
+  <header class="header-reg">
+    <div class="head-reg"><a class="logo-reg" id="logo_reg" href="index.html"></a></div>
+  </header>
+
+  <section class="register">
+    <div class="top">
+      <h2>회원가입</h2>
+      <p><span class="star">*</span>필수입력</p>
+    </div>
+    <div class="mid">
+      <form action="#">
+        <table>
+          <tr>
+            <th>소속기관 <span class="star">*</span></th>
+            <td><select name="" id="">
+              <option value="">전체</option>
+            </select></td>
+          </tr>
+          <tr>
+            <th>지역 <span class="star">*</span></th>
+            <td><select name="" id="">
+              <option value="">전체</option>
+            </select></td>
+          </tr>
+          <tr>
+            <th>아이디 <span class="star">*</span></th>
+            <td>
+              <div class="flex">
+                <input type="text" placeholder="아이디를 입력해주세요.">
+                <input type="button" value="중복확인">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>
+              <p class="ex">
+                <img src="./img/Frame.png" alt="">
+                아이디는 (6~10자리) 영문, 숫자 입력만 가능합니다
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>비밀번호 <span class="star">*</span></th>
+            <td>
+              <input type="text" placeholder="비밀번호를 입력해주세요.">
+            </td>
+          </tr>
+          <tr>
+            <th></th>
+            <td>
+              <p class="ex">
+                <img src="./img/Frame.png" alt="">
+                10~20자 영문 대/소문자, 숫자, 특수문자 중 2가지 이상 조합
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <th>비밀번호 확인 <span class="star">*</span></th>
+            <td>
+              <input type="password" placeholder="비밀번호를 입력해주세요">
+            </td>
+          </tr>
+          <tr>
+            <th>사용자명 <span class="star">*</span></th>
+            <td>
+              <input type="text" placeholder="이름을 입력해주세요">
+            </td>
+          </tr>
+          <tr>
+            <th>연락처 <span class="star">*</span></th>
+            <td>
+              <div class="flex">
+                <input type="number" value="010">
+                <span class="line"></span>
+                <input type="number">
+                <span class="line"></span>
+                <input type="number">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th>이메일 <span class="star">*</span></th>
+            <td>
+              <div class="flex">
+                <input type="text">
+                <span class="at">@</span>
+                <input type="text">
+                <select name="" id="">
+                  <option value="">직접입력</option>
+                  <option value="">naver.com</option>
+                  <option value="">daum.net</option>
+                  <option value="">gmail.com</option>
+                </select>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><input type="button" value="인증번호 요청"></td>
+          </tr>
+          <tr>
+            <th>이메일 인증번호 <span class="star">*</span></th>
+            <td>
+              <div class="flex">
+                <input type="text">
+                <input type="button" value="인증번호 확인">
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="ck_box">
+          <div class="all">
+            <input type="checkbox" id="all_ck">
+            <label for="all_ck">모든 약관에 동의합니다</label>
+          </div>
+          <div class="ck_list">
+            <div class="flex">
+              <div>
+                <input type="checkbox" id="ck1">
+                <label for="ck1">이용약관 동의</label>
+              </div>
+              <button type="button" class="agree1">보기</button>
+            </div>
+            <div class="flex">
+              <div>
+                <input type="checkbox" id="ck2">
+                <label for="ck2">개인정보 수집 및 이용동의</label>
+              </div>
+              <button type="button" class="agree2">보기</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="bot">
+      <button type="button" class="bt_save">저장</button>
+      <button type="button" class="bt_cancel">취소</button>
+    </div>
+  </section>
+
+  <footer class="footer-reg">
+    <ul>
+      <li><strong>(주)성하</strong>  대표이사: 조정윤</li>
+      <li>사업자등록번호: 705-86-01108</li>
+      <li>대표번호: 02-596-2200</li>
+      <li>팩스번호: 02-512-5161</li>
+      <li>이메일: sungha0405@hanmail.net</li>
+    </ul>
+  </footer>
+</body>
+</html>
+
+
+
+<!-- Modal -->
+<div class="modal fade1" id="exampleModalAgree" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-content-fix-agree">
+      <div class="modal-header" style="border-bottom: 0px;">
+        <h5 class="modal-title" id="exampleModalLabel">이용약관 동의</h5>
+          <span aria-hidden="true" class="close-modal"  data-dismiss="modal" aria-label="Close" style="visibility: show;">&times;</span>
+      </div>
+      <div class="msg"></div>
+      <div class="modal-body modal-body-content">
+        <div class="flex-center-agree-content">
+          <textarea id="privacy_scroll" readonly>
+      제1조(개인정보의 처리 목적)
+    본 약관은 주식회사 성하(이하 '회사'라 합니다)가 운영하는 인터넷 사이트 '시그널트리(www.signaltree.kr)'(이하 '사이트'라 합니다)'을 통해 제공되는 관수 시스템 서비스와 관련하여 당사자의 권리 의무 및 책임 사항을 규정하는 것을 목적으로 합니다.
+
+    제2조(정의)
+    본 약관에서 사용하는 용어의 정의는 다음과 같습니다.
+1. '서비스'라 함은 '회사'의 '시그널트리(www.signaltree.kr)'을 통해 제공되는 관수 시스템 및 모니터링을 제공하는 서비스의 의미로 사용합니다.
+2. '서비스'라 함은 구현되는 단말기(PC, 휴대형단말기 등의 각종 유무선 장치를 포함)와 상관없이 '회원'이 이용할 수 있는 시그널트리 관련 제반 서비스를 의미합니다.
+3. '회원'이라 함은 회사의 '서비스'에 접속하여 이 약관에 따라 '회사'와 이용계약을 체결하고 '회사'가 제공하는 '서비스'를 이용하는 고객을 말합니다.
+4. '아이디(ID)'라 함은 '회원'의 식별과 '서비스' 이용을 위하여 '회원'이 정하고 '회사'가 승인하는 고유 아이디를 의미합니다.
+5. '비밀번호'라 함은 '회원'이 부여 받은 '아이디'와 일치되는 '회원'임을 확인하고 비밀보호를 위해 '회원' 자신이 정한 문자, 숫자의 조합을 의미합니다.
+6. '유료서비스'라 함은 '회사'가 제공하는 무선 토양센서, 관수시스템 및 모니터링 등 시그널트리 서비스를 의미합니다.
+7. '고객센터'라 함은 '서비스' 내 '회사'가 주요 사항에 대한 공지사항 업로드 및 1:1문의 게시판에 '회원'이 문의사항을 등록하는 것을 의미합니다.
+
+  제 3 조 (약관의 게시와 개정)
+  1. '회사'는 이 약관의 내용과 상호 및 대표자 성명, 영업소 소재지 주소(소비자의 불만을 처리할 수 있는 곳의 주소를 포함), 전화번호, 팩스번호, 전자우편 주소, 사업자등록번호, 통신판매업신고번호, 개인정보관리책임자 등을 이용자가 쉽게 알 수 있도록 초기 서비스화면(전면)에 게시합니다.
+2. '회사'는 ‘전자상거래 등에서의 소비자보호에 관한 법률’, ‘약관의 규제에 관한 법률’, ‘전자거래기본법’, ‘전자서명법’, ‘정보통신망 이용촉진 및 정보보호 등에 관한 법률’, ‘방문판매 등에 관한 법률’, ‘소비자보호법’ 등 관련법을 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.
+3. '회사'가 약관을 개정할 경우에는 적용일자 및 개정사유를 명시하여 현행 약관과 함께 사이트 내 공지사항 란에 최소 그 적용일자 7일 이전부터 적용일자 전일까지 공지합니다. 단, '회원'의 권리, 의무에 중대한 영향을 주는 변경의 경우에는 적용일자 30일 전부터 공지합니다.
+4. 회사가 전항에 따라 개정약관을 공지 또는 통지하면서 회원에게 30일 기간 내에 의사표시를 하지 않으면 의사표시가 표명된 것으로 본다는 뜻을 명확하게 공지 또는 통지하였음에도 회원이 명시적으로 거부의 의사표시를 하지 아니한 경우 회원이 개정약관에 동의한 것으로 봅니다.
+5. 회원이 개정약관의 적용에 동의하지 않는 경우 회사는 해당 회원에 대하여 개정 약관의 내용을 적용할 수 없으며, 이 경우 해당 회원은 이용계약을 해지할 수 있습니다. 다만, 기존 약관을 적용할 수 없는 특별한 사정이 있는 경우에는 회사는 이용계약을 해지할 수 있습니다.
+          </textarea>     
+        </div>
+      </div>
+
+      <div class="line-modal-agree"></div>
+      <div class="line-modal-agree-bottom"></div>
+      <div class=" modal-footer-fix">
+        <button type="button" class="btn-confirm" data-dismiss="modal" style="display:block;">확인</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade2" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content modal-content-fix-agree">
+      <div class="modal-header" style="border-bottom: 0px;">
+        <h5 class="modal-title" id="exampleModalLabel">개인정보 수집 및 이용방침</h5>
+          <span aria-hidden="true" class="close-modal"  data-dismiss="modal" aria-label="Close" style="visibility: show;">&times;</span>
+      </div>
+      <div class="msg"></div>
+      <div class="modal-body modal-body-content">
+        <div class="flex-center-agree-content">
+          <textarea id="privacy_scroll" readonly>
+      < (주)성하 >('www.treewiz.kr'이하 '시그널트리 나무박사')은(는) 「개인정보 보호법」 제30조에 따라 정보주체의 개인정보를 보호하고 이와 관련한 고충을 신속하고 원활하게 처리할 수 있도록 하기 위하여 다음과 같이 개인정보 처리방침을 수립·공개합니다.
+이 개인정보처리방침은 2023년 1월 1일부터 적용됩니다.
+
+제1조(개인정보의 처리 목적)
+
+.< (주)성하 >('www.treewiz.kr'이하 '시그널트리 나무박사')은(는) 다음의 목적을 위하여 개인정보를 처리합니다. 처리하고 있는 개인정보는 다음의 목적 이외의 용도로는 이용되지 않으며 이용 목적이 변경되는 경우에는 「개인정보 보호법」 제18조에 따라 별도의 동의를 받는 등 필요한 조치를 이행할 예정입니다.
+
+1. 홈페이지 회원가입 및 관리
+회원 가입의사 확인, 회원제 서비스 제공에 따른 본인 식별·인증, 회원자격 유지·관리, 서비스 부정이용 방지, 만14세 미만 아동의 개인정보 처리 시 법정대리인의 동의여부 확인, 각종 고지·통지 목적으로 개인정보를 처리합니다.
+
+2. 민원사무 처리
+민원인의 신원 확인, 민원사항 확인, 사실조사를 위한 연락·통지, 처리결과 통보 목적으로 개인정보를 처리합니다.
+
+3. 재화 또는 서비스 제공
+물품배송, 서비스 제공, 계약서·청구서 발송, 콘텐츠 제공, 맞춤서비스 제공, 본인인증, 연령인증, 요금결제·정산을 목적으로 개인정보를 처리합니다.
+
+4. 마케팅 및 광고에의 활용
+
+신규 서비스(제품) 개발 및 맞춤 서비스 제공, 이벤트 및 광고성 정보 제공 및 참여기회 제공 , 인구통계학적 특성에 따른 서비스 제공 및 광고 게재 , 서비스의 유효성 확인, 접속빈도 파악 또는 회원의 서비스 이용에 대한 통계 등을 목적으로 개인정보를 처리합니다.
+          </textarea>     
+        </div>
+      </div>
+
+      <div class="line-modal-agree"></div>
+      <div class="line-modal-agree-bottom"></div>
+      <div class=" modal-footer-fix">
+        <button type="button" class="btn-confirm" data-dismiss="modal" style="display:block;">확인</button>
+      </div>
+    </div>
+  </div>
+</div>

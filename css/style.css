@@ -108,3 +108,35 @@ img {
   font-size: 18px;
   font-weight: bold;
 }
+.wrong_pop{
+  width: 480px;
+  border-radius: 8px;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 40px 70px;
+}
+.wrong_pop .bt_close{
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
+}
+.wrong_pop figure{
+  width: 78px;
+  margin: 0 auto;
+}
+.wrong_pop p{text-align: center;font-size: 20px;font-weight: bold;color: #4d555f;margin-bottom: 20px;padding: 20px 0;}
+.wrong_pop .bt_ok{
+  border-radius: 4px;
+  padding: 12px 32px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #117757;
+  display: block;
+  margin: 0 auto;
+}
