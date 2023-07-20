@@ -2,15 +2,17 @@
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>시그널트리</title>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/main.css" />
     <link rel="stylesheet" href="./js/script.js" />
+    <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=tioe75vg3s"></script>
   </head>
   <body>
-    <nav>
+    <nav class="pc_nav">
       <h1 class="logo"><img src="img/logo2.png" alt="" /></h1>
       <ul class="dep1">
         <li class="nav_site">
@@ -22,73 +24,338 @@
         <li class="nav_data">
           <figure><img src="img/data.png" alt="" /></figure>
           <ul class="dep2">
-            <li>데이터</li>
-            <li>전체현장</li>
-            <li>전체 데이터</li>
+            <li>계측정보</li>
           </ul>
         </li>
-        <li class="nav_sensor">
-          <figure><img src="img/sensor.png" alt="" /></figure>
-          <ul class="dep2">
-            <li>센서</li>
-            <li>센서정보관리</li>
-          </ul>
         </li>
         <li class="nav_irr">
           <figure><img src="img/watering.png" alt="" /></figure>
           <ul class="dep2">
-            <li>관수</li>
-            <li>관수정보관리</li>
+            <li>관수정보</li>
           </ul>
         </li>
         <li class="nav_set">
           <figure><img src="img/setting.png" alt="" /></figure>
           <ul class="dep2">
-            <li>설정</li>
-            <li>센서설정</li>
+            <li>계측기 설정</li>
+            <li>관수조건 설정</li>
             <li>기관관리</li>
-            <li>지역관리</li>
-            <li>사용자관리</li>
-          </ul>
-        </li>
-        <li class="nav_user">
-          <figure><img src="img/user.png" alt="" /></figure>
-          <ul class="dep2">
-            <li>개인정보 관리</li>
-            <li>회원정보 수정</li>
-          </ul>
-        </li>
-        <li class="nav_customer">
-          <figure><img src="img/customer.png" alt="" /></figure>
-          <ul class="dep2">
-            <li>고객센터</li>
-            <li>공지사항</li>
-            <li>1:1 문의</li>
+            <li>관리자 관리</li>
           </ul>
         </li>
       </ul>
     </nav>
     <section class="main">
-      <div class="tg_box">
-        <ul class="tg_head">
+      <div id="map" style="width:100%;height:100%;"></div>
+       <div class="search">
+        <select name=" " id="">
+          <option value="지역">지역</option>
+        </select>
+        <select name=" " id="">
+          <option value="지역">마포구</option>
+        </select>
+        <button type="button">
+          <img src="./img/search.png" alt="">
+          검색
+        </button>
+       </div>
+       <article>
+         <button class="tg_bt">
+          <img src="./img/arrow-right.png" alt="">
+        </button>
+         <div class="side_bar">
+          
+          <div class="side_head">
+            <select name="" id="">
+              <option value="">전체</option>
+            </select>
+            <ul>
+              <li class="red">
+                <span></span>
+                17
+              </li>
+              <li class="orange">
+                <span></span>
+                10
+              </li>
+              <li class="green">
+                <span></span>
+                10
+              </li>
+            </ul>
+          </div>
+          <div class="side_body">
+            <button type="button" class="bt_guide">
+              <img src="./img/suggested.png" alt="">
+              이용안내
+            </button>
+            <ul class="list">
+              <li>
+                 <div class="top">
+                  <h5>
+                    <span class="red"></span>
+                    센서명1
+                  </h5>
+                  <div>
+                    <img src="./img/on.png" alt="">
+                    <p><strong>40</strong>%</p>
+                  </div>
+                 </div>
+                 <div class="mid">
+                  <ul>
+                    <li>
+                      <p>온도</p>
+                      <strong>17</strong>&#8451;
+                    </li>
+                    <li>
+                      <p>수분함량</p>
+                      <strong>40</strong>%
+                    </li>
+                    <li>
+                      <p>산도</p>
+                      <strong>10.0</strong>PH
+                    </li>
+                    <li>
+                      <p>전도도</p>
+                      <strong>10.56</strong>ds/m
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <p>질소</p>
+                      <strong>10.0</strong>mg/kg
+                    </li>
+                    <li>
+                      <p>인</p>
+                      <strong>8.56</strong>mg/kg
+                    </li>
+                    <li>
+                      <p>칼륨</p>
+                      <strong>8.56</strong>cmol/kg
+                    </li>
+                  </ul>
+                 </div>
+              </li>
+              <li>
+                 <div class="top">
+                  <h5>
+                    <span class="orange"></span>
+                    센서명2
+                  </h5>
+                  <div>
+                    <img src="./img/on.png" alt="">
+                    <p><strong>40</strong>%</p>
+                  </div>
+                 </div>
+                 <div class="mid">
+                  <ul>
+                    <li>
+                      <p>온도</p>
+                      <strong>17</strong>&#8451;
+                    </li>
+                    <li>
+                      <p>수분함량</p>
+                      <strong>40</strong>%
+                    </li>
+                    <li>
+                      <p>산도</p>
+                      <strong>10.0</strong>PH
+                    </li>
+                    <li>
+                      <p>전도도</p>
+                      <strong>10.56</strong>ds/m
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <p>질소</p>
+                      <strong>10.0</strong>mg/kg
+                    </li>
+                    <li>
+                      <p>인</p>
+                      <strong>8.56</strong>mg/kg
+                    </li>
+                    <li>
+                      <p>칼륨</p>
+                      <strong>8.56</strong>cmol/kg
+                    </li>
+                  </ul>
+                 </div>
+              </li>
+              <li>
+                 <div class="top">
+                  <h5>
+                    <span class="green"></span>
+                    센서명3
+                  </h5>
+                  <div>
+                    <img src="./img/on.png" alt="">
+                    <p><strong>40</strong>%</p>
+                  </div>
+                 </div>
+                 <div class="mid">
+                  <ul>
+                    <li>
+                      <p>온도</p>
+                      <strong>17</strong>&#8451;
+                    </li>
+                    <li>
+                      <p>수분함량</p>
+                      <strong>40</strong>%
+                    </li>
+                    <li>
+                      <p>산도</p>
+                      <strong>10.0</strong>PH
+                    </li>
+                    <li>
+                      <p>전도도</p>
+                      <strong>10.56</strong>ds/m
+                    </li>
+                  </ul>
+                  <ul>
+                    <li>
+                      <p>질소</p>
+                      <strong>10.0</strong>mg/kg
+                    </li>
+                    <li>
+                      <p>인</p>
+                      <strong>8.56</strong>mg/kg
+                    </li>
+                    <li>
+                      <p>칼륨</p>
+                      <strong>8.56</strong>cmol/kg
+                    </li>
+                  </ul>
+                 </div>
+              </li>
+            </ul>
+          </div>
+         </div>
+       </article>
+    </section>
+    <div class="modal">
+      <div class="bg"></div>
+      <div class="guide_pop">
+        <button type="button" class="bt_close"><img src="./img/close.png" alt=""></button>
+        <h3>이용안내</h3>
+        <h4>시그널트리 토양센서 계측항목 안내</h4>
+        <ul>
           <li>
-            <p>천안신방삼부르르르르르</p>
-            <figure></figure>
-            <div><strong>0%</strong></div>
+            <div>
+              <span class="dot"></span><strong>배터리</strong>(0~100%)
+            </div>
+            <p>잔여 배터리 상태</p>
           </li>
           <li>
-            <p>천안신방삼부르르르르르</p>
-            <figure></figure>
-            <div><strong>15</strong>%</div>
+            <div>
+              <span class="dot"></span><strong>통신</strong>
+            </div>
+            <p>24시간 데이터 미 수신시 응급상태 발생</p>
+          </li>
+          <li>
+            <div>
+              <span class="dot"></span><strong>온도</strong>(-40~80)&#8451;
+            </div>
+            <p>토양 내 온도 측정하며, 뿌리는 25&#8451; 전후에서 활동이 가장 활발</p>
+          </li>
+          <li>
+            <div>
+              <span class="dot"></span><strong>수분함량</strong>(0~100%)
+            </div>
+            <p>토양의 수분 보유량을 측정하는 것으로 양토 기준으로 11~18%가 적정</p>
+          </li>
+          <li>
+            <div>
+              <span class="dot"></span><strong>산도</strong>(0~14PH)
+            </div>
+            <p>토양의 산성, 염기성을 측정하는 것으로 5.5~6.5PH가 적정</p>
+          </li>
+          <li>
+            <div>
+              <span class="dot"></span><strong>질소</strong>(0~2000mg/kg)
+            </div>
+            <p>광합성에 관여하는 엽록소의 구성요소로 식물성장에 중요한 역할을 하며, 100~300mg/kg가 적정</p>
+          </li>
+          <li>
+            <div>
+              <span class="dot"></span><strong>인</strong>(0~2000mg/kg)
+            </div>
+            <p>가지와 잎의 성장에 중요한 역할을 하며,50~200mg/kg가 적정</p>
+          </li>
+          <li>
+            <div>
+              <span class="dot"></span><strong>칼륨</strong>(0~10cmol/kg)
+            </div>
+            <p>뿌리와 줄기 성장에 중요한 역할을 하며,0.25~0.5cmol/kg가 적정</p>
           </li>
         </ul>
-        <ul class="tg_body">
-          <li>
-            <p>천안신방삼부르르르르르</p>
-            <figure></figure>
-            <div><strong>15%</strong>%</div>
-          </li>
-        </ul>
+        <button type="button" class="bt_ok">확인</button>
+      </div>
+    </div>
+    <section class="m_main">
+      <div class="m_head">
+        <nav role="navigation">
+          <div id="menuToggle">
+            <input type="checkbox" />
+            <span class="a"></span>
+            <span class="b"></span>
+            <span class="c"></span>
+            <div class="m_menu">
+              <div class="head">
+                <button class="logout" type="button" onclick="location.href='index.html'">로그아웃</button>
+              </div>
+              <ul class="mid">
+                <li>
+                  <div>
+                    현장
+                    <img src="./img/arrow_down2.png" alt="">
+                  </div>
+                  <ul class="dep2">
+                    <li><a href="#">현장정보</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <div>
+                    데이터
+                    <img src="./img/arrow_down2.png" alt="">
+                  </div>
+                  <ul class="dep2">
+                    <li><a href="#">계측정보</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <div>관수<img src="./img/arrow_down2.png" alt=""></div>
+                  <ul class="dep2">
+                    <li><a href="#">관수정보</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <div>설정<img src="./img/arrow_down2.png" alt=""></div>
+                  <ul class="dep2">
+                    <li><a href="#">기관등록</a></li>
+                    <li><a href="#">현장등록</a></li>
+                    <li><a href="#">하위관리자 등록</a></li>
+                    <li><a href="#">계측기 설정</a></li>
+                    <li><a href="#">관수조건 설정</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <div class="bot">
+                <h5>(주)성하</h5>
+                <ul>
+                  <li>대표이사 : 조정윤</li>
+                  <li>사업자등록번호 : 705-86-01108</li>
+                  <li>대표번호 : 02-596-2200</li>
+                  <li>팩스번호 : 02-512-5161</li>
+                  <li>이메일: sungha0405@hanmail.net</li>
+                </ul>
+              </div>
+            </div>
+            <div class="bg"></div>
+          </div>
+        </nav>
+        <h1 class="m_logo"><img src="./img/logo-horizontal-white.png" alt=""></h1>
+        <div class="et_box"></div>
       </div>
     </section>
     <script>
@@ -97,7 +364,33 @@
           $(this).toggleClass("active");
           $(this).children().stop().toggleClass("active");
         });
+        $(".tg_bt").click(function(){
+          $(this).toggleClass("active");
+          $(this).siblings().toggleClass("active");
+        });
+        $(".bt_guide").click(function(){
+          $(".modal").show();
+        });
+        $(".bg").click(function(){
+          $(".modal").hide();
+        });
+        $(".bt_ok").click(function(){
+          $(".modal").hide();
+        });
+        $(".bt_close").click(function(){
+          $(".modal").hide();
+        });
+        $(".m_menu .mid>li div").click(function(){
+          $(this).toggleClass("active");
+          $(this).siblings().slideToggle();
+        });
       });
+      var mapOptions = {
+          center: new naver.maps.LatLng(37.3595704, 127.105399),
+          zoom: 10
+      };
+
+      var map = new naver.maps.Map('map', mapOptions);
     </script>
   </body>
 </html>
