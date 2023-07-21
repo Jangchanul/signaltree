@@ -36,6 +36,27 @@ $(function () {
     $(this).siblings().slideToggle();
   });
   $(".agree1").click(function(){
-    $(".fade1").show();
+    $(".terms_a").fadeIn();
+  });
+  $(".agree2").click(function(){
+    $(".terms_b").fadeIn();
+  });
+  $("#all_ck").change(function(){
+    if($(this).is(":checked")){
+      $("input:checkbox[name='chk']").prop("checked", true);
+    }else{
+      $("input:checkbox[name='chk']").prop("checked", false);  
+    }
+  });
+  $(".bt_save").click(function(){
+    if($("#ck1").is(":checked") == false){
+      alert("모든 약관에 동의 하셔야 다음 단계로 진행 가능합니다.");
+      return;
+  }else if($("#ck2").is(":checked") == false){
+      alert("모든 약관에 동의 하셔야 다음 단계로 진행 가능합니다..");
+      return;
+  }else{
+      location.href='index.html'
+  }
   });
 });
