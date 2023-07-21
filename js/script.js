@@ -59,4 +59,8 @@ $(function () {
       location.href='index.html'
   }
   });
+  $(".pages span").click(function(){
+    $(".pages span").removeClass("active");
+    $(this).addClass("active");
+  });
 });

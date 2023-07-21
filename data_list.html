@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시그널트리</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/sub_page.css" />
+    <script src="./js/script.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+  </head>
+  <body>
+    <nav class="pc_nav">
+        <h1 class="logo"><img src="img/logo2.png" alt="" /></h1>
+        <ul class="dep1">
+            <li class="nav_site">
+            <figure><img src="img/site.png" alt="" /></figure>
+            <ul class="dep2">
+                <li>현장정보</li>
+            </ul>
+            </li>
+            <li class="nav_data active">
+            <figure><img src="img/data.png" alt="" /></figure>
+            <ul class="dep2">
+                <li onclick="location.href='data_list.html'">계측기 리스트</li>
+                <li>계측기 차트</li>
+                <li>계측기 상세 데이터</li>
+            </ul>
+            </li>
+            </li>
+            <li class="nav_irr">
+            <figure><img src="img/watering.png" alt="" /></figure>
+            <ul class="dep2">
+                <li>관수정보</li>
+            </ul>
+            </li>
+            <li class="nav_set">
+            <figure><img src="img/setting.png" alt="" /></figure>
+            <ul class="dep2">
+                <li>기관등록</li>
+                <li>현장등록</li>
+                <li>하위관리자 등록</li>
+                <li>계측기 설정</li>
+                <li>관수조건 설정</li>
+            </ul>
+            </li>
+        </ul>
+    </nav>
+    <section class="sub_list sub_page">
+        <div class="sub_title">
+            <h2><img src="./img/tit_line.png" alt="">계측기 데이터</h2>
+        </div>
+        <div class="search_box">
+            <ul>
+                <li>
+                    <strong>기관명</strong>
+                    <select>
+                        <option value="">전체</option>
+                    </select>
+                </li>
+                <li>
+                    <strong>지역명</strong>
+                    <select>
+                        <option value="">전체</option>
+                    </select>
+                </li>
+                <li>
+                    <strong>계측일자</strong>
+                    <input type="date">
+                    <span>-</span>
+                    <input type="date">
+                    <button class="bt_ser" type="button">
+                        <img src="./img/search.png" alt="">
+                        검색
+                    </button>
+                </li>
+            </ul>
+            <div class="ex">
+                <img src="./img/Frame.png" alt="">
+                계측일시 기간검색은 현재 월 기준으로 전 월 까지만 조회 가능
+            </div>
+        </div>
+        <div class="list_box">
+            <button class="download" type="button">
+                <img src="./img/plus.png" alt="">
+                엑셀 다운로드
+            </button>
+            <table id="data_list">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>기관명</th>
+                        <th>지역명</th>
+                        <th>센서명</th>
+                        <th>배터리(%)</th>
+                        <th>온도(&#8451;)</th>
+                        <th>수분함량(%)</th>
+                        <th>산도(PH)</th>
+                        <th>전도도(ds/m)</th>
+                        <th>질소(mg/kg)</th>
+                        <th>인(mg/kg)</th>
+                        <th>칼륨(cmol/kg)</th>
+                        <th>계측일시</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>지엔</td>
+                        <td>가산동</td>
+                        <td>지앤_01</td>
+                        <td>58%</td>
+                        <td>12</td>
+                        <td>30</td>
+                        <td>7</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>2023-00-00 00:00</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>지엔</td>
+                        <td>가산동</td>
+                        <td>지앤_01</td>
+                        <td>58%</td>
+                        <td>12</td>
+                        <td>30</td>
+                        <td>7</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>2023-00-00 00:00</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>지엔</td>
+                        <td>가산동</td>
+                        <td>지앤_01</td>
+                        <td>58%</td>
+                        <td>12</td>
+                        <td>30</td>
+                        <td>7</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>2023-00-00 00:00</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>지엔</td>
+                        <td>가산동</td>
+                        <td>지앤_01</td>
+                        <td>58%</td>
+                        <td>12</td>
+                        <td>30</td>
+                        <td>7</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>2023-00-00 00:00</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>지엔</td>
+                        <td>가산동</td>
+                        <td>지앤_01</td>
+                        <td>58%</td>
+                        <td>12</td>
+                        <td>30</td>
+                        <td>7</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>2023-00-00 00:00</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>지엔</td>
+                        <td>가산동</td>
+                        <td>지앤_01</td>
+                        <td>58%</td>
+                        <td>12</td>
+                        <td>30</td>
+                        <td>7</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>2023-00-00 00:00</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>지엔</td>
+                        <td>가산동</td>
+                        <td>지앤_01</td>
+                        <td>58%</td>
+                        <td>12</td>
+                        <td>30</td>
+                        <td>7</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>2023-00-00 00:00</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>지엔</td>
+                        <td>가산동</td>
+                        <td>지앤_01</td>
+                        <td>58%</td>
+                        <td>12</td>
+                        <td>30</td>
+                        <td>7</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>2023-00-00 00:00</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>지엔</td>
+                        <td>가산동</td>
+                        <td>지앤_01</td>
+                        <td>58%</td>
+                        <td>12</td>
+                        <td>30</td>
+                        <td>7</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>2023-00-00 00:00</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>지엔</td>
+                        <td>가산동</td>
+                        <td>지앤_01</td>
+                        <td>58%</td>
+                        <td>12</td>
+                        <td>30</td>
+                        <td>7</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>2023-00-00 00:00</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="paging">
+                <i class="fa-solid fa-angles-left" id="first_page"></i>
+                <i class="fa-solid fa-angles-left" id="prev_page"></i>
+                <div class="pages">
+                    <span class="active">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                    <span>6</span>
+                    <span>7</span>
+                    <span>8</span>
+                    <span>9</span>
+                    <span>10</span>
+                </div>
+                <i class="fa-solid fa-angles-right" id="next_page"></i>
+                <i class="fa-solid fa-angles-right" id="last_page"></i>
+            </div>
+        </div>
+    </section>
+    <footer class="sub_footer">
+        <ul>
+          <li><strong>(주)성하</strong>  대표이사: 조정윤</li>
+          <li>사업자등록번호: 705-86-01108</li>
+          <li>대표번호: 02-596-2200</li>
+          <li>팩스번호: 02-512-5161</li>
+          <li>이메일: sungha0405@hanmail.net</li>
+        </ul>
+      </footer>
+  </body>
+</html>
