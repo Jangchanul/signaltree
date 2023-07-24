@@ -5,6 +5,7 @@
     padding-left: 80px;
     padding-bottom: 60px;
     box-sizing: border-box;
+    overflow-y: auto;
 }
 .sub_title{
     background-color: #fff;
@@ -115,7 +116,7 @@
 .list_box{
     background-color: #fff;
     padding: 24px 40px;
-    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.10); 
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.10);
     box-sizing: border-box;
 }
 .list_box .download{
@@ -192,4 +193,224 @@
     cursor: pointer;
     border: 1px solid #ddd;
     padding: 2px 8px;
+}
+.chart_box{
+    width: 96%;
+    margin: 0 auto;
+}
+.chart_box>li{
+    margin-bottom: 30px;
+}
+.chart_box .head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #c4cbd6;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+}
+.chart_box .head h5{
+    font-size: 16px;
+    display: flex;
+}
+.chart_box .head h5 strong{
+    font-weight: bold;
+}
+.chart_box .ex{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    font-size: 14px;
+    color: #6a6a6a;
+}
+.chart_box .ex img{
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+.sub_page .print{
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    border: 1px solid #bababa;
+    border-radius: 2px;
+    color: #6a6a6a;
+    font-weight: bold;
+    background-color: #fff;
+}
+.sub_page .print img{
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+}
+.chart_box .body{
+    background-color: #fff;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.10);
+    padding: 40px;
+    box-sizing: border-box;
+    position: relative;
+}
+.chart_list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.chart_list li{
+    margin-left: 120px;
+    margin-bottom: 20px;
+}
+.chart_list li:first-child{
+    margin-left: 0;
+}
+.chart_list li:nth-child(4n+1){
+    margin-left: 0;
+}
+.chart{
+    position: relative;
+    width: 220px;
+    height: 220px;
+    background-color: #c4cbd6;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+.chart.bar1{
+    background: conic-gradient(#a6e375 58% 0%, #49ba84 42% 100%);
+}
+.chart.bar2{
+    background: conic-gradient(#a6e375 10% 0%, #49ba84 10% 100%);
+}
+.chart.bar3{
+    background: conic-gradient(#a6e375 30% 0%, #49ba84 30% 100%);
+}
+.chart.bar4{
+    background: conic-gradient(#a6e375 50% 0%, #49ba84 50% 100%);
+}
+.chart.bar5{
+    background: conic-gradient(#a6e375 31% 0%, #49ba84 31% 100%);
+}
+.chart.bar6{
+    background: conic-gradient(#a6e375 5% 0%, #49ba84 5% 100%);
+}
+.chart.bar7{
+    background: conic-gradient(#a6e375 4% 0%, #49ba84 4% 100%);
+}
+.chart.bar8{
+    background: conic-gradient(#a6e375 60% 0%, #49ba84 60% 100%);
+}
+.chart .center{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.chart .center strong{
+    font-size: 64px;
+}
+.chart_list p{
+    font-size: 16px;
+    text-align: center;
+}
+.chart_list p strong{
+    font-weight: bold;
+}
+.detail_chart{
+    width: 96%;
+    margin: 0 auto;
+    background-color: #FFF;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.detail_chart h5{
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.detail_chart #line_chart{
+    height: 470px;
+}
+.bt_line{
+    width: 96%;
+    margin: 0 auto 12px;
+    border-bottom: 1px solid #c4cbd6;
+    padding: 10px 0;
+}
+.bt_line .print{
+    margin-left: auto;
+}
+
+.reg_container{
+    background-color: #fff;
+    padding: 40px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.10);   
+}
+.reg_container table{
+    width: 100%;
+}
+.reg_container th{
+    background-color: #f1f8f6;
+    border: 1px solid #a2cdc1;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px 24px;
+}
+.reg_container td{
+    border: 1px solid #a2cdc1;
+    text-align: center;
+    padding: 8px 10px;
+}
+.reg_container td input{
+    border: 1px solid #c4cbd6;
+    background-color: #f8f9fb;
+    padding: 8px 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.reg_container td strong{
+    font-weight: bold;
+    font-size: 16px;
+}
+.reg_container .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.reg_container .flex span{
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0 12px;
+}
+.bt_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+.bt_box button{
+    border-radius: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 12px 24px;
+}
+.bt_box .bt_cancel{
+    border: 1px solid #188764;
+    color: #188764;
+    background-color: #fff;
+    margin-left: 12px;
+}
+.bt_box .bt_reg{
+    border: 1px solid #188764;
+    color: #fff;
+    background-color: #188764;
 }

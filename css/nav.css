@@ -108,7 +108,7 @@
         position: relative;
         background: #fff;
         border-radius: 3px;
-        z-index: 2;
+        z-index: 12;
         transform-origin: -2px 2px;
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
           background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
@@ -145,7 +145,11 @@
         transform-origin: 0% 0%;
         transform: translate(-100%, 0);
         transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
-        z-index: 1;
+        z-index: 10;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
       #menuToggle input:checked ~ .m_menu {
         transform: none;
@@ -177,12 +181,13 @@
         width: 100%;
         height: 100%;
         display: none;
+        z-index: 9;
       }
       .m_menu a{
         text-decoration: none;
       }
       .m_menu .mid{
-        padding: 11.111vw 4.444vw 58.333vw 4.444vw;
+        padding: 11.111vw 4.444vw 11.1111vw 4.444vw;
         box-sizing: border-box;
       }
       .m_menu .mid>li div{
@@ -240,9 +245,6 @@
       .m_menu .bot{
         background-color: #f2f4f5;
         padding: 5.556vw 4.444vw;
-        position: absolute;
-        left: 0;
-        bottom: 0;
         width: 100%;
         box-sizing: border-box;
       }

@@ -14,7 +14,7 @@
   </head>
   <body>
     <nav class="pc_nav">
-      <h1 class="logo"><img src="img/logo2.png" alt="" /></h1>
+      <h1 class="logo" onclick="location.href='main.html'"><img src="img/logo2.png" alt="" /></h1>
       <ul class="dep1">
         <li class="nav_site">
           <figure><img src="img/site.png" alt="" /></figure>
@@ -26,8 +26,8 @@
           <figure><img src="img/data.png" alt="" /></figure>
           <ul class="dep2">
             <li onclick="location.href='data_list.html'">계측기 리스트</li>
-            <li>계측기 차트</li>
-            <li>계측기 상세 데이터</li>
+            <li onclick="location.href='data_chart.html'">계측기 차트</li>
+            <li onclick="location.href='data_detail.html'">계측기 상세 데이터</li>
           </ul>
         </li>
         </li>
@@ -305,45 +305,49 @@
             <span class="b"></span>
             <span class="c"></span>
             <div class="m_menu">
-              <div class="head">
-                <button class="logout" type="button" onclick="location.href='index.html'">로그아웃</button>
+              <div>
+                <div class="head">
+                  <button class="logout" type="button" onclick="location.href='index.html'">로그아웃</button>
+                </div>
+                <ul class="mid">
+                  <li>
+                    <div>
+                      현장
+                      <img src="./img/arrow_down2.png" alt="">
+                    </div>
+                    <ul class="dep2">
+                      <li onclick="location.href='main.html'">현장정보</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div>
+                      데이터
+                      <img src="./img/arrow_down2.png" alt="">
+                    </div>
+                    <ul class="dep2">
+                      <li onclick="location.href='data_list.html'">계측기 리스트</li>
+                      <li onclick="location.href='data_chart.html'">계측기 차트</li>
+                      <li onclick="location.href='data_detail.html'">계측기 상세 데이터</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div>관수<img src="./img/arrow_down2.png" alt=""></div>
+                    <ul class="dep2">
+                      <li><a href="#">관수정보</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div>설정<img src="./img/arrow_down2.png" alt=""></div>
+                    <ul class="dep2">
+                      <li><a href="#">기관등록</a></li>
+                      <li><a href="#">현장등록</a></li>
+                      <li><a href="#">하위관리자 등록</a></li>
+                      <li><a href="#">계측기 설정</a></li>
+                      <li><a href="#">관수조건 설정</a></li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
-              <ul class="mid">
-                <li>
-                  <div>
-                    현장
-                    <img src="./img/arrow_down2.png" alt="">
-                  </div>
-                  <ul class="dep2">
-                    <li><a href="#">현장정보</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <div>
-                    데이터
-                    <img src="./img/arrow_down2.png" alt="">
-                  </div>
-                  <ul class="dep2">
-                    <li><a href="#">계측정보</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <div>관수<img src="./img/arrow_down2.png" alt=""></div>
-                  <ul class="dep2">
-                    <li><a href="#">관수정보</a></li>
-                  </ul>
-                </li>
-                <li>
-                  <div>설정<img src="./img/arrow_down2.png" alt=""></div>
-                  <ul class="dep2">
-                    <li><a href="#">기관등록</a></li>
-                    <li><a href="#">현장등록</a></li>
-                    <li><a href="#">하위관리자 등록</a></li>
-                    <li><a href="#">계측기 설정</a></li>
-                    <li><a href="#">관수조건 설정</a></li>
-                  </ul>
-                </li>
-              </ul>
               <div class="bot">
                 <h5>(주)성하</h5>
                 <ul>

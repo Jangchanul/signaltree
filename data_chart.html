@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시그널트리</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/sub_page.css" />
+    <script src="./js/script.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+  </head>
+  <body>
+    <nav class="pc_nav">
+        <h1 class="logo" onclick="location.href='main.html'"><img src="img/logo2.png" alt="" /></h1>
+        <ul class="dep1">
+            <li class="nav_site">
+            <figure><img src="img/site.png" alt="" /></figure>
+            <ul class="dep2">
+                <li onclick="location.href='main.html'">현장정보</li>
+            </ul>
+            </li>
+            <li class="nav_data active">
+            <figure><img src="img/data.png" alt="" /></figure>
+            <ul class="dep2">
+                <li onclick="location.href='data_list.html'">계측기 리스트</li>
+                <li onclick="location.href='data_chart.html'">계측기 차트</li>
+                <li onclick="location.href='data_detail.html'">계측기 상세 데이터</li>
+            </ul>
+            </li>
+            </li>
+            <li class="nav_irr">
+            <figure><img src="img/watering.png" alt="" /></figure>
+            <ul class="dep2">
+                <li>관수정보</li>
+            </ul>
+            </li>
+            <li class="nav_set">
+            <figure><img src="img/setting.png" alt="" /></figure>
+            <ul class="dep2">
+                <li>기관등록</li>
+                <li>현장등록</li>
+                <li>하위관리자 등록</li>
+                <li>계측기 설정</li>
+                <li>관수조건 설정</li>
+            </ul>
+            </li>
+        </ul>
+    </nav>
+    <section class="sub_list sub_page">
+        <div class="sub_title">
+            <h2><img src="./img/tit_line.png" alt="">계측기 차트</h2>
+        </div>
+        <ul class="chart_box">
+           <li>
+                <div class="head">
+                    <h5>
+                        <strong>지엔_01</strong>[2023-01-12 00:00]
+                        <div class="ex">
+                            <img src="./img/Frame.png" alt="">
+                            개별 그래프를 클릭하시면 디테일한 정보를 볼 수 있습니다.
+                        </div>
+                    </h5>
+                    <button class="print" type="button">
+                        <img src="./img/printer.png" alt="">
+                        인쇄
+                    </button>
+                </div>
+                <div class="body">
+                    <ul class="chart_list">
+                        <li>
+                            <div class="chart bar1">
+                                <span class="center">
+                                    배터리
+                                    <strong>58</strong>
+                                </span>
+                            </div>
+                            <p><strong>측정범위</strong>(0~100) <strong>단위</strong>%</p>
+                        </li>
+                        <li>
+                            <div class="chart bar2">
+                                <span class="center">
+                                    온도
+                                    <strong>12</strong>
+                                </span>
+                            </div>
+                            <p><strong>측정범위</strong>(-40~80) <strong>단위</strong>&#8451;</p>
+                        </li>
+                        <li>
+                            <div class="chart bar3">
+                                <span class="center">
+                                    수분함량
+                                    <strong>30</strong>
+                                </span>
+                            </div>
+                            <p><strong>측정범위</strong>(0~100) <strong>단위</strong>%</p>
+                        </li>
+                        <li>
+                            <div class="chart bar4">
+                                <span class="center">
+                                    산도
+                                    <strong>7</strong>
+                                </span>
+                            </div>
+                            <p><strong>측정범위</strong>(0~14) <strong>단위</strong>PH</p>
+                        </li>
+                        <li>
+                            <div class="chart bar5 ">
+                                <span class="center">
+                                    전도도
+                                    <strong>3</strong>
+                                </span>
+                            </div>
+                            <p><strong>측정범위</strong>(0~20) <strong>단위</strong>ds/m</p>
+                        </li>
+                        <li>
+                            <div class="chart bar6">
+                                <span class="center">
+                                    질소
+                                    <strong>4</strong>
+                                </span>
+                            </div>
+                            <p><strong>측정범위</strong>(0~2000) <strong>단위</strong>mg/kg</p>
+                        </li>
+                        <li>
+                            <div class="chart bar7">
+                                <span class="center">
+                                    인
+                                    <strong>5</strong>
+                                </span>
+                            </div>
+                            <p><strong>측정범위</strong>(0~2000) <strong>단위</strong>mg/kg </p>
+                        </li>
+                        <li>
+                            <div class="chart bar8">
+                                <span class="center">
+                                    칼륨
+                                    <strong>6</strong>
+                                </span>
+                            </div>
+                            <p><strong>측정범위</strong>(0~10) <strong>단위</strong>cmol/kg</p>
+                        </li>
+                    </ul>
+                </div>
+           </li>
+           <li>
+                <div class="head">
+                    <h5>
+                        <strong>지엔_02</strong>[2023-01-12 00:00]
+                        <div class="ex">
+                            <img src="./img/Frame.png" alt="">
+                            개별 그래프를 클릭하시면 디테일한 정보를 볼 수 있습니다.
+                        </div>
+                    </h5>
+                    <button class="print" type="button">
+                        <img src="./img/printer.png" alt="">
+                        인쇄
+                    </button>
+                </div>
+                <div class="body">
+                    <ul class="chart_list">
+                        <li>
+                            <div class="chart bar1">
+                                <span class="center">
+                                    배터리
+                                    <strong>58</strong>
+                                </span>
+                            </div>
+                            <p><strong>측정범위</strong>(0~100) <strong>단위</strong>%</p>
+                        </li>
+                        <li>
+                            <div class="chart bar2">
+                                <span class="center">
+                                    온도
+                                    <strong>12</strong>
+                                </span>
+                            </div>
+                            <p><strong>측정범위</strong>(-40~80) <strong>단위</strong>&#8451;</p>
+                        </li>
+                        <li>
+                            <div class="chart bar3">
+                                <span class="center">
+                                    수분함량
+                                    <strong>30</strong>
+                                </span>
+                            </div>
+                            <p><strong>측정범위</strong>(0~100) <strong>단위</strong>%</p>
+                        </li>
+                        <li>
+                            <div class="chart bar4">
+                                <span class="center">
+                                    산도
+                                    <strong>7</strong>
+                                </span>
+                            </div>
+                            <p><strong>측정범위</strong>(0~14) <strong>단위</strong>PH</p>
+                        </li>
+                        <li>
+                            <div class="chart bar5 ">
+                                <span class="center">
+                                    전도도
+                                    <strong>3</strong>
+                                </span>
+                            </div>
+                            <p><strong>측정범위</strong>(0~20) <strong>단위</strong>ds/m</p>
+                        </li>
+                        <li>
+                            <div class="chart bar6">
+                                <span class="center">
+                                    질소
+                                    <strong>4</strong>
+                                </span>
+                            </div>
+                            <p><strong>측정범위</strong>(0~2000) <strong>단위</strong>mg/kg</p>
+                        </li>
+                        <li>
+                            <div class="chart bar7">
+                                <span class="center">
+                                    인
+                                    <strong>5</strong>
+                                </span>
+                            </div>
+                            <p><strong>측정범위</strong>(0~2000) <strong>단위</strong>mg/kg </p>
+                        </li>
+                        <li>
+                            <div class="chart bar8">
+                                <span class="center">
+                                    칼륨
+                                    <strong>6</strong>
+                                </span>
+                            </div>
+                            <p><strong>측정범위</strong>(0~10) <strong>단위</strong>cmol/kg</p>
+                        </li>
+                    </ul>
+                </div>
+           </li>
+        </ul>
+    </section>
+    <footer class="sub_footer">
+        <ul>
+          <li><strong>(주)성하</strong>  대표이사: 조정윤</li>
+          <li>사업자등록번호: 705-86-01108</li>
+          <li>대표번호: 02-596-2200</li>
+          <li>팩스번호: 02-512-5161</li>
+          <li>이메일: sungha0405@hanmail.net</li>
+        </ul>
+      </footer>
+  </body>
+</html>
