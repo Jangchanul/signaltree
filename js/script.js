@@ -63,4 +63,8 @@ $(function () {
     $(".pages span").removeClass("active");
     $(this).addClass("active");
   });
+  $(".bt_onoff").click(function(){
+    $(this).toggleClass("on");
+    $(this).text($(this).text()=='OFF'?"ON":"OFF");
+  });
 });

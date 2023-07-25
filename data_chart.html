@@ -18,42 +18,46 @@
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
   </head>
   <body>
-    <nav class="pc_nav">
-        <h1 class="logo" onclick="location.href='main.html'"><img src="img/logo2.png" alt="" /></h1>
-        <ul class="dep1">
-            <li class="nav_site">
-            <figure><img src="img/site.png" alt="" /></figure>
-            <ul class="dep2">
-                <li onclick="location.href='main.html'">현장정보</li>
+    <header>
+        <nav class="pc_nav">
+            <h1 class="logo" onclick="location.href='main.html'"><img src="img/logo2.png" alt="" /></h1>
+            <ul class="dep1">
+                <li class="nav_site">
+                <figure><img src="img/site.png" alt="" /></figure>
+                <ul class="dep2">
+                    <li onclick="location.href='main.html'">현장정보</li>
+                </ul>
+                </li>
+                <li class="nav_data">
+                <figure><img src="img/data.png" alt="" /></figure>
+                <ul class="dep2">
+                    <li onclick="location.href='data_list.html'">계측기 리스트</li>
+                    <li onclick="location.href='data_chart.html'">계측기 차트</li>
+                    <li onclick="location.href='data_detail.html'">계측기 상세 데이터</li>
+                </ul>
+                </li>
+                </li>
+                <li class="nav_irr">
+                <figure><img src="img/watering.png" alt="" /></figure>
+                <ul class="dep2">
+                    <li onclick="location.href='water_list.html'">관수정보</li>
+                </ul>
+                </li>
+                <li class="nav_set">
+                <figure><img src="img/setting.png" alt="" /></figure>
+                <ul class="dep2">
+                    <li onclick="location.href='measure_reg.html'">계측기등록</li>
+                    <li onclick="location.href='agency_reg.html'">기관등록</li>
+                    <li>현장등록</li>
+                    <li>하위관리자 등록</li>
+                    <li>계측기 설정</li>
+                    <li>관수조건 설정</li>
+                </ul>
+                </li>
             </ul>
-            </li>
-            <li class="nav_data active">
-            <figure><img src="img/data.png" alt="" /></figure>
-            <ul class="dep2">
-                <li onclick="location.href='data_list.html'">계측기 리스트</li>
-                <li onclick="location.href='data_chart.html'">계측기 차트</li>
-                <li onclick="location.href='data_detail.html'">계측기 상세 데이터</li>
-            </ul>
-            </li>
-            </li>
-            <li class="nav_irr">
-            <figure><img src="img/watering.png" alt="" /></figure>
-            <ul class="dep2">
-                <li>관수정보</li>
-            </ul>
-            </li>
-            <li class="nav_set">
-            <figure><img src="img/setting.png" alt="" /></figure>
-            <ul class="dep2">
-                <li>기관등록</li>
-                <li>현장등록</li>
-                <li>하위관리자 등록</li>
-                <li>계측기 설정</li>
-                <li>관수조건 설정</li>
-            </ul>
-            </li>
-        </ul>
-    </nav>
+        </nav>
+    </header>
+    
     <section class="sub_list sub_page">
         <div class="sub_title">
             <h2><img src="./img/tit_line.png" alt="">계측기 차트</h2>

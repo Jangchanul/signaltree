@@ -7,6 +7,7 @@
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
@@ -15,8 +16,8 @@
     <link rel="stylesheet" href="./css/nav.css" />
     <link rel="stylesheet" href="./css/sub_page.css" />
     <script src="./js/script.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    
+    <script src="https://kit.fontawesome.com/512286d077.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -58,16 +59,17 @@
             </ul>
         </nav>
     </header>
+    
     <section class="sub_list sub_page">
         <div class="sub_title">
-            <h2><img src="./img/tit_line.png" alt="">계측기 등록</h2>
+            <h2><img src="./img/tit_line.png" alt="">관수보드 등록</h2>
         </div>
         <div class="reg_container">
             <table>
                 <tr>
-                    <th>IMEI</th>
+                    <th>관수명</th>
                     <td><input type="text"></td>
-                    <th>DEVICE ID</th>
+                    <th>IP</th>
                     <td><input type="text"></td>
                 </tr>
                 <tr>
@@ -77,84 +79,17 @@
                     <td><input type="text"></td>
                 </tr>
                 <tr>
-                    <td colspan="4"><strong>계측 정상 범위</strong></td>
+                    <th>계측기</th>
+                    <td colspan="3"><input type="text"></td>
                 </tr>
                 <tr>
-                    <th>배터리</th>
-                    <td>
-                        <div class="flex">
-                            <input type="text">
-                            <span>~</span>
-                            <input type="text">
-                        </div>
-                    </td>
-                    <th>온도</th>
-                    <td>
-                        <div class="flex">
-                            <input type="text">
-                            <span>~</span>
-                            <input type="text">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>수분량</th>
-                    <td>
-                        <div class="flex">
-                            <input type="text">
-                            <span>~</span>
-                            <input type="text">
-                        </div>
-                    </td>
-                    <th>산도</th>
-                    <td>
-                        <div class="flex">
-                            <input type="text">
-                            <span>~</span>
-                            <input type="text">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>전도도</th>
-                    <td>
-                        <div class="flex">
-                            <input type="text">
-                            <span>~</span>
-                            <input type="text">
-                        </div>
-                    </td>
-                    <th>질소</th>
-                    <td>
-                        <div class="flex">
-                            <input type="text">
-                            <span>~</span>
-                            <input type="text">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>인</th>
-                    <td>
-                        <div class="flex">
-                            <input type="text">
-                            <span>~</span>
-                            <input type="text">
-                        </div>
-                    </td>
-                    <th>칼륨</th>
-                    <td>
-                        <div class="flex">
-                            <input type="text">
-                            <span>~</span>
-                            <input type="text">
-                        </div>
-                    </td>
+                    <td colspan="4"><textarea></textarea></td>
+                    
                 </tr>
             </table>
             <div class="bt_box">
                 <button class="bt_reg" type="button">등 록</button>
-                <button class="bt_cancel" type="button">취 소</button>
+                <button class="bt_cancel" type="button" onclick="history.back()">취 소</button>
             </div>
         </div>
     </section>

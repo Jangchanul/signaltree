@@ -7,6 +7,7 @@
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
@@ -15,8 +16,8 @@
     <link rel="stylesheet" href="./css/nav.css" />
     <link rel="stylesheet" href="./css/sub_page.css" />
     <script src="./js/script.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    
+    <script src="https://kit.fontawesome.com/512286d077.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -50,9 +51,9 @@
                     <li onclick="location.href='measure_reg.html'">계측기등록</li>
                     <li onclick="location.href='agency_reg.html'">기관등록</li>
                     <li>현장등록</li>
-                    <li>하위관리자 등록</li>
-                    <li>계측기 설정</li>
-                    <li>관수조건 설정</li>
+                    <li onclick="location.href='manager_reg.html'">하위관리자 등록</li>
+                    <li onclick="location.href='measure_set.html'">계측기 설정</li>
+                    <li onclick="location.href='water_set.html'">관수조건 설정</li>
                 </ul>
                 </li>
             </ul>
@@ -61,7 +62,7 @@
     
     <section class="sub_list sub_page">
         <div class="sub_title">
-            <h2><img src="./img/tit_line.png" alt="">상세 데이터</h2>
+            <h2><img src="./img/tit_line.png" alt="">계측기 설정</h2>
         </div>
         <div class="search_box">
             <ul>
@@ -78,40 +79,74 @@
                     </select>
                 </li>
                 <li>
-                    <strong>센서명</strong>
+                    <strong>계측기</strong>
                     <select>
                         <option value="">전체</option>
                     </select>
-                </li>
-                <li>
-                    <strong>계측항목</strong>
-                    <select>
-                        <option value="">전체</option>
-                    </select>
-                </li>
-                <li>
                     <button class="bt_ser" type="button">
                         <img src="./img/search.png" alt="">
                         검색
                     </button>
                 </li>
             </ul>
-            <div class="ex">
-                <img src="./img/Frame.png" alt="">
-                기관명, 지역명, 센서명, 계측항목은 반드시 선택해야 조회 가능합니다. 검색기간은 현재요일기준으로 전주요일까지(1주일)조회 가능합니다.
+        </div>
+        <div class="list_box">
+            <button class="download" type="button">
+                <img src="./img/plus.png" alt="">
+                엑셀 다운로드
+            </button>
+            <table id="water_list">
+                <thead>
+                    <tr>
+                        <th>선택</th>
+                        <th>계측시간</th>
+                        <th>관수</th>
+                        <th>LED</th>
+                        <th>기상정보</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>05:00</td>
+                        <td><button class="bt_onoff on" type="button">ON</button></td>
+                        <td><button class="bt_onoff on" type="button">ON</button></td>
+                        <td><button class="bt_onoff on" type="button">ON</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>06:00</td>
+                        <td><button class="bt_onoff on" type="button">ON</button></td>
+                        <td><button class="bt_onoff" type="button">OFF</button></td>
+                        <td><button class="bt_onoff on" type="button">ON</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>07:00</td>
+                        <td><button class="bt_onoff on" type="button">ON</button></td>
+                        <td><button class="bt_onoff on" type="button">ON</button></td>
+                        <td><button class="bt_onoff" type="button">OFF</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>08:00</td>
+                        <td><button class="bt_onoff" type="button">OFF</button></td>
+                        <td><button class="bt_onoff" type="button">OFF</button></td>
+                        <td><button class="bt_onoff on" type="button">ON</button></td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox"></td>
+                        <td>09:00</td>
+                        <td><button class="bt_onoff" type="button">OFF</button></td>
+                        <td><button class="bt_onoff on" type="button">ON</button></td>
+                        <td><button class="bt_onoff on" type="button">ON</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="bt_box">
+                <button class="bt_reg" type="button">계측조건 추가하기</button>
             </div>
         </div>
-        <div class="bt_line">
-            <button class="print" type="button">
-                <img src="./img/printer.png" alt="">
-                인쇄
-            </button>
-        </div>
-        <div class="detail_chart">
-            <h5>온도</h5>
-            <div id="line_chart"></div>
-        </div>
-        
     </section>
     <footer class="sub_footer">
         <ul>
@@ -123,43 +158,4 @@
         </ul>
       </footer>
   </body>
-  
-        <script type="text/javascript">
-          var dom = document.getElementById('line_chart');
-          var myChart = echarts.init(dom, null, {
-            renderer: 'canvas',
-            useDirtyRect: false
-          });
-          var app = {};
-          
-          var option;
-          
-          option = {
-        xAxis: {
-          type: 'category',
-          data: ['월', '화', '수', '목', '금', '토', '일']
-        },
-        yAxis: {
-          type: 'value'
-        },
-        series: [
-          {
-            data: [20, 10, 20, 30, 40, 50, 30],
-            type: 'line',
-            itemStyle: {
-                normal:{
-                   color:'#16a571'
-                }
-            }
-          }
-        ]
-      };
-      
-      
-          if (option && typeof option === 'object') {
-            myChart.setOption(option);
-          }
-      
-          window.addEventListener('resize', myChart.resize);
-        </script>
 </html>

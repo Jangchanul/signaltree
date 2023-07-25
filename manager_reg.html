@@ -7,6 +7,7 @@
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
@@ -15,8 +16,8 @@
     <link rel="stylesheet" href="./css/nav.css" />
     <link rel="stylesheet" href="./css/sub_page.css" />
     <script src="./js/script.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    
+    <script src="https://kit.fontawesome.com/512286d077.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <header>
@@ -50,7 +51,7 @@
                     <li onclick="location.href='measure_reg.html'">계측기등록</li>
                     <li onclick="location.href='agency_reg.html'">기관등록</li>
                     <li>현장등록</li>
-                    <li>하위관리자 등록</li>
+                    <li onclick="location.href='manager_reg.html'">하위관리자 등록</li>
                     <li>계측기 설정</li>
                     <li>관수조건 설정</li>
                 </ul>
@@ -58,103 +59,67 @@
             </ul>
         </nav>
     </header>
+    
     <section class="sub_list sub_page">
         <div class="sub_title">
-            <h2><img src="./img/tit_line.png" alt="">계측기 등록</h2>
+            <h2><img src="./img/tit_line.png" alt="">하위 관리자 등록</h2>
         </div>
         <div class="reg_container">
-            <table>
+            <table class="reg_agency">
                 <tr>
-                    <th>IMEI</th>
+                    <th>관리자 ID</th>
+                    <td>
+                        <div class="flex">
+                            <input type="text">
+                            <button type="button">중복확인</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <td><input type="password"></td>
+                </tr>
+                <tr>
+                    <th>비밀번호확인</th>
+                    <td><input type="password"></td>
+                </tr>
+                <tr>
+                    <th>관리자 이름</th>
                     <td><input type="text"></td>
-                    <th>DEVICE ID</th>
+                </tr>
+                <tr>
+                    <th>연락처</th>
+                    <td>
+                        <div class="flex">
+                            <input type="number" value="010">
+                            <span>-</span>
+                            <input type="number">
+                            <span>-</span>
+                            <input type="number">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>소속 기관</th>
                     <td><input type="text"></td>
                 </tr>
                 <tr>
-                    <th>기관</th>
-                    <td><input type="text"></td>
-                    <th>현장</th>
-                    <td><input type="text"></td>
-                </tr>
-                <tr>
-                    <td colspan="4"><strong>계측 정상 범위</strong></td>
-                </tr>
-                <tr>
-                    <th>배터리</th>
+                    <th>담당현장</th>
                     <td>
-                        <div class="flex">
+                        <div class="flex ad_reg">
                             <input type="text">
-                            <span>~</span>
-                            <input type="text">
+                            <button type="button">위치선택</button>
                         </div>
-                    </td>
-                    <th>온도</th>
-                    <td>
-                        <div class="flex">
+                        <div class="flex ad_reg">
                             <input type="text">
-                            <span>~</span>
-                            <input type="text">
+                            <button type="button">위치선택</button>
                         </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>수분량</th>
-                    <td>
-                        <div class="flex">
-                            <input type="text">
-                            <span>~</span>
-                            <input type="text">
-                        </div>
-                    </td>
-                    <th>산도</th>
-                    <td>
-                        <div class="flex">
-                            <input type="text">
-                            <span>~</span>
-                            <input type="text">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>전도도</th>
-                    <td>
-                        <div class="flex">
-                            <input type="text">
-                            <span>~</span>
-                            <input type="text">
-                        </div>
-                    </td>
-                    <th>질소</th>
-                    <td>
-                        <div class="flex">
-                            <input type="text">
-                            <span>~</span>
-                            <input type="text">
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <th>인</th>
-                    <td>
-                        <div class="flex">
-                            <input type="text">
-                            <span>~</span>
-                            <input type="text">
-                        </div>
-                    </td>
-                    <th>칼륨</th>
-                    <td>
-                        <div class="flex">
-                            <input type="text">
-                            <span>~</span>
-                            <input type="text">
-                        </div>
+                        <button type="button" class="bt_plus"><img src="./img/plus.png" alt=""></button>
                     </td>
                 </tr>
             </table>
             <div class="bt_box">
                 <button class="bt_reg" type="button">등 록</button>
-                <button class="bt_cancel" type="button">취 소</button>
             </div>
         </div>
     </section>
