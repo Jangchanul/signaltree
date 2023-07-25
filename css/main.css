@@ -474,11 +474,13 @@
     display: none;
   }
   .guide_pop li{
-    display: block;
+    display: flex;
     margin-bottom: 3.333vw;
+    align-items: flex-start;
+    justify-content: space-between;
   }
-  .guide_pop li div{margin-bottom: 2.778vw;width: 100%;}
-  .guide_pop li>p{font-size: 3.889vw;}
+  .guide_pop li div{margin-bottom: 2.778vw;width: 49%;}
+  .guide_pop li>p{font-size: 3.889vw;width: 49%;}
   .guide_pop strong{font-size: 4.444vw;}
   .guide_pop ul{max-height: 80vh;overflow-y: scroll;}
 }
