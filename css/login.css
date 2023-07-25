@@ -58,8 +58,8 @@
 .login input {
   border: none;
 }
-.login #text_id,
-.login #text_pw {
+.login .text_id,
+.login .text_pw {
   background-color: #FFF;
   display: block;
   width: 100%;
@@ -190,8 +190,8 @@
   .login form {
     width: 83.333vw;
   }
-  .login #text_id,
-  .login #text_pw {
+  .login .text_id,
+  .login .text_pw {
     padding: 3.333vw 11.111vw;
     background-color: #fff;
   }
