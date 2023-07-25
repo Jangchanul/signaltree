@@ -64,9 +64,13 @@
 .pc_nav .dep1 > li.active figure {
   background-color: #117757;
 }
+.m_head{
+  display: none;
+}
 @media screen and (max-width : 800px) {
     .pc_nav{display: none;}
     .m_head {
+      display: block;
         background-color: #219c76;
         display: flex;
         justify-content: space-between;

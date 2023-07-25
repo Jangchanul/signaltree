@@ -13,43 +13,114 @@
     <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=tioe75vg3s"></script>
   </head>
   <body>
-    <nav class="pc_nav">
-      <h1 class="logo" onclick="location.href='main.html'"><img src="img/logo2.png" alt="" /></h1>
-      <ul class="dep1">
-        <li class="nav_site">
-          <figure><img src="img/site.png" alt="" /></figure>
-          <ul class="dep2">
-            <li>현장정보</li>
-          </ul>
-        </li>
-        <li class="nav_data">
-          <figure><img src="img/data.png" alt="" /></figure>
-          <ul class="dep2">
-            <li onclick="location.href='data_list.html'">계측기 리스트</li>
-            <li onclick="location.href='data_chart.html'">계측기 차트</li>
-            <li onclick="location.href='data_detail.html'">계측기 상세 데이터</li>
-          </ul>
-        </li>
-        </li>
-        <li class="nav_irr">
-          <figure><img src="img/watering.png" alt="" /></figure>
-          <ul class="dep2">
-            <li>관수정보</li>
-          </ul>
-        </li>
-        <li class="nav_set">
-          <figure><img src="img/setting.png" alt="" /></figure>
-          <ul class="dep2">
-            <li>기관등록</li>
-            <li>현장등록</li>
-            <li>하위관리자 등록</li>
-            <li>계측기 설정</li>
-            <li>관수조건 설정</li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-    
+    <header>
+      <nav class="pc_nav">
+        <h1 class="logo" onclick="location.href='main.html'"><img src="img/logo2.png" alt="" /></h1>
+        <ul class="dep1">
+          <li class="nav_site">
+            <figure><img src="img/site.png" alt="" /></figure>
+            <ul class="dep2">
+              <li>현장정보</li>
+            </ul>
+          </li>
+          <li class="nav_data">
+            <figure><img src="img/data.png" alt="" /></figure>
+            <ul class="dep2">
+              <li onclick="location.href='data_list.html'">계측기 리스트</li>
+              <li onclick="location.href='data_chart.html'">계측기 차트</li>
+              <li onclick="location.href='data_detail.html'">계측기 상세 데이터</li>
+            </ul>
+          </li>
+          </li>
+          <li class="nav_irr">
+            <figure><img src="img/watering.png" alt="" /></figure>
+            <ul class="dep2">
+              <li onclick="location.href='water_list.html'">관수정보</li>
+            </ul>
+          </li>
+          <li class="nav_set">
+            <figure><img src="img/setting.png" alt="" /></figure>
+            <ul class="dep2">
+              <li>기관등록</li>
+              <li>현장등록</li>
+              <li>하위관리자 등록</li>
+              <li>계측기 설정</li>
+              <li>관수조건 설정</li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <!-- ------------------------------------------------------------ -->
+      <div class="m_head">
+        <nav role="navigation">
+          <div id="menuToggle">
+            <input type="checkbox" />
+            <span class="a"></span>
+            <span class="b"></span>
+            <span class="c"></span>
+            <div class="m_menu">
+              <div>
+                <div class="head">
+                  <button class="logout" type="button" onclick="location.href='index.html'">로그아웃</button>
+                </div>
+                <ul class="mid">
+                  <li>
+                    <div>
+                      현장
+                      <img src="./img/arrow_down2.png" alt="">
+                    </div>
+                    <ul class="dep2">
+                      <li onclick="location.href='main.html'">현장정보</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div>
+                      데이터
+                      <img src="./img/arrow_down2.png" alt="">
+                    </div>
+                    <ul class="dep2">
+                      <li onclick="location.href='data_list.html'">계측기 리스트</li>
+                      <li onclick="location.href='data_chart.html'">계측기 차트</li>
+                      <li onclick="location.href='data_detail.html'">계측기 상세 데이터</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div>관수<img src="./img/arrow_down2.png" alt=""></div>
+                    <ul class="dep2">
+                      <li><a href="water_list.html">관수정보</a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <div>설정<img src="./img/arrow_down2.png" alt=""></div>
+                    <ul class="dep2">
+                      <li><a href="#">기관등록</a></li>
+                      <li><a href="#">현장등록</a></li>
+                      <li><a href="#">하위관리자 등록</a></li>
+                      <li><a href="#">계측기 설정</a></li>
+                      <li><a href="#">관수조건 설정</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div class="bot">
+                <h5>(주)성하</h5>
+                <ul>
+                  <li>대표이사 : 조정윤</li>
+                  <li>사업자등록번호 : 705-86-01108</li>
+                  <li>대표번호 : 02-596-2200</li>
+                  <li>팩스번호 : 02-512-5161</li>
+                  <li>이메일: sungha0405@hanmail.net</li>
+                </ul>
+              </div>
+            </div>
+            <div class="bg"></div>
+          </div>
+        </nav>
+        <h1 class="m_logo"><img src="./img/logo-horizontal-white.png" alt=""></h1>
+        <div class="et_box"></div>
+      </div>
+    </header>
+
     <section class="main">
       <div id="map" style="width:100%;height:100%;"></div>
        <div class="search">
@@ -237,6 +308,8 @@
          </div>
        </article>
     </section>
+
+
     <div class="modal">
       <div class="bg"></div>
       <div class="guide_pop">
@@ -296,75 +369,9 @@
         <button type="button" class="bt_ok">확인</button>
       </div>
     </div>
+
+
     <section class="m_main">
-      <div class="m_head">
-        <nav role="navigation">
-          <div id="menuToggle">
-            <input type="checkbox" />
-            <span class="a"></span>
-            <span class="b"></span>
-            <span class="c"></span>
-            <div class="m_menu">
-              <div>
-                <div class="head">
-                  <button class="logout" type="button" onclick="location.href='index.html'">로그아웃</button>
-                </div>
-                <ul class="mid">
-                  <li>
-                    <div>
-                      현장
-                      <img src="./img/arrow_down2.png" alt="">
-                    </div>
-                    <ul class="dep2">
-                      <li onclick="location.href='main.html'">현장정보</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <div>
-                      데이터
-                      <img src="./img/arrow_down2.png" alt="">
-                    </div>
-                    <ul class="dep2">
-                      <li onclick="location.href='data_list.html'">계측기 리스트</li>
-                      <li onclick="location.href='data_chart.html'">계측기 차트</li>
-                      <li onclick="location.href='data_detail.html'">계측기 상세 데이터</li>
-                    </ul>
-                  </li>
-                  <li>
-                    <div>관수<img src="./img/arrow_down2.png" alt=""></div>
-                    <ul class="dep2">
-                      <li><a href="#">관수정보</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <div>설정<img src="./img/arrow_down2.png" alt=""></div>
-                    <ul class="dep2">
-                      <li><a href="#">기관등록</a></li>
-                      <li><a href="#">현장등록</a></li>
-                      <li><a href="#">하위관리자 등록</a></li>
-                      <li><a href="#">계측기 설정</a></li>
-                      <li><a href="#">관수조건 설정</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              <div class="bot">
-                <h5>(주)성하</h5>
-                <ul>
-                  <li>대표이사 : 조정윤</li>
-                  <li>사업자등록번호 : 705-86-01108</li>
-                  <li>대표번호 : 02-596-2200</li>
-                  <li>팩스번호 : 02-512-5161</li>
-                  <li>이메일: sungha0405@hanmail.net</li>
-                </ul>
-              </div>
-            </div>
-            <div class="bg"></div>
-          </div>
-        </nav>
-        <h1 class="m_logo"><img src="./img/logo-horizontal-white.png" alt=""></h1>
-        <div class="et_box"></div>
-      </div>
       <div class="search">
         <select name=" " id="">
           <option value="기관">기관</option>
