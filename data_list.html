@@ -50,13 +50,82 @@
                     <li onclick="location.href='measure_reg.html'">계측기등록</li>
                     <li onclick="location.href='agency_reg.html'">기관등록</li>
                     <li>현장등록</li>
-                    <li>하위관리자 등록</li>
-                    <li>계측기 설정</li>
-                    <li>관수조건 설정</li>
+                    <li onclick="location.href='manager_reg.html'">하위관리자 등록</li>
+                    <li onclick="location.href='measure_set.html'">계측기 설정</li>
+                    <li onclick="location.href='water_set.html'">관수조건 설정</li>
                 </ul>
                 </li>
             </ul>
         </nav>
+
+        <div class="m_head">
+            <nav role="navigation">
+              <div id="menuToggle">
+                <input type="checkbox" />
+                <span class="a"></span>
+                <span class="b"></span>
+                <span class="c"></span>
+                <div class="m_menu">
+                  <div>
+                    <div class="head">
+                      <button class="logout" type="button" onclick="location.href='index.html'">로그아웃</button>
+                    </div>
+                    <ul class="mid">
+                      <li>
+                        <div>
+                          현장
+                          <img src="./img/arrow_down2.png" alt="">
+                        </div>
+                        <ul class="dep2">
+                          <li onclick="location.href='main.html'">현장정보</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <div>
+                          데이터
+                          <img src="./img/arrow_down2.png" alt="">
+                        </div>
+                        <ul class="dep2">
+                          <li onclick="location.href='data_list.html'">계측기 리스트</li>
+                          <li onclick="location.href='data_chart.html'">계측기 차트</li>
+                          <li onclick="location.href='data_detail.html'">계측기 상세 데이터</li>
+                        </ul>
+                      </li>
+                      <li>
+                        <div>관수<img src="./img/arrow_down2.png" alt=""></div>
+                        <ul class="dep2">
+                          <li><a href="water_list.html">관수정보</a></li>
+                        </ul>
+                      </li>
+                      <li>
+                        <div>설정<img src="./img/arrow_down2.png" alt=""></div>
+                        <ul class="dep2">
+                          <li><a href="#">기관등록</a></li>
+                          <li><a href="#">현장등록</a></li>
+                          <li><a href="#">하위관리자 등록</a></li>
+                          <li><a href="#">계측기 설정</a></li>
+                          <li><a href="#">관수조건 설정</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="bot">
+                    <h5>(주)성하</h5>
+                    <ul>
+                      <li>대표이사 : 조정윤</li>
+                      <li>사업자등록번호 : 705-86-01108</li>
+                      <li>대표번호 : 02-596-2200</li>
+                      <li>팩스번호 : 02-512-5161</li>
+                      <li>이메일: sungha0405@hanmail.net</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="bg"></div>
+              </div>
+            </nav>
+            <h1 class="m_logo"><img src="./img/logo-horizontal-white.png" alt=""></h1>
+            <div class="et_box"></div>
+          </div>
     </header>
     <section class="sub_list sub_page">
         <div class="sub_title">
@@ -78,9 +147,17 @@
                 </li>
                 <li>
                     <strong>계측일자</strong>
-                    <input type="date">
-                    <span>-</span>
-                    <input type="date">
+                    <div>
+                        <input type="date" data-placeholder="날짜 선택">
+                        <span>~</span>
+                        <input type="date">
+                    </div>
+                    <button class="bt_ser" type="button">
+                        <img src="./img/search.png" alt="">
+                        검색
+                    </button>
+                </li>
+                <li class="m_bt">
                     <button class="bt_ser" type="button">
                         <img src="./img/search.png" alt="">
                         검색
@@ -94,10 +171,10 @@
         </div>
         <div class="list_box">
             <button class="download" type="button">
-                <img src="./img/plus.png" alt="">
+                <img src="./img/download.png" alt="">
                 엑셀 다운로드
             </button>
-            <table id="data_list">
+            <table class="data_list">
                 <thead>
                     <tr>
                         <th>번호</th>
@@ -267,6 +344,60 @@
                         <td>2023-00-00 00:00</td>
                     </tr>
                 </tbody>
+            </table>
+            <table class="m_table">
+                <tr>
+                    <th>번호</th>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <th>기관명</th>
+                    <td>지앤</td>
+                </tr>
+                <tr>
+                    <th>지역명</th>
+                    <td>가산동</td>
+                </tr>
+                <tr>
+                    <th>센서명</th>
+                    <td>지앤_01</td>
+                </tr>
+                <tr>
+                    <th>배터리(%)</th>
+                    <td>58</td>
+                </tr>
+                <tr>
+                    <th>온도(&#8451;)</th>
+                    <td>12</td>
+                </tr>
+                <tr>
+                    <th>수분함량(%)</th>
+                    <td>30</td>
+                </tr>
+                <tr>
+                    <th>산도(PH)</th>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <th>전도도(ds/m)</th>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <th>질소(mg/kg)</th>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <th>인(mg/kg)</th>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <th>칼륨(cmol/kg)</th>
+                    <td>6</td>
+                </tr>
+                <tr>
+                    <th>계측일시</th>
+                    <td>2023-00-00 00:00</td>
+                </tr>
             </table>
             <div class="paging">
                 <i class="fa-solid fa-angles-left" id="first_page"></i>

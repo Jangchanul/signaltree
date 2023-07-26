@@ -75,9 +75,10 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 3.889vw 5.556vw;
+        padding: 0 5.556vw;
         width: 100%;
         box-sizing: border-box;
+        height: 13.889vw;
       }
       .m_head .m_logo {
         width: 22.222vw;
