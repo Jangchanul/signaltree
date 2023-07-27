@@ -67,4 +67,21 @@ $(function () {
     $(this).toggleClass("on");
     $(this).text($(this).text()=='OFF'?"ON":"OFF");
   });
+  $(".minus").click(function(){
+    var num = $(this).siblings(".result").val();
+    if(num > 5){
+      $(this).siblings(".result").val(parseInt(num) - 5);  
+    }else{
+      num = 5;
+    }
+  });
+  $(".plus").click(function(){
+    var num = $(this).siblings(".result").val();
+    
+    if(num < 30){
+      $(this).siblings(".result").val(parseInt(num) + 5);
+    }else{
+      num = 30;
+    }
+  });
 });

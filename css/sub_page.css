@@ -164,6 +164,7 @@
     font-weight: bold;
     border-right: 1px solid #a2cdc1;
     word-break: keep-all;
+    vertical-align: middle;
 }
 .list_box table tbody{
     border: 1px solid #bababa;
@@ -173,6 +174,7 @@
     padding: 14px 0;
     color: #6a6a6a;
     border-bottom: 1px solid #bababa;
+    vertical-align: middle;
 }
 #data_list tbody tr:nth-child(2n){
     background-color: #f4f5f6;
@@ -395,6 +397,17 @@
     width: 100%;
     box-sizing: border-box;
 }
+.reg_container td select{
+    border: 1px solid #c4cbd6;
+    background-color: #f8f9fb;
+    padding: 8px 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.reg_container .water_reg{
+    width: 60%;
+    margin: 0 auto;
+}
 .reg_container td strong{
     font-weight: bold;
     font-size: 16px;
@@ -447,12 +460,13 @@
     color: #c51a08;
     border-color: #c51a08;
 }
-#water_list input{
-    padding: 4px 12px;
+#water_list .bts{
     box-sizing: border-box;
     background-color: #f8f9fb;
     border: 1px solid #c4cbd6;
-    width: 100%;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
 }
 #water_list .flex{
     display: flex;
@@ -460,6 +474,22 @@
     justify-content: center;
     padding: 0 20px;
     box-sizing: border-box;
+}
+#water_list .result{
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 24px;
+    box-sizing: border-box;
+    width: 100px;
+    text-align: center;
+}
+#water_list .bt_start{
+    padding: 10px 40px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #41ad8d;
+    margin-left: 40px;
+    border-radius: 4px;
 }
 .reg_container textarea{
     border: 1px solid #c4cbd6;
@@ -515,17 +545,90 @@
     padding: 8px 12px;
     width: 10%;
 }
-.search_box .m_bt{display: none;}
 input[type="date"].after::-webkit-calendar-picker-indicator{
     margin-left: 0px;
 }
 .m_table{display: none;}
+
+.top_radio{
+    border: 1px solid #c4cbd6;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto 60px;
+    padding: 8px 20px;
+    justify-content: space-evenly;
+}
+.top_radio>p{
+    background-color: #188764;
+    color: #FFF;
+    padding: 4px 24px;
+    border-radius: 4px;
+    font-size: 24px;
+}
+.top_radio input{
+    display: none;
+}
+.top_radio input+label{
+    margin-left: 12px;
+    padding-left: 24px;
+    background-image: url(../img/ck_off.png);
+    background-size: 18px;
+    background-repeat: no-repeat;
+    background-position: left center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.top_radio input:checked+label{
+    background-image: url(../img/ck_on.png);
+}
+#measure td:first-child{
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+}
+.onoff_box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.onoff_box input{
+    display: none;
+}
+.onoff_box input+label{
+    display: block;
+    width: 150px;
+    padding: 4px;
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #464a69;
+    border-radius: 2px;
+    margin-left: 12px;
+    color: #464a69;
+}
+.onoff_box input:checked+label{
+    color: #c51a08;
+    border-color: #c51a08;
+}
+#measure td{
+    white-space: nowrap;
+    padding: 8px 12px;
+}
+
+
+
+/* ------------------------------------------------------------------------ */
+
+
+
+
+
+
+
 @media screen and (max-width: 1400px) {
     .search_box li{
         margin-bottom: 12px;
-    }
-    .search_box li:last-child{
-        margin-bottom: 0;
     }
 }
 @media screen and (max-width: 800px) {
@@ -534,6 +637,7 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
     }
     .sub_page{
         padding: 0;
+        height: calc(100% - 13.889vw);
     }
     .sub_title{
         padding: 3.333vw 5.556vw;
@@ -565,19 +669,26 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
     .search_box input[type='date']{
         width: 27.778vw;
         font-size: 3.333vw;
+        padding: 1.667vw 2.778vw;
+        height: auto;
     }
-    .search_box .bt_ser{display: none;}
-    .search_box .m_bt{display: block;}
-    .search_box .m_bt .bt_ser{display: flex;width: 100%;margin: 0;}
+    .search_box .m_bt .bt_ser{display: flex;width: 100%;margin: 0;font-size: 4.444vw;height: auto;padding: 2.222vw 0;}
+    .search_box .bt_ser img{width: 4.444vw;height: 4.444vw;}
     .search_box .ex{align-items: flex-start;}
     .list_box{padding: 5.556vw;}
-    .list_box table{display: none;}
-    .list_box .m_table{display: table;}
-    .list_box .m_table{
-        border-top: 2px solid #a2cdc1;
-        border-bottom: 2px solid #a2cdc1;
+    .list_box table{
+        table-layout: fixed;
     }
     .list_box table tbody{border: 0;}
+    .list_box table th:first-child,.list_box table td:first-child,.list_box .data_list th:last-child,.list_box .data_list td:last-child
+    {display: none;}
+    .list_box table td{
+        padding: 1.111vw;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
     .list_box .m_table tr{
         border-bottom: 1px solid #d7dde3;
     }
@@ -586,7 +697,6 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
         text-align: left;
         padding: 3.333vw 2.222vw;
     }
-    .paging{display: none;}
     .sub_page .print{
         display: none;
     }
@@ -637,4 +747,48 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
     }
     .bt_line{display: none;}
     .detail_chart{width: 100%;}
+    #water_list .flex{
+        padding: 0;
+        flex-wrap: wrap;
+    }
+    #water_list .flex>div{
+        display: flex;
+        align-items: center;
+    }
+    #water_list .result{
+        width: 9vw;
+        padding: 0;
+        font-size: 4.444vw;
+    }
+    #water_list .bt_start{
+        margin: 0;
+        padding: 2.222vw 3.333vw;
+    }
+    .reg_container{
+        padding: 5.556vw;
+    }
+    .reg_container .water_reg{
+        width: 100%;
+    }
+    .reg_container th{
+        font-size: 4.444vw;
+        padding: 2.222vw 3.333vw;
+        white-space: nowrap;
+    }
+    .bt_box button{
+        padding: 2.222vw 4.444vw;
+        font-size: 4.444vw;
+    }
+    #measure th{
+        padding: 2.222vw 0;
+        font-size: 4.444vw;
+    }
+    #measure td:first-child,#measure th:first-child{
+        display: revert;
+        font-size: 4.444vw;
+    }
+    .onoff_box input+label{
+        font-size: 4.444vw;
+        margin-left: 2.222vw;
+    }
 }
