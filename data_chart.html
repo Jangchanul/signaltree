@@ -1,141 +1,161 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>시그널트리</title>
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/nav.css" />
-    <link rel="stylesheet" href="./css/sub_page.css" />
-    <script src="./js/script.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-  </head>
-  <body>
-    <header>
-        <nav class="pc_nav">
-            <h1 class="logo" onclick="location.href='main.html'"><img src="img/logo2.png" alt="" /></h1>
-            <ul class="dep1">
-                <li class="nav_site">
-                <figure><img src="img/site.png" alt="" /></figure>
-                <ul class="dep2">
-                    <li onclick="location.href='main.html'">현장정보</li>
-                </ul>
-                </li>
-                <li class="nav_data">
-                <figure><img src="img/data.png" alt="" /></figure>
-                <ul class="dep2">
-                    <li onclick="location.href='data_list.html'">계측기 리스트</li>
-                    <li onclick="location.href='data_chart.html'">계측기 차트</li>
-                    <li onclick="location.href='data_detail.html'">계측기 상세 데이터</li>
-                </ul>
-                </li>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>시그널트리</title>
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin="crossorigin"/>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"/>
+        <link rel="stylesheet" href="./css/style.css"/>
+        <link rel="stylesheet" href="./css/nav.css"/>
+        <link rel="stylesheet" href="./css/sub_page.css"/>
+        <script src="./js/script.js"></script>
+        <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/highcharts-more.js"></script>
+        <script src="https://code.highcharts.com/modules/exporting.js"></script>
+        <script src="https://code.highcharts.com/modules/export-data.js"></script>
+        <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="pc_nav">
+                <h1 class="logo" onclick="location.href='main.html'"><img src="img/logo2.png" alt=""/></h1>
+                <ul class="dep1">
+                    <li class="nav_site">
+                        <figure><img src="img/site.png" alt=""/></figure>
+                        <ul class="dep2">
+                            <li onclick="location.href='main.html'">현장정보</li>
+                        </ul>
+                    </li>
+                    <li class="nav_data">
+                        <figure><img src="img/data.png" alt=""/></figure>
+                        <ul class="dep2">
+                            <li onclick="location.href='data_list.html'">계측기 리스트</li>
+                            <li onclick="location.href='data_chart.html'">계측기 차트</li>
+                            <li onclick="location.href='data_detail.html'">계측기 상세 데이터</li>
+                        </ul>
+                    </li>
                 </li>
                 <li class="nav_irr">
-                <figure><img src="img/watering.png" alt="" /></figure>
-                <ul class="dep2">
-                    <li onclick="location.href='water_list.html'">관수정보</li>
-                </ul>
+                    <figure><img src="img/watering.png" alt=""/></figure>
+                    <ul class="dep2">
+                        <li onclick="location.href='water_list.html'">관수정보</li>
+                    </ul>
                 </li>
                 <li class="nav_set">
-                <figure><img src="img/setting.png" alt="" /></figure>
-                <ul class="dep2">
-                    <li onclick="location.href='measure_reg.html'">계측기등록</li>
-                    <li onclick="location.href='agency_reg.html'">기관등록</li>
-                    <li>현장등록</li>
-                    <li onclick="location.href='manager_reg.html'">하위관리자 등록</li>
-                    <li onclick="location.href='measure_set.html'">계측기 설정</li>
-                    <li onclick="location.href='water_set.html'">관수조건 설정</li>
-                </ul>
+                    <figure><img src="img/setting.png" alt=""/></figure>
+                    <ul class="dep2">
+                        <li onclick="location.href='measure_reg.html'">계측기등록</li>
+                        <li onclick="location.href='agency_reg.html'">기관등록</li>
+                        <li>현장등록</li>
+                        <li onclick="location.href='manager_reg.html'">하위관리자 등록</li>
+                        <li onclick="location.href='measure_set.html'">계측기 설정</li>
+                        <li onclick="location.href='water_set.html'">관수조건 설정</li>
+                    </ul>
                 </li>
             </ul>
         </nav>
 
         <div class="m_head">
             <nav role="navigation">
-              <div id="menuToggle">
-                <input type="checkbox" />
-                <span class="a"></span>
-                <span class="b"></span>
-                <span class="c"></span>
-                <div class="m_menu">
-                  <div>
-                    <div class="head">
-                      <button class="logout" type="button" onclick="location.href='index.html'">로그아웃</button>
+                <div id="menuToggle">
+                    <input type="checkbox"/>
+                    <span class="a"></span>
+                    <span class="b"></span>
+                    <span class="c"></span>
+                    <div class="m_menu">
+                        <div>
+                            <div class="head">
+                                <button class="logout" type="button" onclick="location.href='index.html'">로그아웃</button>
+                            </div>
+                            <ul class="mid">
+                                <li>
+                                    <div>
+                                        현장
+                                        <img src="./img/arrow_down2.png" alt="">
+                                    </div>
+                                    <ul class="dep2">
+                                        <li onclick="location.href='main.html'">현장정보</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>
+                                        데이터
+                                        <img src="./img/arrow_down2.png" alt="">
+                                    </div>
+                                    <ul class="dep2">
+                                        <li onclick="location.href='data_list.html'">계측기 리스트</li>
+                                        <li onclick="location.href='data_chart.html'">계측기 차트</li>
+                                        <li onclick="location.href='data_detail.html'">계측기 상세 데이터</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>관수<img src="./img/arrow_down2.png" alt=""></div>
+                                    <ul class="dep2">
+                                        <li>
+                                            <a href="water_list.html">관수정보</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>설정<img src="./img/arrow_down2.png" alt=""></div>
+                                    <ul class="dep2">
+                                        <li>
+                                            <a href="#">기관등록</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">현장등록</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">하위관리자 등록</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">계측기 설정</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">관수조건 설정</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bot">
+                            <h5>(주)성하</h5>
+                            <ul>
+                                <li>대표이사 : 조정윤</li>
+                                <li>사업자등록번호 : 705-86-01108</li>
+                                <li>대표번호 : 02-596-2200</li>
+                                <li>팩스번호 : 02-512-5161</li>
+                                <li>이메일: sungha0405@hanmail.net</li>
+                            </ul>
+                        </div>
                     </div>
-                    <ul class="mid">
-                      <li>
-                        <div>
-                          현장
-                          <img src="./img/arrow_down2.png" alt="">
-                        </div>
-                        <ul class="dep2">
-                          <li onclick="location.href='main.html'">현장정보</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <div>
-                          데이터
-                          <img src="./img/arrow_down2.png" alt="">
-                        </div>
-                        <ul class="dep2">
-                          <li onclick="location.href='data_list.html'">계측기 리스트</li>
-                          <li onclick="location.href='data_chart.html'">계측기 차트</li>
-                          <li onclick="location.href='data_detail.html'">계측기 상세 데이터</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <div>관수<img src="./img/arrow_down2.png" alt=""></div>
-                        <ul class="dep2">
-                          <li><a href="water_list.html">관수정보</a></li>
-                        </ul>
-                      </li>
-                      <li>
-                        <div>설정<img src="./img/arrow_down2.png" alt=""></div>
-                        <ul class="dep2">
-                          <li><a href="#">기관등록</a></li>
-                          <li><a href="#">현장등록</a></li>
-                          <li><a href="#">하위관리자 등록</a></li>
-                          <li><a href="#">계측기 설정</a></li>
-                          <li><a href="#">관수조건 설정</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="bot">
-                    <h5>(주)성하</h5>
-                    <ul>
-                      <li>대표이사 : 조정윤</li>
-                      <li>사업자등록번호 : 705-86-01108</li>
-                      <li>대표번호 : 02-596-2200</li>
-                      <li>팩스번호 : 02-512-5161</li>
-                      <li>이메일: sungha0405@hanmail.net</li>
-                    </ul>
-                  </div>
+                    <div class="bg"></div>
                 </div>
-                <div class="bg"></div>
-              </div>
             </nav>
             <h1 class="m_logo"><img src="./img/logo-horizontal-white.png" alt=""></h1>
             <div class="et_box"></div>
-          </div>
+        </div>
     </header>
-    
+
     <section class="sub_list sub_page">
         <div class="sub_title">
             <h2><img src="./img/tit_line.png" alt="">계측기 차트</h2>
         </div>
         <ul class="chart_box">
-           <li>
+            <li>
                 <div class="head">
                     <h5>
-                        <p><strong>지엔_01</strong>[2023-01-12 00:00]</p>
+                        <p>
+                            <strong>커피앤티_01</strong>[2023-01-12 00:00]</p>
                         <div class="ex">
                             <img src="./img/Frame.png" alt="">
                             개별 그래프를 클릭하시면 자세한 정보를 볼 수 있습니다.
@@ -149,181 +169,929 @@
                 <div class="body">
                     <ul class="chart_list">
                         <li>
-                            <div class="chart bar1">
-                                <span class="center">
-                                    배터리
-                                    <strong>58</strong>
-                                </span>
-                            </div>
-                            <p><strong>측정범위</strong>(0~100) <strong>단위</strong>%</p>
+                            <figure class="highchart">
+                                <div id="gauge"></div>
+                                <h5>배터리</h5>
+                                <p>측정범위
+                                    <small>0~100</small>
+                                    단위
+                                    <small>%</small>
+                                </p>
+                            </figure>
                         </li>
                         <li>
-                            <div class="chart bar2">
-                                <span class="center">
-                                    온도
-                                    <strong>12</strong>
-                                </span>
-                            </div>
-                            <p><strong>측정범위</strong>(-40~80) <strong>단위</strong>&#8451;</p>
+                            <figure class="highchart">
+                                <div id="gauge2"></div>
+                                <h5>온도</h5>
+                                <p>측정범위
+                                    <small>-40~80</small>
+                                    단위
+                                    <small>&#8451;</small>
+                                </p>
+                            </figure>
                         </li>
                         <li>
-                            <div class="chart bar3">
-                                <span class="center">
-                                    수분함량
-                                    <strong>30</strong>
-                                </span>
-                            </div>
-                            <p><strong>측정범위</strong>(0~100) <strong>단위</strong>%</p>
+                            <figure class="highchart">
+                                <div id="gauge3"></div>
+                                <h5>수분함량</h5>
+                                <p>측정범위
+                                    <small>0~100</small>
+                                    단위
+                                    <small>%</small>
+                                </p>
+                            </figure>
                         </li>
                         <li>
-                            <div class="chart bar4">
-                                <span class="center">
-                                    산도
-                                    <strong>7</strong>
-                                </span>
-                            </div>
-                            <p><strong>측정범위</strong>(0~14) <strong>단위</strong>PH</p>
+                            <figure class="highchart">
+                                <div id="gauge4"></div>
+                                <h5>산도</h5>
+                                <p>측정범위
+                                    <small>0~14</small>
+                                    단위
+                                    <small>PH</small>
+                                </p>
+                            </figure>
                         </li>
                         <li>
-                            <div class="chart bar5 ">
-                                <span class="center">
-                                    전도도
-                                    <strong>3</strong>
-                                </span>
-                            </div>
-                            <p><strong>측정범위</strong>(0~20) <strong>단위</strong>ds/m</p>
+                            <figure class="highchart">
+                                <div id="gauge5"></div>
+                                <h5>전도도</h5>
+                                <p>측정범위
+                                    <small>0~20</small>
+                                    단위
+                                    <small>ds/m</small>
+                                </p>
+                            </figure>
                         </li>
                         <li>
-                            <div class="chart bar6">
-                                <span class="center">
-                                    질소
-                                    <strong>4</strong>
-                                </span>
-                            </div>
-                            <p><strong>측정범위</strong>(0~2000) <strong>단위</strong>mg/kg</p>
+                            <figure class="highchart">
+                                <div id="gauge6"></div>
+                                <h5>질소</h5>
+                                <p>측정범위
+                                    <small>0~2000</small>
+                                    단위
+                                    <small>mg/kg</small>
+                                </p>
+                            </figure>
                         </li>
                         <li>
-                            <div class="chart bar7">
-                                <span class="center">
-                                    인
-                                    <strong>5</strong>
-                                </span>
-                            </div>
-                            <p><strong>측정범위</strong>(0~2000) <strong>단위</strong>mg/kg </p>
+                            <figure class="highchart">
+                                <div id="gauge7"></div>
+                                <h5>인</h5>
+                                <p>측정범위
+                                    <small>0~2000</small>
+                                    단위
+                                    <small>mg/kg</small>
+                                </p>
+                            </figure>
                         </li>
                         <li>
-                            <div class="chart bar8">
-                                <span class="center">
-                                    칼륨
-                                    <strong>6</strong>
-                                </span>
-                            </div>
-                            <p><strong>측정범위</strong>(0~10) <strong>단위</strong>cmol/kg</p>
+                            <figure class="highchart">
+                                <div id="gauge8"></div>
+                                <h5>칼륨</h5>
+                                <p>측정범위
+                                    <small>0~10</small>
+                                    단위
+                                    <small>cmol/kg</small>
+                                </p>
+                            </figure>
                         </li>
                     </ul>
                 </div>
-           </li>
-           <li>
-                <div class="head">
-                    <h5>
-                        <p><strong>지엔_02</strong>[2023-01-12 00:00]</p>
-                        <div class="ex">
-                            <img src="./img/Frame.png" alt="">
-                            개별 그래프를 클릭하시면 자세한 정보를 볼 수 있습니다.
-                        </div>
-                    </h5>
-                    <button class="print" type="button">
-                        <img src="./img/printer.png" alt="">
-                        인쇄
-                    </button>
-                </div>
-                <div class="body">
-                    <ul class="chart_list">
-                        <li>
-                            <div class="chart bar1">
-                                <span class="center">
-                                    배터리
-                                    <strong>58</strong>
-                                </span>
-                            </div>
-                            <p><strong>측정범위</strong>(0~100) <strong>단위</strong>%</p>
-                        </li>
-                        <li>
-                            <div class="chart bar2">
-                                <span class="center">
-                                    온도
-                                    <strong>12</strong>
-                                </span>
-                            </div>
-                            <p><strong>측정범위</strong>(-40~80) <strong>단위</strong>&#8451;</p>
-                        </li>
-                        <li>
-                            <div class="chart bar3">
-                                <span class="center">
-                                    수분함량
-                                    <strong>30</strong>
-                                </span>
-                            </div>
-                            <p><strong>측정범위</strong>(0~100) <strong>단위</strong>%</p>
-                        </li>
-                        <li>
-                            <div class="chart bar4">
-                                <span class="center">
-                                    산도
-                                    <strong>7</strong>
-                                </span>
-                            </div>
-                            <p><strong>측정범위</strong>(0~14) <strong>단위</strong>PH</p>
-                        </li>
-                        <li>
-                            <div class="chart bar5 ">
-                                <span class="center">
-                                    전도도
-                                    <strong>3</strong>
-                                </span>
-                            </div>
-                            <p><strong>측정범위</strong>(0~20) <strong>단위</strong>ds/m</p>
-                        </li>
-                        <li>
-                            <div class="chart bar6">
-                                <span class="center">
-                                    질소
-                                    <strong>4</strong>
-                                </span>
-                            </div>
-                            <p><strong>측정범위</strong>(0~2000) <strong>단위</strong>mg/kg</p>
-                        </li>
-                        <li>
-                            <div class="chart bar7">
-                                <span class="center">
-                                    인
-                                    <strong>5</strong>
-                                </span>
-                            </div>
-                            <p><strong>측정범위</strong>(0~2000) <strong>단위</strong>mg/kg </p>
-                        </li>
-                        <li>
-                            <div class="chart bar8">
-                                <span class="center">
-                                    칼륨
-                                    <strong>6</strong>
-                                </span>
-                            </div>
-                            <p><strong>측정범위</strong>(0~10) <strong>단위</strong>cmol/kg</p>
-                        </li>
-                    </ul>
-                </div>
-           </li>
+            </li>
         </ul>
     </section>
     <footer class="sub_footer">
         <ul>
-          <li><strong>(주)성하</strong>  대표이사: 조정윤</li>
-          <li>사업자등록번호: 705-86-01108</li>
-          <li>대표번호: 02-596-2200</li>
-          <li>팩스번호: 02-512-5161</li>
-          <li>이메일: sungha0405@hanmail.net</li>
+            <li>
+                <strong>(주)성하</strong>
+                대표이사: 조정윤</li>
+            <li>사업자등록번호: 705-86-01108</li>
+            <li>대표번호: 02-596-2200</li>
+            <li>팩스번호: 02-512-5161</li>
+            <li>이메일: sungha0405@hanmail.net</li>
         </ul>
-      </footer>
-  </body>
+    </footer>
+    <script type="text/javascript">
+        Highcharts.chart('gauge', {
+
+            chart: {
+                type: 'gauge',
+                plotBackgroundColor: null,
+                plotBackgroundImage: null,
+                plotBorderWidth: 0,
+                plotShadow: false,
+                height: '80%'
+            },
+
+            pane: {
+                startAngle: -90,
+                endAngle: 89.9,
+                background: null,
+                center: [
+                    '50%', '75%'
+                ],
+                size: '110%'
+            },
+
+            // the value axis
+            yAxis: {
+                min: 0,
+                max: 200,
+                tickPixelInterval: 72,
+                tickPosition: 'inside',
+                tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
+                tickLength: 20,
+                tickWidth: 2,
+                minorTickInterval: null,
+                labels: {
+                    distance: 20,
+                    style: {
+                        fontSize: '14px'
+                    }
+                },
+                lineWidth: 0,
+                plotBands: [
+                    {
+                        from: 80,
+                        to: 120,
+                        color: '#55BF3B', // green
+                        thickness: 15
+                    }, {
+                        from: 40,
+                        to: 80,
+                        color: '#DDDF0D', // yellow
+                        thickness: 15
+                    }, {
+                        from: 0,
+                        to: 40,
+                        color: '#DF5353', // red
+                        thickness: 15
+                    }, {
+                        from: 120,
+                        to: 160,
+                        color: '#DDDF0D', // red
+                        thickness: 15
+                    }, {
+                        from: 160,
+                        to: 200,
+                        color: '#DF5353', // red
+                        thickness: 15
+                    }
+                ]
+            },
+
+            series: [
+                {
+                    data: [100],
+                    tooltip: {
+                        valueSuffix: '%'
+                    },
+                    dataLabels: {
+                        format: '{y} %',
+                        borderWidth: 0,
+                        color: (
+                            Highcharts.defaultOptions.title && Highcharts.defaultOptions.title.style && Highcharts.defaultOptions.title.style.color
+                        ) || '#333333',
+                        style: {
+                            fontSize: '16px'
+                        }
+                    },
+                    dial: {
+                        radius: '80%',
+                        backgroundColor: 'gray',
+                        baseWidth: 12,
+                        baseLength: '0%',
+                        rearLength: '0%'
+                    },
+                    pivot: {
+                        backgroundColor: 'gray',
+                        radius: 6
+                    }
+
+                }
+            ]
+
+        });
+        Highcharts.chart('gauge2', {
+
+            chart: {
+                type: 'gauge',
+                plotBackgroundColor: null,
+                plotBackgroundImage: null,
+                plotBorderWidth: 0,
+                plotShadow: false,
+                height: '80%'
+            },
+
+            pane: {
+                startAngle: -90,
+                endAngle: 89.9,
+                background: null,
+                center: [
+                    '50%', '75%'
+                ],
+                size: '110%'
+            },
+
+            // the value axis
+            yAxis: {
+                min: 0,
+                max: 200,
+                tickPixelInterval: 72,
+                tickPosition: 'inside',
+                tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
+                tickLength: 20,
+                tickWidth: 2,
+                minorTickInterval: null,
+                labels: {
+                    distance: 20,
+                    style: {
+                        fontSize: '14px'
+                    }
+                },
+                lineWidth: 0,
+                plotBands: [
+                    {
+                        from: 80,
+                        to: 120,
+                        color: '#55BF3B', // green
+                        thickness: 15
+                    }, {
+                        from: 40,
+                        to: 80,
+                        color: '#DDDF0D', // yellow
+                        thickness: 15
+                    }, {
+                        from: 0,
+                        to: 40,
+                        color: '#DF5353', // red
+                        thickness: 15
+                    }, {
+                        from: 120,
+                        to: 160,
+                        color: '#DDDF0D', // red
+                        thickness: 15
+                    }, {
+                        from: 160,
+                        to: 200,
+                        color: '#DF5353', // red
+                        thickness: 15
+                    }
+                ]
+            },
+
+            series: [
+                {
+                    data: [100],
+                    tooltip: {
+                        valueSuffix: '%'
+                    },
+                    dataLabels: {
+                        format: '{y} %',
+                        borderWidth: 0,
+                        color: (
+                            Highcharts.defaultOptions.title && Highcharts.defaultOptions.title.style && Highcharts.defaultOptions.title.style.color
+                        ) || '#333333',
+                        style: {
+                            fontSize: '16px'
+                        }
+                    },
+                    dial: {
+                        radius: '80%',
+                        backgroundColor: 'gray',
+                        baseWidth: 12,
+                        baseLength: '0%',
+                        rearLength: '0%'
+                    },
+                    pivot: {
+                        backgroundColor: 'gray',
+                        radius: 6
+                    }
+
+                }
+            ]
+
+        });
+        Highcharts.chart('gauge3', {
+
+            chart: {
+                type: 'gauge',
+                plotBackgroundColor: null,
+                plotBackgroundImage: null,
+                plotBorderWidth: 0,
+                plotShadow: false,
+                height: '80%'
+            },
+
+            pane: {
+                startAngle: -90,
+                endAngle: 89.9,
+                background: null,
+                center: [
+                    '50%', '75%'
+                ],
+                size: '110%'
+            },
+
+            // the value axis
+            yAxis: {
+                min: 0,
+                max: 200,
+                tickPixelInterval: 72,
+                tickPosition: 'inside',
+                tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
+                tickLength: 20,
+                tickWidth: 2,
+                minorTickInterval: null,
+                labels: {
+                    distance: 20,
+                    style: {
+                        fontSize: '14px'
+                    }
+                },
+                lineWidth: 0,
+                plotBands: [
+                    {
+                        from: 80,
+                        to: 120,
+                        color: '#55BF3B', // green
+                        thickness: 15
+                    }, {
+                        from: 40,
+                        to: 80,
+                        color: '#DDDF0D', // yellow
+                        thickness: 15
+                    }, {
+                        from: 0,
+                        to: 40,
+                        color: '#DF5353', // red
+                        thickness: 15
+                    }, {
+                        from: 120,
+                        to: 160,
+                        color: '#DDDF0D', // red
+                        thickness: 15
+                    }, {
+                        from: 160,
+                        to: 200,
+                        color: '#DF5353', // red
+                        thickness: 15
+                    }
+                ]
+            },
+
+            series: [
+                {
+                    data: [100],
+                    tooltip: {
+                        valueSuffix: '%'
+                    },
+                    dataLabels: {
+                        format: '{y} %',
+                        borderWidth: 0,
+                        color: (
+                            Highcharts.defaultOptions.title && Highcharts.defaultOptions.title.style && Highcharts.defaultOptions.title.style.color
+                        ) || '#333333',
+                        style: {
+                            fontSize: '16px'
+                        }
+                    },
+                    dial: {
+                        radius: '80%',
+                        backgroundColor: 'gray',
+                        baseWidth: 12,
+                        baseLength: '0%',
+                        rearLength: '0%'
+                    },
+                    pivot: {
+                        backgroundColor: 'gray',
+                        radius: 6
+                    }
+
+                }
+            ]
+
+        });
+        Highcharts.chart('gauge4', {
+
+            chart: {
+                type: 'gauge',
+                plotBackgroundColor: null,
+                plotBackgroundImage: null,
+                plotBorderWidth: 0,
+                plotShadow: false,
+                height: '80%'
+            },
+
+            pane: {
+                startAngle: -90,
+                endAngle: 89.9,
+                background: null,
+                center: [
+                    '50%', '75%'
+                ],
+                size: '110%'
+            },
+
+            // the value axis
+            yAxis: {
+                min: 0,
+                max: 200,
+                tickPixelInterval: 72,
+                tickPosition: 'inside',
+                tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
+                tickLength: 20,
+                tickWidth: 2,
+                minorTickInterval: null,
+                labels: {
+                    distance: 20,
+                    style: {
+                        fontSize: '14px'
+                    }
+                },
+                lineWidth: 0,
+                plotBands: [
+                    {
+                        from: 80,
+                        to: 120,
+                        color: '#55BF3B', // green
+                        thickness: 15
+                    }, {
+                        from: 40,
+                        to: 80,
+                        color: '#DDDF0D', // yellow
+                        thickness: 15
+                    }, {
+                        from: 0,
+                        to: 40,
+                        color: '#DF5353', // red
+                        thickness: 15
+                    }, {
+                        from: 120,
+                        to: 160,
+                        color: '#DDDF0D', // red
+                        thickness: 15
+                    }, {
+                        from: 160,
+                        to: 200,
+                        color: '#DF5353', // red
+                        thickness: 15
+                    }
+                ]
+            },
+
+            series: [
+                {
+                    data: [100],
+                    tooltip: {
+                        valueSuffix: '%'
+                    },
+                    dataLabels: {
+                        format: '{y} %',
+                        borderWidth: 0,
+                        color: (
+                            Highcharts.defaultOptions.title && Highcharts.defaultOptions.title.style && Highcharts.defaultOptions.title.style.color
+                        ) || '#333333',
+                        style: {
+                            fontSize: '16px'
+                        }
+                    },
+                    dial: {
+                        radius: '80%',
+                        backgroundColor: 'gray',
+                        baseWidth: 12,
+                        baseLength: '0%',
+                        rearLength: '0%'
+                    },
+                    pivot: {
+                        backgroundColor: 'gray',
+                        radius: 6
+                    }
+
+                }
+            ]
+
+        });
+        Highcharts.chart('gauge5', {
+
+            chart: {
+                type: 'gauge',
+                plotBackgroundColor: null,
+                plotBackgroundImage: null,
+                plotBorderWidth: 0,
+                plotShadow: false,
+                height: '80%'
+            },
+
+            pane: {
+                startAngle: -90,
+                endAngle: 89.9,
+                background: null,
+                center: [
+                    '50%', '75%'
+                ],
+                size: '110%'
+            },
+
+            // the value axis
+            yAxis: {
+                min: 0,
+                max: 200,
+                tickPixelInterval: 72,
+                tickPosition: 'inside',
+                tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
+                tickLength: 20,
+                tickWidth: 2,
+                minorTickInterval: null,
+                labels: {
+                    distance: 20,
+                    style: {
+                        fontSize: '14px'
+                    }
+                },
+                lineWidth: 0,
+                plotBands: [
+                    {
+                        from: 80,
+                        to: 120,
+                        color: '#55BF3B', // green
+                        thickness: 15
+                    }, {
+                        from: 40,
+                        to: 80,
+                        color: '#DDDF0D', // yellow
+                        thickness: 15
+                    }, {
+                        from: 0,
+                        to: 40,
+                        color: '#DF5353', // red
+                        thickness: 15
+                    }, {
+                        from: 120,
+                        to: 160,
+                        color: '#DDDF0D', // red
+                        thickness: 15
+                    }, {
+                        from: 160,
+                        to: 200,
+                        color: '#DF5353', // red
+                        thickness: 15
+                    }
+                ]
+            },
+
+            series: [
+                {
+                    data: [100],
+                    tooltip: {
+                        valueSuffix: '%'
+                    },
+                    dataLabels: {
+                        format: '{y} %',
+                        borderWidth: 0,
+                        color: (
+                            Highcharts.defaultOptions.title && Highcharts.defaultOptions.title.style && Highcharts.defaultOptions.title.style.color
+                        ) || '#333333',
+                        style: {
+                            fontSize: '16px'
+                        }
+                    },
+                    dial: {
+                        radius: '80%',
+                        backgroundColor: 'gray',
+                        baseWidth: 12,
+                        baseLength: '0%',
+                        rearLength: '0%'
+                    },
+                    pivot: {
+                        backgroundColor: 'gray',
+                        radius: 6
+                    }
+
+                }
+            ]
+
+        });
+        Highcharts.chart('gauge6', {
+
+            chart: {
+                type: 'gauge',
+                plotBackgroundColor: null,
+                plotBackgroundImage: null,
+                plotBorderWidth: 0,
+                plotShadow: false,
+                height: '80%'
+            },
+
+            pane: {
+                startAngle: -90,
+                endAngle: 89.9,
+                background: null,
+                center: [
+                    '50%', '75%'
+                ],
+                size: '110%'
+            },
+
+            // the value axis
+            yAxis: {
+                min: 0,
+                max: 200,
+                tickPixelInterval: 72,
+                tickPosition: 'inside',
+                tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
+                tickLength: 20,
+                tickWidth: 2,
+                minorTickInterval: null,
+                labels: {
+                    distance: 20,
+                    style: {
+                        fontSize: '14px'
+                    }
+                },
+                lineWidth: 0,
+                plotBands: [
+                    {
+                        from: 80,
+                        to: 120,
+                        color: '#55BF3B', // green
+                        thickness: 15
+                    }, {
+                        from: 40,
+                        to: 80,
+                        color: '#DDDF0D', // yellow
+                        thickness: 15
+                    }, {
+                        from: 0,
+                        to: 40,
+                        color: '#DF5353', // red
+                        thickness: 15
+                    }, {
+                        from: 120,
+                        to: 160,
+                        color: '#DDDF0D', // red
+                        thickness: 15
+                    }, {
+                        from: 160,
+                        to: 200,
+                        color: '#DF5353', // red
+                        thickness: 15
+                    }
+                ]
+            },
+
+            series: [
+                {
+                    data: [100],
+                    tooltip: {
+                        valueSuffix: '%'
+                    },
+                    dataLabels: {
+                        format: '{y} %',
+                        borderWidth: 0,
+                        color: (
+                            Highcharts.defaultOptions.title && Highcharts.defaultOptions.title.style && Highcharts.defaultOptions.title.style.color
+                        ) || '#333333',
+                        style: {
+                            fontSize: '16px'
+                        }
+                    },
+                    dial: {
+                        radius: '80%',
+                        backgroundColor: 'gray',
+                        baseWidth: 12,
+                        baseLength: '0%',
+                        rearLength: '0%'
+                    },
+                    pivot: {
+                        backgroundColor: 'gray',
+                        radius: 6
+                    }
+
+                }
+            ]
+
+        });
+        Highcharts.chart('gauge7', {
+
+            chart: {
+                type: 'gauge',
+                plotBackgroundColor: null,
+                plotBackgroundImage: null,
+                plotBorderWidth: 0,
+                plotShadow: false,
+                height: '80%'
+            },
+
+            pane: {
+                startAngle: -90,
+                endAngle: 89.9,
+                background: null,
+                center: [
+                    '50%', '75%'
+                ],
+                size: '110%'
+            },
+
+            // the value axis
+            yAxis: {
+                min: 0,
+                max: 200,
+                tickPixelInterval: 72,
+                tickPosition: 'inside',
+                tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
+                tickLength: 20,
+                tickWidth: 2,
+                minorTickInterval: null,
+                labels: {
+                    distance: 20,
+                    style: {
+                        fontSize: '14px'
+                    }
+                },
+                lineWidth: 0,
+                plotBands: [
+                    {
+                        from: 80,
+                        to: 120,
+                        color: '#55BF3B', // green
+                        thickness: 15
+                    }, {
+                        from: 40,
+                        to: 80,
+                        color: '#DDDF0D', // yellow
+                        thickness: 15
+                    }, {
+                        from: 0,
+                        to: 40,
+                        color: '#DF5353', // red
+                        thickness: 15
+                    }, {
+                        from: 120,
+                        to: 160,
+                        color: '#DDDF0D', // red
+                        thickness: 15
+                    }, {
+                        from: 160,
+                        to: 200,
+                        color: '#DF5353', // red
+                        thickness: 15
+                    }
+                ]
+            },
+
+            series: [
+                {
+                    data: [100],
+                    tooltip: {
+                        valueSuffix: '%'
+                    },
+                    dataLabels: {
+                        format: '{y} %',
+                        borderWidth: 0,
+                        color: (
+                            Highcharts.defaultOptions.title && Highcharts.defaultOptions.title.style && Highcharts.defaultOptions.title.style.color
+                        ) || '#333333',
+                        style: {
+                            fontSize: '16px'
+                        }
+                    },
+                    dial: {
+                        radius: '80%',
+                        backgroundColor: 'gray',
+                        baseWidth: 12,
+                        baseLength: '0%',
+                        rearLength: '0%'
+                    },
+                    pivot: {
+                        backgroundColor: 'gray',
+                        radius: 6
+                    }
+
+                }
+            ]
+
+        });
+        Highcharts.chart('gauge8', {
+
+            chart: {
+                type: 'gauge',
+                plotBackgroundColor: null,
+                plotBackgroundImage: null,
+                plotBorderWidth: 0,
+                plotShadow: false,
+                height: '80%'
+            },
+
+            pane: {
+                startAngle: -90,
+                endAngle: 89.9,
+                background: null,
+                center: [
+                    '50%', '75%'
+                ],
+                size: '110%'
+            },
+
+            // the value axis
+            yAxis: {
+                min: 0,
+                max: 200,
+                tickPixelInterval: 72,
+                tickPosition: 'inside',
+                tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
+                tickLength: 20,
+                tickWidth: 2,
+                minorTickInterval: null,
+                labels: {
+                    distance: 20,
+                    style: {
+                        fontSize: '14px'
+                    }
+                },
+                lineWidth: 0,
+                plotBands: [
+                    {
+                        from: 80,
+                        to: 120,
+                        color: '#55BF3B', // green
+                        thickness: 15
+                    }, {
+                        from: 40,
+                        to: 80,
+                        color: '#DDDF0D', // yellow
+                        thickness: 15
+                    }, {
+                        from: 0,
+                        to: 40,
+                        color: '#DF5353', // red
+                        thickness: 15
+                    }, {
+                        from: 120,
+                        to: 160,
+                        color: '#DDDF0D', // red
+                        thickness: 15
+                    }, {
+                        from: 160,
+                        to: 200,
+                        color: '#DF5353', // red
+                        thickness: 15
+                    }
+                ]
+            },
+
+            series: [
+                {
+                    data: [100],
+                    tooltip: {
+                        valueSuffix: '%'
+                    },
+                    dataLabels: {
+                        format: '{y} %',
+                        borderWidth: 0,
+                        color: (
+                            Highcharts.defaultOptions.title && Highcharts.defaultOptions.title.style && Highcharts.defaultOptions.title.style.color
+                        ) || '#333333',
+                        style: {
+                            fontSize: '16px'
+                        }
+                    },
+                    dial: {
+                        radius: '80%',
+                        backgroundColor: 'gray',
+                        baseWidth: 12,
+                        baseLength: '0%',
+                        rearLength: '0%'
+                    },
+                    pivot: {
+                        backgroundColor: 'gray',
+                        radius: 6
+                    }
+
+                }
+            ]
+
+        });
+
+        // Add some life
+        setInterval(() => {
+            const chart = Highcharts.charts[0];
+            if (chart && !chart.renderer.forExport) {
+                const point = chart
+                        .series[0]
+                        .points[0],
+                    inc = Math.round((Math.random() - 0.5) * 20);
+
+                let newVal = point.y + inc;
+                if (newVal < 0 || newVal > 200) {
+                    newVal = point.y - inc;
+                }
+
+                point.update(newVal);
+            }
+
+        }, 3000);
+    </script>
+</body>
 </html>

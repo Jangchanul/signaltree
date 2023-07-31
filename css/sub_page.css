@@ -499,9 +499,9 @@
     box-sizing: border-box;
     height: 200px;
 }
-.reg_agency{
+.reg_container .reg_agency{
     display: block;
-    width: 60% !important;
+    width: 60%;
     margin: 0 auto;
 }
 .reg_agency .flex{
@@ -615,9 +615,31 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
     white-space: nowrap;
     padding: 8px 12px;
 }
-
-
-
+.highchart .highcharts-title{
+    display: none;
+}
+.highchart .highcharts-no-tooltip{
+    display: none;
+}
+.highchart .highcharts-data-labels{
+    display: none;
+}
+.highchart .highcharts-credits{
+    display: none;
+}
+.highchart h5{
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+.highchart p{
+    font-weight: bold;
+}
+.highchart p small{
+    font-weight: 400;
+    color: #a6a6b9;
+}
 /* ------------------------------------------------------------------------ */
 
 
@@ -790,5 +812,36 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
     .onoff_box input+label{
         font-size: 4.444vw;
         margin-left: 2.222vw;
+    }
+    .reg_container .reg_agency{
+        width: 100%;
+    }
+    .reg_agency th{
+        font-size: 3.889vw;
+    }
+    .reg_agency button{
+        font-size: 3.889vw;
+        margin-left: 4.444vw;
+        padding: 2.778vw;
+    }
+    .reg_container td input{
+        padding: 2.222vw 2.778vw;
+    }
+    .reg_container .flex span{
+        font-size: 5vw;
+    }
+    .highchart h5{
+        text-align: center;
+        font-weight: bold;
+        font-size: 5vw;
+        margin-bottom: 2.222vw;
+    }
+    .highchart p{
+        font-weight: bold;
+        font-size: 3.333vw;
+    }
+    .highchart p small{
+        font-weight: 400;
+        color: #a6a6b9;
     }
 }
