@@ -46,8 +46,9 @@
             <li class="nav_set">
             <figure><img src="img/setting.png" alt="" /></figure>
             <ul class="dep2">
+                <li onclick="location.href='measure_reg.html'">계측기등록</li>
                 <li onclick="location.href='agency_reg.html'">기관등록</li>
-                <li>현장등록</li>
+                <li onclick="location.href='site_reg.html'">현장등록</li>
                 <li onclick="location.href='manager_reg.html'">하위관리자 등록</li>
                 <li onclick="location.href='measure_set.html'">계측기 설정</li>
                 <li onclick="location.href='water_set.html'">관수조건 설정</li>
@@ -100,7 +101,7 @@
                     <ul class="dep2">
                       <li><a href="measure_reg.html">계측기등록</a></li>
                       <li><a href="agency_reg.html">기관등록</a></li>
-                      <li><a href="#">현장등록</a></li>
+                      <li><a href="site_reg.html">현장등록</a></li>
                       <li><a href="manager_reg.html">하위관리자 등록</a></li>
                       <li><a href="measure_set.html">계측기 설정</a></li>
                       <li><a href="water_set.html">관수조건 설정</a></li>
@@ -327,49 +328,55 @@
             <div>
               <span class="dot"></span><strong>배터리</strong>(0~100%)
             </div>
-            <p>잔여 배터리 상태</p>
+            <p>현재 잔여 배터리 상태입니다.</p>
           </li>
           <li>
             <div>
               <span class="dot"></span><strong>통신</strong>
             </div>
-            <p>24시간 데이터 미 수신시 응급상태 발생</p>
+            <p>측정 정보 수신 상태입니다.</p>
           </li>
           <li>
             <div>
-              <span class="dot"></span><strong>온도</strong>(-40~80)&#8451;
+              <span class="dot"></span><strong>온도</strong>(0~60&#8451;)
             </div>
-            <p>토양 내 온도 측정하며, 뿌리는 25&#8451; 전후에서 활동이 가장 활발</p>
+            <p>대부분의 일반적인 작물은 약 18&#8451; ~ 27&#8451; 정도의 온도에서 잘 자랍니다.</p>
           </li>
           <li>
             <div>
               <span class="dot"></span><strong>수분함량</strong>(0~100%)
             </div>
-            <p>토양의 수분 보유량을 측정하는 것으로 양토 기준으로 11~18%가 적정</p>
+            <p>너무 많은 습도는 뿌리 부패로 이어질 수 있으며, 습도가 너무 낮으면 식물이 죽을 수 있습니다.</p>
           </li>
           <li>
             <div>
-              <span class="dot"></span><strong>산도</strong>(0~14PH)
+              <span class="dot"></span><strong>산도</strong>(3~9pH)
             </div>
-            <p>토양의 산성, 염기성을 측정하는 것으로 5.5~6.5PH가 적정</p>
+            <p>식물의 영양분 흡수에 영향을 미칩니다.</p>
           </li>
           <li>
             <div>
-              <span class="dot"></span><strong>질소</strong>(0~2000mg/kg)
+              <span class="dot"></span><strong>질소</strong>(1~2,999mg/kg)
             </div>
-            <p>광합성에 관여하는 엽록소의 구성요소로 식물성장에 중요한 역할을 하며, 100~300mg/kg가 적정</p>
+            <p>잎의 생장과 색상을 촉진하며, 일반적으로 푸른색 식물에 필요합니다.</p>
           </li>
           <li>
             <div>
-              <span class="dot"></span><strong>인</strong>(0~2000mg/kg)
+              <span class="dot"></span><strong>인</strong>(1~2,999mg/kg)
             </div>
-            <p>가지와 잎의 성장에 중요한 역할을 하며,50~200mg/kg가 적정</p>
+            <p>뿌리와 꽃의 발달을 촉진하며, 씨앗의 형성과 성장에 중요합니다.</p>
           </li>
           <li>
             <div>
-              <span class="dot"></span><strong>칼륨</strong>(0~10cmol/kg)
+              <span class="dot"></span><strong>칼륨</strong>(1~2,999mg/kg)
             </div>
-            <p>뿌리와 줄기 성장에 중요한 역할을 하며,0.25~0.5cmol/kg가 적정</p>
+            <p>전반적인 식물 생장과 내성을 촉진합니다.</p>
+          </li>
+          <li>
+            <div>
+              <span class="dot"></span><strong>전도도</strong>(0~2dS/m)
+            </div>
+            <p>토양의 염분 농도를 측정하는데 사용되며, 물의 전기 전도도에 따라 표시됩니다.</p>
           </li>
         </ul>
         <button type="button" class="bt_ok">확인</button>

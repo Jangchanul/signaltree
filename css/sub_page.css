@@ -543,7 +543,8 @@
     border: 1px solid #c4cbd6;
     background-color: #f8f9fb;
     padding: 8px 12px;
-    width: 10%;
+    width: 100px;
+    text-align: center;
 }
 input[type="date"].after::-webkit-calendar-picker-indicator{
     margin-left: 0px;
@@ -559,6 +560,7 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
     margin: 0 auto 60px;
     padding: 8px 20px;
     justify-content: space-evenly;
+    box-sizing: border-box;
 }
 .top_radio>p{
     background-color: #188764;
@@ -639,6 +641,94 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
 .highchart p small{
     font-weight: 400;
     color: #a6a6b9;
+}
+.water_set{
+    width: 60%;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.water_set>li{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    border: 1px solid #a2cdc1;
+    padding: 10px;
+    box-sizing: border-box;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+.water_set>li:last-child{
+    margin-bottom: 0;
+}
+.water_set>li>button{
+    width: 40px;
+    height: 40px;
+    background-color: #188764;
+    color: #fff;
+    display: block;
+    font-size: 18px;
+}
+.water_set>li select{
+    border: 1px solid #c4cbd6;
+    background-color: #f8f9fb;
+    padding: 8px 12px;
+    box-sizing: border-box;
+    width: 100px;
+    text-align: center;
+}
+.site_reg th{
+    word-break: keep-all;
+    vertical-align: middle;
+    width: 10%;
+}
+.filebox{
+    display: flex;
+    border: 1px solid #c4cbd6;
+    border-radius: 4px;
+    padding: 8px;
+}
+.filebox input{
+    height: 38px;
+}
+.filebox input[type="file"] {
+    position: absolute;
+    width: 0;
+    height: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+}
+.filebox label {
+    display: inline-block;
+    padding: 0px 10px;
+    color: #fff;
+    background-color: #41ad8d;
+    cursor: pointer;
+    margin-left: 10px;
+    box-sizing: border-box;
+    word-break: keep-all;
+    font-weight: bold;
+    height: 38px;
+    line-height: 38px;
+}
+.bt_box2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.bt_box2 button{
+    border: 1px solid #188764;
+    background-color: #188764;
+    color: #fff;
+    border-radius: 2px;
+    font-size: 16px;
+    padding: 12px 24px;
+    font-weight: bold;
+}
+.bt_box2 .bt_cancel{
+    background-color: #fff;
+    color: #188764;
 }
 /* ------------------------------------------------------------------------ */
 
@@ -793,9 +883,9 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
         width: 100%;
     }
     .reg_container th{
-        font-size: 4.444vw;
+        font-size: 3.889vw;
         padding: 2.222vw 3.333vw;
-        white-space: nowrap;
+        word-break: keep-all;
     }
     .bt_box button{
         padding: 2.222vw 4.444vw;
@@ -825,10 +915,11 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
         padding: 2.778vw;
     }
     .reg_container td input{
-        padding: 2.222vw 2.778vw;
+        padding: 2.222vw;
     }
     .reg_container .flex span{
         font-size: 5vw;
+        padding: 0 1.111vw;
     }
     .highchart h5{
         text-align: center;
@@ -843,5 +934,22 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
     .highchart p small{
         font-weight: 400;
         color: #a6a6b9;
+    }
+    .reg_container table{
+        table-layout: fixed;
+    }
+    .reg_container td{
+        padding: 2.222vw;
+    }
+    .top_radio{
+        width: 100%;
+        margin: 0 auto 5.667vw;
+        padding: 2.222vw 5.667vw;
+    }
+    .water_set{
+        width: 100%;
+    }
+    .water_set>li{
+        padding: 2.222vw;
     }
 }

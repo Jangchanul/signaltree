@@ -1,297 +1,320 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>시그널트리</title>
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/nav.css" />
-    <link rel="stylesheet" href="./css/sub_page.css" />
-    <script src="./js/script.js"></script>
-    
-    <script src="https://kit.fontawesome.com/512286d077.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <header>
-        <nav class="pc_nav">
-          <h1 class="logo" onclick="location.href='main.html'"><img src="img/logo2.png" alt="" /></h1>
-          <ul class="dep1">
-              <li class="nav_site">
-                <figure><img src="img/site.png" alt="" /></figure>
-                <ul class="dep2">
-                    <li onclick="location.href='main.html'">현장정보</li>
-                </ul>
-              </li>
-              <li class="nav_data">
-                <figure><img src="img/data.png" alt="" /></figure>
-                <ul class="dep2">
-                    <li onclick="location.href='data_list.html'">전체현장</li>
-                    <li onclick="location.href='data_chart.html'">전체데이터</li>
-                    <li onclick="location.href='data_detail.html'">상세 데이터</li>
-                </ul>
-              </li>
-              <li class="nav_sensor">
-                <figure><img src="img/sensor.png" alt="" /></figure>
-                <ul class="dep2">
-                    <li onclick="location.href='measure_reg.html'">계측기 등록</li>
-                </ul>
-              </li>
-              <li class="nav_irr">
-                <figure><img src="img/watering.png" alt="" /></figure>
-                <ul class="dep2">
-                    <li onclick="location.href='water_list.html'">관수정보데이터</li>
-                </ul>
-              </li>
-              <li class="nav_set">
-              <figure><img src="img/setting.png" alt="" /></figure>
-              <ul class="dep2">
-                  <li onclick="location.href='agency_reg.html'">기관등록</li>
-                  <li>현장등록</li>
-                  <li onclick="location.href='manager_reg.html'">하위관리자 등록</li>
-                  <li onclick="location.href='measure_set.html'">계측기 설정</li>
-                  <li onclick="location.href='water_set.html'">관수조건 설정</li>
-              </ul>
-              </li>
-          </ul>
-        </nav>
-        <!-- ------------------------------------------------------------ -->
-        <div class="m_head">
-          <nav role="navigation">
-            <div id="menuToggle">
-              <input type="checkbox" />
-              <span class="a"></span>
-              <span class="b"></span>
-              <span class="c"></span>
-              <div class="m_menu">
-                <div>
-                  <div class="head">
-                    <button class="logout" type="button" onclick="location.href='index.html'">로그아웃</button>
-                  </div>
-                  <ul class="mid">
-                    <li>
-                      <div>
-                        현장
-                        <img src="./img/arrow_down2.png" alt="">
-                      </div>
-                      <ul class="dep2">
-                        <li onclick="location.href='main.html'">현장정보</li>
-                      </ul>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>시그널트리</title>
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin="crossorigin"/>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+            integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"/>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"/>
+        <link rel="stylesheet" href="./css/style.css"/>
+        <link rel="stylesheet" href="./css/nav.css"/>
+        <link rel="stylesheet" href="./css/sub_page.css"/>
+        <script src="./js/script.js"></script>
+
+        <script src="https://kit.fontawesome.com/512286d077.js" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="pc_nav">
+                <h1 class="logo" onclick="location.href='main.html'"><img src="img/logo2.png" alt=""/></h1>
+                <ul class="dep1">
+                    <li class="nav_site">
+                        <figure><img src="img/site.png" alt=""/></figure>
+                        <ul class="dep2">
+                            <li onclick="location.href='main.html'">현장정보</li>
+                        </ul>
                     </li>
-                    <li>
-                      <div>
-                        데이터
-                        <img src="./img/arrow_down2.png" alt="">
-                      </div>
-                      <ul class="dep2">
-                        <li onclick="location.href='data_list.html'">계측기 리스트</li>
-                        <li onclick="location.href='data_chart.html'">계측기 차트</li>
-                        <li onclick="location.href='data_detail.html'">계측기 상세 데이터</li>
-                      </ul>
+                    <li class="nav_data">
+                        <figure><img src="img/data.png" alt=""/></figure>
+                        <ul class="dep2">
+                            <li onclick="location.href='data_list.html'">전체현장</li>
+                            <li onclick="location.href='data_chart.html'">전체데이터</li>
+                            <li onclick="location.href='data_detail.html'">상세 데이터</li>
+                        </ul>
                     </li>
-                    <li>
-                      <div>관수<img src="./img/arrow_down2.png" alt=""></div>
-                      <ul class="dep2">
-                        <li><a href="water_list.html">관수정보</a></li>
-                      </ul>
+                    <li class="nav_sensor">
+                        <figure><img src="img/sensor.png" alt=""/></figure>
+                        <ul class="dep2">
+                            <li onclick="location.href='measure_reg.html'">계측기 등록</li>
+                        </ul>
                     </li>
-                    <li>
-                      <div>설정<img src="./img/arrow_down2.png" alt=""></div>
-                      <ul class="dep2">
-                        <li><a href="measure_reg.html">계측기등록</a></li>
-                        <li><a href="agency_reg.html">기관등록</a></li>
-                        <li><a href="#">현장등록</a></li>
-                        <li><a href="manager_reg.html">하위관리자 등록</a></li>
-                        <li><a href="measure_set.html">계측기 설정</a></li>
-                        <li><a href="water_set.html">관수조건 설정</a></li>
-                      </ul>
+                    <li class="nav_irr">
+                        <figure><img src="img/watering.png" alt=""/></figure>
+                        <ul class="dep2">
+                            <li onclick="location.href='water_list.html'">관수정보데이터</li>
+                        </ul>
                     </li>
-                  </ul>
-                </div>
-                <div class="bot">
-                  <h5>(주)성하</h5>
-                  <ul>
-                    <li>대표이사 : 조정윤</li>
-                    <li>사업자등록번호 : 705-86-01108</li>
-                    <li>대표번호 : 02-596-2200</li>
-                    <li>팩스번호 : 02-512-5161</li>
-                    <li>이메일: sungha0405@hanmail.net</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="bg"></div>
+                    <li class="nav_set">
+                        <figure><img src="img/setting.png" alt=""/></figure>
+                        <ul class="dep2">
+                            <li onclick="location.href='agency_reg.html'">기관등록</li>
+                            <li onclick="location.href='site_reg.html'">현장등록</li>
+                            <li onclick="location.href='manager_reg.html'">하위관리자 등록</li>
+                            <li onclick="location.href='measure_set.html'">계측기 설정</li>
+                            <li onclick="location.href='water_set.html'">관수조건 설정</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <!-- ------------------------------------------------------------ -->
+            <div class="m_head">
+                <nav role="navigation">
+                    <div id="menuToggle">
+                        <input type="checkbox"/>
+                        <span class="a"></span>
+                        <span class="b"></span>
+                        <span class="c"></span>
+                        <div class="m_menu">
+                            <div>
+                                <div class="head">
+                                    <button class="logout" type="button" onclick="location.href='index.html'">로그아웃</button>
+                                </div>
+                                <ul class="mid">
+                                    <li>
+                                        <div>
+                                            현장
+                                            <img src="./img/arrow_down2.png" alt="">
+                                        </div>
+                                        <ul class="dep2">
+                                            <li onclick="location.href='main.html'">현장정보</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            데이터
+                                            <img src="./img/arrow_down2.png" alt="">
+                                        </div>
+                                        <ul class="dep2">
+                                            <li onclick="location.href='data_list.html'">계측기 리스트</li>
+                                            <li onclick="location.href='data_chart.html'">계측기 차트</li>
+                                            <li onclick="location.href='data_detail.html'">계측기 상세 데이터</li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div>관수<img src="./img/arrow_down2.png" alt=""></div>
+                                        <ul class="dep2">
+                                            <li>
+                                                <a href="water_list.html">관수정보</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div>설정<img src="./img/arrow_down2.png" alt=""></div>
+                                        <ul class="dep2">
+                                            <li>
+                                                <a href="measure_reg.html">계측기등록</a>
+                                            </li>
+                                            <li>
+                                                <a href="agency_reg.html">기관등록</a>
+                                            </li>
+                                            <li>
+                                                <a href="site_reg.html">현장등록</a>
+                                            </li>
+                                            <li>
+                                                <a href="manager_reg.html">하위관리자 등록</a>
+                                            </li>
+                                            <li>
+                                                <a href="measure_set.html">계측기 설정</a>
+                                            </li>
+                                            <li>
+                                                <a href="water_set.html">관수조건 설정</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="bot">
+                                <h5>(주)성하</h5>
+                                <ul>
+                                    <li>대표이사 : 조정윤</li>
+                                    <li>사업자등록번호 : 705-86-01108</li>
+                                    <li>대표번호 : 02-596-2200</li>
+                                    <li>팩스번호 : 02-512-5161</li>
+                                    <li>이메일: sungha0405@hanmail.net</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="bg"></div>
+                    </div>
+                </nav>
+                <h1 class="m_logo"><img src="./img/logo-horizontal-white.png" alt=""></h1>
+                <div class="et_box"></div>
             </div>
-          </nav>
-          <h1 class="m_logo"><img src="./img/logo-horizontal-white.png" alt=""></h1>
-          <div class="et_box"></div>
-        </div>
-      </header>
-    
-    <section class="sub_list sub_page">
-        <div class="sub_title">
-            <h2><img src="./img/tit_line.png" alt="">계측기 설정</h2>
-        </div>
-        <div class="search_box">
+        </header>
+
+        <section class="sub_list sub_page">
+            <div class="sub_title">
+                <h2><img src="./img/tit_line.png" alt="">계측기 설정</h2>
+            </div>
+            <div class="search_box">
+                <ul>
+                    <li>
+                        <strong>기관명</strong>
+                        <select>
+                            <option value="">전체</option>
+                        </select>
+                    </li>
+                    <li>
+                        <strong>현장명</strong>
+                        <select>
+                            <option value="">전체</option>
+                        </select>
+                    </li>
+                    <li>
+                        <strong>계측기</strong>
+                        <select>
+                            <option value="">전체</option>
+                        </select>
+                    </li>
+                    <li class="m_bt">
+                        <button class="bt_ser" type="button">
+                            <img src="./img/search.png" alt="">
+                            검색
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div class="list_box">
+                <div class="top_radio">
+                    <p>LED</p>
+                    <div>
+                        <input type="radio" name="led" id="ra1" checked="checked">
+                        <label for="ra1">ON</label>
+                        <input type="radio" name="led" id="ra2">
+                        <label for="ra2">OFF</label>
+                    </div>
+                </div>
+                <table id="measure">
+                    <thead>
+                        <tr>
+                            <th>계측시간</th>
+                            <th>관수</th>
+                            <th>기상정보</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>05 : 00</td>
+                            <td>
+                                <div class="onoff_box">
+                                    <input type="radio" name="aa1" id="a1">
+                                    <label for="a1">ON</label>
+                                    <input type="radio" name="aa1" id="a2" checked="checked">
+                                    <label for="a2">OFF</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="onoff_box">
+                                    <input type="radio" name="bb1" id="a3" checked="checked">
+                                    <label for="a3">ON</label>
+                                    <input type="radio" name="bb1" id="a4">
+                                    <label for="a4">OFF</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>06 : 00</td>
+                            <td>
+                                <div class="onoff_box">
+                                    <input type="radio" name="aa2" id="a5">
+                                    <label for="a5">ON</label>
+                                    <input type="radio" name="aa2" id="a6" checked="checked">
+                                    <label for="a6">OFF</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="onoff_box">
+                                    <input type="radio" name="bb2" id="a7" checked="checked">
+                                    <label for="a7">ON</label>
+                                    <input type="radio" name="bb2" id="a8">
+                                    <label for="a8">OFF</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>09 : 00</td>
+                            <td>
+                                <div class="onoff_box">
+                                    <input type="radio" name="aa3" id="a9">
+                                    <label for="a9">ON</label>
+                                    <input type="radio" name="aa3" id="a10" checked="checked">
+                                    <label for="a10">OFF</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="onoff_box">
+                                    <input type="radio" name="bb3" id="a11" checked="checked">
+                                    <label for="a11">ON</label>
+                                    <input type="radio" name="bb3" id="a12">
+                                    <label for="a12">OFF</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>13 : 00</td>
+                            <td>
+                                <div class="onoff_box">
+                                    <input type="radio" name="aa4" id="a13">
+                                    <label for="a13">ON</label>
+                                    <input type="radio" name="aa4" id="a14" checked="checked">
+                                    <label for="a14">OFF</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="onoff_box">
+                                    <input type="radio" name="bb4" id="a15" checked="checked">
+                                    <label for="a15">ON</label>
+                                    <input type="radio" name="bb4" id="a16">
+                                    <label for="a16">OFF</label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>16 : 00</td>
+                            <td>
+                                <div class="onoff_box">
+                                    <input type="radio" name="aa5" id="a17">
+                                    <label for="a17">ON</label>
+                                    <input type="radio" name="aa5" id="a18" checked="checked">
+                                    <label for="a18">OFF</label>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="onoff_box">
+                                    <input type="radio" name="bb5" id="a19" checked="checked">
+                                    <label for="a19">ON</label>
+                                    <input type="radio" name="bb5" id="a20">
+                                    <label for="a20">OFF</label>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <footer class="sub_footer">
             <ul>
                 <li>
-                    <strong>기관명</strong>
-                    <select>
-                        <option value="">전체</option>
-                    </select>
-                </li>
-                <li>
-                    <strong>현장명</strong>
-                    <select>
-                        <option value="">전체</option>
-                    </select>
-                </li>
-                <li>
-                    <strong>계측기</strong>
-                    <select>
-                        <option value="">전체</option>
-                    </select>
-                </li>
-                <li class="m_bt">
-                  <button class="bt_ser" type="button">
-                    <img src="./img/search.png" alt="">
-                    검색
-                </button>
-                </li>
+                    <strong>(주)성하</strong>
+                    대표이사: 조정윤</li>
+                <li>사업자등록번호: 705-86-01108</li>
+                <li>대표번호: 02-596-2200</li>
+                <li>팩스번호: 02-512-5161</li>
+                <li>이메일: sungha0405@hanmail.net</li>
             </ul>
-        </div>
-        <div class="list_box">
-            <div class="top_radio">
-              <p>LED</p>
-              <div>
-                <input type="radio" name="led" id="ra1" checked>
-                <label for="ra1">ON</label>
-                <input type="radio" name="led" id="ra2">
-                <label for="ra2">OFF</label>
-              </div>
-            </div>
-            <table id="measure">
-                <thead>
-                    <tr>
-                        <th>계측시간</th>
-                        <th>관수</th>
-                        <th>기상정보</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>05 : 00</td>
-                        <td>
-                          <div class="onoff_box">
-                            <input type="radio" name="aa1" id="a1">
-                            <label for="a1">ON</label>
-                            <input type="radio" name="aa1" id="a2" checked>
-                            <label for="a2">OFF</label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="onoff_box">
-                            <input type="radio" name="bb1" id="a3" checked>
-                            <label for="a3">ON</label>
-                            <input type="radio" name="bb1" id="a4">
-                            <label for="a4">OFF</label>
-                          </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>06 : 00</td>
-                        <td>
-                          <div class="onoff_box">
-                            <input type="radio" name="aa2" id="a5">
-                            <label for="a5">ON</label>
-                            <input type="radio" name="aa2" id="a6" checked>
-                            <label for="a6">OFF</label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="onoff_box">
-                            <input type="radio" name="bb2" id="a7" checked>
-                            <label for="a7">ON</label>
-                            <input type="radio" name="bb2" id="a8">
-                            <label for="a8">OFF</label>
-                          </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>09 : 00</td>
-                        <td>
-                          <div class="onoff_box">
-                            <input type="radio" name="aa3" id="a9">
-                            <label for="a9">ON</label>
-                            <input type="radio" name="aa3" id="a10" checked>
-                            <label for="a10">OFF</label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="onoff_box">
-                            <input type="radio" name="bb3" id="a11" checked>
-                            <label for="a11">ON</label>
-                            <input type="radio" name="bb3" id="a12">
-                            <label for="a12">OFF</label>
-                          </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>13 : 00</td>
-                        <td>
-                          <div class="onoff_box">
-                            <input type="radio" name="aa4" id="a13">
-                            <label for="a13">ON</label>
-                            <input type="radio" name="aa4" id="a14" checked>
-                            <label for="a14">OFF</label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="onoff_box">
-                            <input type="radio" name="bb4" id="a15" checked>
-                            <label for="a15">ON</label>
-                            <input type="radio" name="bb4" id="a16">
-                            <label for="a16">OFF</label>
-                          </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>16 : 00</td>
-                        <td>
-                          <div class="onoff_box">
-                            <input type="radio" name="aa5" id="a17">
-                            <label for="a17">ON</label>
-                            <input type="radio" name="aa5" id="a18" checked>
-                            <label for="a18">OFF</label>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="onoff_box">
-                            <input type="radio" name="bb5" id="a19" checked>
-                            <label for="a19">ON</label>
-                            <input type="radio" name="bb5" id="a20">
-                            <label for="a20">OFF</label>
-                          </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-    <footer class="sub_footer">
-        <ul>
-          <li><strong>(주)성하</strong>  대표이사: 조정윤</li>
-          <li>사업자등록번호: 705-86-01108</li>
-          <li>대표번호: 02-596-2200</li>
-          <li>팩스번호: 02-512-5161</li>
-          <li>이메일: sungha0405@hanmail.net</li>
-        </ul>
-      </footer>
-  </body>
+        </footer>
+    </body>
 </html>

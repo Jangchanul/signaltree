@@ -1,133 +1,140 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>시그널트리</title>
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/nav.css" />
-    <link rel="stylesheet" href="./css/sub_page.css" />
-    <script src="./js/script.js"></script>
-    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-    <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
-  </head>
-  <body>
-    <header>
-        <nav class="pc_nav">
-            <h1 class="logo" onclick="location.href='main.html'"><img src="img/logo2.png" alt="" /></h1>
-            <ul class="dep1">
-                <li class="nav_site">
-                <figure><img src="img/site.png" alt="" /></figure>
-                <ul class="dep2">
-                    <li onclick="location.href='main.html'">현장정보</li>
-                </ul>
-                </li>
-                <li class="nav_data">
-                <figure><img src="img/data.png" alt="" /></figure>
-                <ul class="dep2">
-                    <li onclick="location.href='data_list.html'">계측기 리스트</li>
-                    <li onclick="location.href='data_chart.html'">계측기 차트</li>
-                    <li onclick="location.href='data_detail.html'">계측기 상세 데이터</li>
-                </ul>
-                </li>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>시그널트리</title>
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin="crossorigin"/>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+            rel="stylesheet"/>
+        <link rel="stylesheet" href="./css/style.css"/>
+        <link rel="stylesheet" href="./css/nav.css"/>
+        <link rel="stylesheet" href="./css/sub_page.css"/>
+        <script src="./js/script.js"></script>
+        <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+        <script
+            type="text/javascript"
+            src="https://fastly.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav class="pc_nav">
+                <h1 class="logo" onclick="location.href='main.html'"><img src="img/logo2.png" alt=""/></h1>
+                <ul class="dep1">
+                    <li class="nav_site">
+                        <figure><img src="img/site.png" alt=""/></figure>
+                        <ul class="dep2">
+                            <li onclick="location.href='main.html'">현장정보</li>
+                        </ul>
+                    </li>
+                    <li class="nav_data">
+                        <figure><img src="img/data.png" alt=""/></figure>
+                        <ul class="dep2">
+                            <li onclick="location.href='data_list.html'">계측기 리스트</li>
+                            <li onclick="location.href='data_chart.html'">계측기 차트</li>
+                            <li onclick="location.href='data_detail.html'">계측기 상세 데이터</li>
+                        </ul>
+                    </li>
                 </li>
                 <li class="nav_irr">
-                <figure><img src="img/watering.png" alt="" /></figure>
-                <ul class="dep2">
-                    <li onclick="location.href='water_list.html'">관수정보</li>
-                </ul>
+                    <figure><img src="img/watering.png" alt=""/></figure>
+                    <ul class="dep2">
+                        <li onclick="location.href='water_list.html'">관수정보</li>
+                    </ul>
                 </li>
                 <li class="nav_set">
-                <figure><img src="img/setting.png" alt="" /></figure>
-                <ul class="dep2">
-                    <li onclick="location.href='measure_reg.html'">계측기등록</li>
-                    <li onclick="location.href='agency_reg.html'">기관등록</li>
-                    <li>현장등록</li>
-                    <li onclick="location.href='manager_reg.html'">하위관리자 등록</li>
-                    <li onclick="location.href='measure_set.html'">계측기 설정</li>
-                    <li onclick="location.href='water_set.html'">관수조건 설정</li>
-                </ul>
+                    <figure><img src="img/setting.png" alt=""/></figure>
+                    <ul class="dep2">
+                        <li onclick="location.href='measure_reg.html'">계측기등록</li>
+                        <li onclick="location.href='agency_reg.html'">기관등록</li>
+                        <li onclick="location.href='site_reg.html'">현장등록</li>
+                        <li onclick="location.href='manager_reg.html'">하위관리자 등록</li>
+                        <li onclick="location.href='measure_set.html'">계측기 설정</li>
+                        <li onclick="location.href='water_set.html'">관수조건 설정</li>
+                    </ul>
                 </li>
             </ul>
         </nav>
 
         <div class="m_head">
             <nav role="navigation">
-              <div id="menuToggle">
-                <input type="checkbox" />
-                <span class="a"></span>
-                <span class="b"></span>
-                <span class="c"></span>
-                <div class="m_menu">
-                  <div>
-                    <div class="head">
-                      <button class="logout" type="button" onclick="location.href='index.html'">로그아웃</button>
+                <div id="menuToggle">
+                    <input type="checkbox"/>
+                    <span class="a"></span>
+                    <span class="b"></span>
+                    <span class="c"></span>
+                    <div class="m_menu">
+                        <div>
+                            <div class="head">
+                                <button class="logout" type="button" onclick="location.href='index.html'">로그아웃</button>
+                            </div>
+                            <ul class="mid">
+                                <li>
+                                    <div>
+                                        현장
+                                        <img src="./img/arrow_down2.png" alt="">
+                                    </div>
+                                    <ul class="dep2">
+                                        <li onclick="location.href='main.html'">현장정보</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>
+                                        데이터
+                                        <img src="./img/arrow_down2.png" alt="">
+                                    </div>
+                                    <ul class="dep2">
+                                        <li onclick="location.href='data_list.html'">계측기 리스트</li>
+                                        <li onclick="location.href='data_chart.html'">계측기 차트</li>
+                                        <li onclick="location.href='data_detail.html'">계측기 상세 데이터</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>관수<img src="./img/arrow_down2.png" alt=""></div>
+                                    <ul class="dep2">
+                                        <li>
+                                            <a href="water_list.html">관수정보</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <div>설정<img src="./img/arrow_down2.png" alt=""></div>
+                                    <ul class="dep2">
+                                        <li onclick="location.href='measure_reg.html'">계측기등록</li>
+                                        <li onclick="location.href='agency_reg.html'">기관등록</li>
+                                        <li onclick="location.href='site_reg.html'">현장등록</li>
+                                        <li onclick="location.href='manager_reg.html'">하위관리자 등록</li>
+                                        <li onclick="location.href='measure_set.html'">계측기 설정</li>
+                                        <li onclick="location.href='water_set.html'">관수조건 설정</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bot">
+                            <h5>(주)성하</h5>
+                            <ul>
+                                <li>대표이사 : 조정윤</li>
+                                <li>사업자등록번호 : 705-86-01108</li>
+                                <li>대표번호 : 02-596-2200</li>
+                                <li>팩스번호 : 02-512-5161</li>
+                                <li>이메일: sungha0405@hanmail.net</li>
+                            </ul>
+                        </div>
                     </div>
-                    <ul class="mid">
-                      <li>
-                        <div>
-                          현장
-                          <img src="./img/arrow_down2.png" alt="">
-                        </div>
-                        <ul class="dep2">
-                          <li onclick="location.href='main.html'">현장정보</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <div>
-                          데이터
-                          <img src="./img/arrow_down2.png" alt="">
-                        </div>
-                        <ul class="dep2">
-                          <li onclick="location.href='data_list.html'">계측기 리스트</li>
-                          <li onclick="location.href='data_chart.html'">계측기 차트</li>
-                          <li onclick="location.href='data_detail.html'">계측기 상세 데이터</li>
-                        </ul>
-                      </li>
-                      <li>
-                        <div>관수<img src="./img/arrow_down2.png" alt=""></div>
-                        <ul class="dep2">
-                          <li><a href="water_list.html">관수정보</a></li>
-                        </ul>
-                      </li>
-                      <li>
-                        <div>설정<img src="./img/arrow_down2.png" alt=""></div>
-                        <ul class="dep2">
-                          <li><a href="#">기관등록</a></li>
-                          <li><a href="#">현장등록</a></li>
-                          <li><a href="#">하위관리자 등록</a></li>
-                          <li><a href="#">계측기 설정</a></li>
-                          <li><a href="#">관수조건 설정</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="bot">
-                    <h5>(주)성하</h5>
-                    <ul>
-                      <li>대표이사 : 조정윤</li>
-                      <li>사업자등록번호 : 705-86-01108</li>
-                      <li>대표번호 : 02-596-2200</li>
-                      <li>팩스번호 : 02-512-5161</li>
-                      <li>이메일: sungha0405@hanmail.net</li>
-                    </ul>
-                  </div>
+                    <div class="bg"></div>
                 </div>
-                <div class="bg"></div>
-              </div>
             </nav>
             <h1 class="m_logo"><img src="./img/logo-horizontal-white.png" alt=""></h1>
             <div class="et_box"></div>
-          </div>
+        </div>
     </header>
-    
+
     <section class="sub_list sub_page">
         <div class="sub_title">
             <h2><img src="./img/tit_line.png" alt="">상세 데이터</h2>
@@ -180,55 +187,72 @@
             <h5>온도</h5>
             <div id="line_chart"></div>
         </div>
-        
+
     </section>
     <footer class="sub_footer">
         <ul>
-          <li><strong>(주)성하</strong>  대표이사: 조정윤</li>
-          <li>사업자등록번호: 705-86-01108</li>
-          <li>대표번호: 02-596-2200</li>
-          <li>팩스번호: 02-512-5161</li>
-          <li>이메일: sungha0405@hanmail.net</li>
+            <li>
+                <strong>(주)성하</strong>
+                대표이사: 조정윤</li>
+            <li>사업자등록번호: 705-86-01108</li>
+            <li>대표번호: 02-596-2200</li>
+            <li>팩스번호: 02-512-5161</li>
+            <li>이메일: sungha0405@hanmail.net</li>
         </ul>
-      </footer>
-  </body>
-  
-        <script type="text/javascript">
-          var dom = document.getElementById('line_chart');
-          var myChart = echarts.init(dom, null, {
-            renderer: 'canvas',
-            useDirtyRect: false
-          });
-          var app = {};
-          
-          var option;
-          
-          option = {
+    </footer>
+</body>
+
+<script type="text/javascript">
+    var dom = document.getElementById('line_chart');
+    var myChart = echarts.init(dom, null, {
+        renderer: 'canvas',
+        useDirtyRect: false
+    });
+    var app = {};
+
+    var option;
+
+    option = {
         xAxis: {
-          type: 'category',
-          data: ['월', '화', '수', '목', '금', '토', '일']
+            type: 'category',
+            data: [
+                '월',
+                '화',
+                '수',
+                '목',
+                '금',
+                '토',
+                '일'
+            ]
         },
         yAxis: {
-          type: 'value'
+            type: 'value'
         },
         series: [
-          {
-            data: [20, 10, 20, 30, 40, 50, 30],
-            type: 'line',
-            itemStyle: {
-                normal:{
-                   color:'#16a571'
+            {
+                data: [
+                    20,
+                    10,
+                    20,
+                    30,
+                    40,
+                    50,
+                    30
+                ],
+                type: 'line',
+                itemStyle: {
+                    normal: {
+                        color: '#16a571'
+                    }
                 }
             }
-          }
         ]
-      };
-      
-      
-          if (option && typeof option === 'object') {
-            myChart.setOption(option);
-          }
-      
-          window.addEventListener('resize', myChart.resize);
-        </script>
+    };
+
+    if (option && typeof option === 'object') {
+        myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+</script>
 </html>
