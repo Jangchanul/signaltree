@@ -1,11 +1,19 @@
 .login {
   width: 100%;
   height: 100%;
-  background-image: url(../img/login_bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   padding: 1.875rem 2.5rem;
   box-sizing: border-box;
+}
+.type1{
+  background-image: url(../img/login_bg.jpg);
+}
+.type2{
+  background-image: url(../img/bg_3.jpg);
+}
+.type1 figure{
+  display: none;
 }
 .logo {
   display: flex;
@@ -27,7 +35,7 @@
   justify-content: space-around;
   align-items: center;
 }
-.login .container{
+.type1 .container{
   position: fixed;
   left: 20%;
   top: 50%;
