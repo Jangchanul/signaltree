@@ -207,11 +207,11 @@
     padding: 3.333vw 11.111vw;
     background-color: #fff;
   }
-  .login input[type="email"] {
+  .login input.text_id {
     background-size: 4.444vw;
     background-position: 4.444vw;
   }
-  .login input[type="password"] {
+  .login input.text_pw {
     background-size: 4.444vw;
     background-position: 4.444vw;
   }
