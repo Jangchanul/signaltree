@@ -634,6 +634,15 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
     font-weight: bold;
     font-size: 24px;
     margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.highchart h5 .icon{
+    margin-right: 8px;
+}
+.highchart h5 .icon img{
+    width: 32px;
 }
 .highchart p{
     font-weight: bold;
@@ -953,5 +962,11 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
     }
     .water_set>li{
         padding: 2.222vw;
+    }
+    .highchart h5 .icon{
+        margin-right: 2.222vw;
+    }
+    .highchart h5 .icon img{
+        width: 6.667vw;
     }
 }
