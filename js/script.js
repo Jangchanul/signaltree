@@ -17,10 +17,6 @@ $(function () {
   $(".bt_guide").click(function(){
     $(".modal").show();
   });
-  $(".bg").click(function(){
-    $(".modal").hide();  
-    $("#menuToggle input:checkbox").prop("checked", false);
-  });
   $(".bt_ok").click(function(){
     $(".modal").hide();
   });

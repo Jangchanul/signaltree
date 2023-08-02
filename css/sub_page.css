@@ -749,7 +749,9 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
     }
     .sub_page{
         padding: 0;
-        height: calc(100% - 13.889vw);
+        padding-top: 13.889vw;
+        box-sizing: border-box;
+        height: 100%;
     }
     .sub_title{
         padding: 3.333vw 5.556vw;

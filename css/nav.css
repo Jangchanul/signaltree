@@ -79,6 +79,10 @@
         width: 100%;
         box-sizing: border-box;
         height: 13.889vw;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 10;
       }
       .m_head .m_logo {
         width: 22.222vw;
@@ -136,7 +140,7 @@
         transform: rotate(-45deg) translate(0, -1px);
       }
       .m_menu {
-        position: absolute;
+        position: fixed;
         width: 80.556vw;
         top: 0;
         left: 0;
@@ -177,7 +181,7 @@
       #menuToggle .bg {
         background-color: #000;
         opacity: 0.5;
-        position: absolute;
+        position: fixed;
         left: 0;
         top: 0;
         width: 100%;
