@@ -269,6 +269,28 @@
     box-sizing: border-box;
     position: relative;
 }
+.chart_box .mark{
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 12px;
+}
+.chart_box .mark li div{
+    width: 60px;
+    height: 20px;
+    margin-top: 4px;
+}
+.chart_box .mark li:nth-child(1) div{
+    background-color: #55BF3B;
+}
+.chart_box .mark li:nth-child(2) div{
+    background-color: #DDDF0D;
+}
+.chart_box .mark li:nth-child(3) div{
+    background-color: #DF5353;
+}
 .chart_list{
     display: flex;
     flex-wrap: wrap;
@@ -968,5 +990,18 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
     }
     .highchart h5 .icon img{
         width: 6.667vw;
+    }
+    .chart_box .mark{
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 3.889vw;
+        text-align: center;
+        margin-bottom: 2.222vw;
+    }
+    .chart_box .mark li div{
+        width: 10vw;
+        height: 3.333vw;
+        margin-top: 1.111vw;
     }
 }
