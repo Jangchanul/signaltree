@@ -528,7 +528,7 @@
 }
 .reg_agency .flex{
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-between;
 }
 .reg_agency .flex.ad_reg{
@@ -771,10 +771,39 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
 
 @media screen and (max-width: 1400px) {
     .search_box li{
-        margin-bottom: 12px;
+        padding: 12px;
+    }
+}
+@media screen and (max-width: 1023px) {
+    
+    .water_set>li>*:not(button){
+        flex: 1;
+        text-align: center;
+        font-size: 12px;
+    }
+    .water_set>li>button{
+        width: 3.333vw;
+        height: 3.333vw;
+        line-height: 3.333vw;
+    }
+    .water_set>li span{
+        word-break: keep-all;
+        padding: 0 8px;
+    }
+    .water_set input[type='text']{
+        width: 70%;
+    }
+    .water_set>li select{
+        width: auto;
     }
 }
 @media screen and (max-width: 800px) {
+    .water_set input[type='text']{
+        padding: 1.111vw;
+    }
+    .water_set>li select{
+        padding: 1.111vw;
+    }
     .sub_footer{
         display: none;
     }
@@ -916,9 +945,13 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
         width: 100%;
     }
     .reg_container th{
-        font-size: 3.889vw;
-        padding: 2.222vw 3.333vw;
+        font-size: 3.333vw;
+        padding: 2.222vw;
         word-break: keep-all;
+    }
+    .measure_reg td{
+        width: 27%;
+        text-align: center;
     }
     .bt_box button{
         padding: 2.222vw 4.444vw;
@@ -943,12 +976,12 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
         font-size: 3.889vw;
     }
     .reg_agency button{
+        margin-left: 3.333vw;
+        padding: 1.689vw;
         font-size: 3.889vw;
-        margin-left: 4.444vw;
-        padding: 2.778vw;
     }
     .reg_container td input{
-        padding: 2.222vw;
+        padding: 1.111vw;
     }
     .reg_container .flex span{
         font-size: 5vw;
@@ -972,7 +1005,7 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
         table-layout: fixed;
     }
     .reg_container td{
-        padding: 2.222vw;
+        padding: 1.111vw;
     }
     .top_radio{
         width: 100%;
@@ -1003,5 +1036,28 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
         width: 10vw;
         height: 3.333vw;
         margin-top: 1.111vw;
+    }
+    .filebox{
+        padding: 1.111vw;
+        align-items: center;
+    }
+    .filebox label{
+        font-size: 3.333vw;
+        padding: 0 1.111vw;
+        margin-left: 1.111vw;
+        height: 8.333vw;
+        line-height: 8.333vw;
+    }
+    .filebox input{
+        font-size: 3.333vw;
+        height: 8.333vw;
+    }
+    .reg_container td select{
+        font-size: 3.333vw;
+        padding: 1.111vw;
+    }
+    .bt_box2 button{
+        font-size: 3.889vw;
+        padding: 2.222vw 3.333vw;
     }
 }
