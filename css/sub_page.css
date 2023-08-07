@@ -117,7 +117,7 @@
     justify-content: center;
     margin-left: 4px;
 }
-.search_box .bt_ser img{width: 16px;height: 16px;margin-right: 4px;}
+.search_box .bt_ser i{margin-right: 4px;}
 .search_box .ex{
     display: flex;
     align-items: center;
@@ -531,6 +531,11 @@
     align-items: stretch;
     justify-content: space-between;
 }
+.reg_agency .flex.number{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 .reg_agency .flex.ad_reg{
     margin-bottom: 12px;
 }
@@ -847,7 +852,7 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
         height: auto;
     }
     .search_box .m_bt .bt_ser{display: flex;width: 100%;margin: 0;font-size: 4.444vw;height: auto;padding: 2.222vw 0;}
-    .search_box .bt_ser img{width: 4.444vw;height: 4.444vw;}
+    .search_box .bt_ser i{margin-right: 1.111vw;}
     .search_box .ex{align-items: flex-start;}
     .list_box{padding: 5.556vw;}
     .list_box table{
