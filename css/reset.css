@@ -61,6 +61,7 @@ select {
 
     /*화살표 배경 넣기*/
     background: url("../img/arrow_down.png.png") no-repeat 98% 50% #fff;
+    background-size: 14px;
     /*화살표 select박스 오른쪽 중앙 배치,배경 흰색*/
 }
 select::-ms-expand {
