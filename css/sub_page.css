@@ -907,6 +907,8 @@ select{
     .water_list td:nth-of-type(3)::before{content: '기관명';}
     .water_list td:nth-of-type(4)::before{content: '현장명';}
     .water_list td:nth-of-type(5)::before{content: '관수제어';line-height: 8.333vw;}
+    .water_list tr{display: block;margin-bottom: 4.444vw;border-top: 2px solid #41ad8d;border-bottom: 1px solid #d7dde3;}
+
 
     .measure_reg{width: 100%;}
     .measure_reg th{text-align: left;border: none;background: none;}
