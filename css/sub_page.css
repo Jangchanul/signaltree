@@ -405,19 +405,18 @@
     border: 1px solid #a2cdc1;
     font-size: 18px;
     font-weight: bold;
-    padding: 12px 24px;
 }
 .reg_container td{
     border: 1px solid #a2cdc1;
     text-align: center;
-    padding: 8px 10px;
+    padding: 8px;
 }
 .reg_container td input{
     border: 1px solid #c4cbd6;
     background-color: #f8f9fb;
-    padding: 8px 10px;
     width: 100%;
     box-sizing: border-box;
+    padding: 4px;
 }
 .reg_container td select{
     border: 1px solid #c4cbd6;
@@ -763,7 +762,7 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
 }
 select{
     color: #000;
-    padding: 0 12px;
+    padding: 0 16px;
 }
 
 .list_box2{
@@ -831,7 +830,7 @@ select{
         padding: 1.111vw;
     }
     .water_set>li select{
-        padding: 1.111vw;
+        padding: 1.111vw 4.444vw;
     }
     .sub_footer{
         display: none;
@@ -870,7 +869,7 @@ select{
     }
     .search_box select{
         width: 100%;
-        padding: 1.667vw 2.778vw;
+        padding: 1.667vw 4.444vw;
         font-size: 3.889vw;
     }
     .search_box input[type='date']{
@@ -891,7 +890,7 @@ select{
     .list_box table tbody{border: 0;}
     .list_box th,.list_box td{display: block;}
     .reg_container th,.reg_container td{display: block;}
-    
+
     .list_box td{border-bottom: 1px solid #eee;display: grid;grid-template-columns: 1fr 2fr;text-align: left;}
     .list_box td::before{font-weight: bold;color: #000;}
     .data_list td:nth-of-type(1)::before{content: '번호';}
@@ -911,10 +910,11 @@ select{
     .water_list td:nth-of-type(5)::before{content: '관수제어';line-height: 8.333vw;}
     .water_list tr{display: block;margin-bottom: 4.444vw;border-top: 2px solid #41ad8d;border-bottom: 1px solid #d7dde3;}
 
-
-    .measure_reg{width: 100%;}
-    .measure_reg th{text-align: left;border: none;background: none;}
-    .measure_reg td{width: 100%;box-sizing: border-box ;padding: 0;border: none;}
+    /* .measure_reg tr{display: grid;grid-template-columns: 1fr 2fr;} */
+    .measure_reg tr{display: grid;grid-template-columns: 1fr 2fr;}
+    .measure_reg th{display: block;}
+    .measure_reg td{display: block;}
+    
 
     .reg_agency{width: 100%;}
     .reg_agency th{text-align: left;border: none;background: none;}
@@ -925,6 +925,11 @@ select{
     .measure{table-layout: fixed;}
     .measure th{font-size: 3.889vw;}
     .measure td:first-child{font-size: 3.889vw;}
+
+    .measure_reg{border-bottom: 1px solid #a2cdc1;}
+    .measure_reg th{border-right: 0;border-bottom: 0;box-sizing: border-box;}
+    .measure_reg td{border-bottom: 0;box-sizing: border-box;}
+    .measure_reg td input{padding: 0;}
 
     .sub_page .print{
         display: none;
@@ -1028,9 +1033,6 @@ select{
         margin-left: 3.333vw;
         padding: 1.689vw;
         font-size: 3.889vw;
-    }
-    .reg_container td input{
-        padding: 1.111vw;
     }
     .reg_container .flex span{
         font-size: 5vw;

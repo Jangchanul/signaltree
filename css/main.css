@@ -54,10 +54,10 @@
   left: 112px;
 }
 .main .search select {
-  width: 140px;
+  min-width: 140px;
   border: 1px solid #117757;
   border-radius: 4px;
-  padding: 6px 10px;
+  padding: 6px 16px;
   color: #117757;
   margin-right: 10px;
 }
@@ -283,10 +283,10 @@
     box-sizing: border-box;
   }
   .m_main .search select {
-    width: 30.556vw;
+    width: auto;
     border: 1px solid #117757;
     border-radius: 4px;
-    padding: 1.667vw 2.778vw;
+    padding: 1.667vw 5.556vw;
     color: #117757;
     margin-right: 10px;
     box-sizing: border-box;
