@@ -482,7 +482,7 @@
     color: #c51a08;
     border-color: #c51a08;
 }
-#water_list .bts{
+.water_list .bts{
     box-sizing: border-box;
     background-color: #f8f9fb;
     border: 1px solid #c4cbd6;
@@ -490,14 +490,14 @@
     width: 16px;
     height: 16px;
 }
-#water_list .flex{
+.water_list .flex{
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 20px;
     box-sizing: border-box;
 }
-#water_list .result{
+.water_list .result{
     font-weight: bold;
     font-size: 18px;
     padding: 0 24px;
@@ -505,7 +505,7 @@
     width: 100px;
     text-align: center;
 }
-#water_list .bt_start{
+.water_list .bt_start{
     padding: 10px 40px;
     font-weight: bold;
     color: #fff;
@@ -525,11 +525,6 @@
     display: block;
     width: 60%;
     margin: 0 auto;
-}
-.reg_agency .flex{
-    display: flex;
-    align-items: stretch;
-    justify-content: space-between;
 }
 .reg_agency .flex.number{
     display: flex;
@@ -612,7 +607,7 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
 .top_radio input:checked+label{
     background-image: url(../img/ck_on.png);
 }
-#measure td:first-child{
+.measure td:first-child{
     font-size: 18px;
     font-weight: bold;
     color: #000;
@@ -640,7 +635,7 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
     color: #c51a08;
     border-color: #c51a08;
 }
-#measure td{
+.measure td{
     white-space: nowrap;
     padding: 8px 12px;
 }
@@ -769,6 +764,32 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
 select{
     background-size: 14px;
     color: #000;
+    padding: 0 12px;
+}
+
+.list_box2{
+    background-color: #fff;
+    padding: 5.556vw;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.10);
+}
+.measure{width: 100%;}
+.measure thead{
+    background-color: #f1f8f6;
+    border: 1px solid #a2cdc1;
+}
+.measure tr{
+    border-bottom: 1px solid #bababa;
+}
+.measure th{
+    font-weight: bold;
+    border-right: 1px solid #a2cdc1;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+.measure td{
+    text-align: center;
 }
 /* ------------------------------------------------------------------------ */
 
@@ -863,27 +884,45 @@ select{
     .search_box .bt_ser i{margin-right: 1.111vw;}
     .search_box .ex{align-items: flex-start;}
     .list_box{padding: 5.556vw;}
-    .list_box table{
-        table-layout: fixed;
-    }
-    .list_box table tbody{border: 0;}
-    .list_box table th:first-child,.list_box table td:first-child,.list_box .data_list th:last-child,.list_box .data_list td:last-child
-    {display: none;}
-    .list_box table td{
-        padding: 1.111vw;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
     
-    .list_box .m_table tr{
-        border-bottom: 1px solid #d7dde3;
+    .list_box table{
+        width: 100%;
     }
-    .list_box .m_table th,.list_box .m_table td{
-        border: 0;
-        text-align: left;
-        padding: 3.333vw 2.222vw;
-    }
+    .list_box thead{display: none;}
+    .list_box table tbody{border: 0;}
+    .list_box th,.list_box td{display: block;}
+    .list_box td{border-bottom: 1px solid #eee;display: grid;grid-template-columns: 1fr 2fr;text-align: left;}
+    .list_box td::before{font-weight: bold;color: #000;}
+    .data_list td:nth-of-type(1)::before{content: '번호';}
+    .data_list td:nth-of-type(2)::before{content: '계측기명';}
+    .data_list td:nth-of-type(3)::before{content: '기관명';}
+    .data_list td:nth-of-type(4)::before{content: '현장명';}
+    .data_list td:nth-of-type(5)::before{content: '배터리(%)';}
+    .data_list td:nth-of-type(6)::before{content: '온도(℃)';}
+    .data_list td:nth-of-type(7)::before{content: '수분함량(%)';}
+    .data_list td:nth-of-type(8)::before{content: '계측시간';}
+    .data_list tr{display: block;margin-bottom: 4.444vw;border-top: 2px solid #41ad8d;border-bottom: 1px solid #d7dde3;}
+
+    .water_list td:nth-of-type(1)::before{content: '번호';}
+    .water_list td:nth-of-type(2)::before{content: '관수명';}
+    .water_list td:nth-of-type(3)::before{content: '기관명';}
+    .water_list td:nth-of-type(4)::before{content: '현장명';}
+    .water_list td:nth-of-type(5)::before{content: '관수제어';line-height: 8.333vw;}
+
+    .measure_reg{width: 100%;}
+    .measure_reg th{text-align: left;border: none;background: none;}
+    .measure_reg td{width: 100%;box-sizing: border-box ;padding: 0;border: none;}
+
+    .reg_agency{width: 100%;}
+    .reg_agency th{text-align: left;border: none;background: none;}
+    .reg_agency td{width: 100%;box-sizing: border-box ;padding: 0;border: none;}
+
+    .site_reg td,.site_reg th{display: table-cell;}
+
+    .measure{table-layout: fixed;}
+    .measure th{font-size: 3.889vw;}
+    .measure td:first-child{font-size: 3.889vw;}
+
     .sub_page .print{
         display: none;
     }
@@ -934,25 +973,24 @@ select{
     }
     .bt_line{display: none;}
     .detail_chart{width: 100%;}
-    #water_list .flex{
+    .water_list .flex{
         padding: 0;
-        flex-wrap: wrap;
+        justify-content: space-between;
     }
-    #water_list .flex>div{
+    .water_list .flex>div{
         display: flex;
         align-items: center;
     }
-    #water_list .result{
+    .water_list .result{
         width: 9vw;
         padding: 0;
-        font-size: 4.444vw;
     }
-    #water_list .bt_start{
+    .water_list .bt_start{
         margin: 0;
-        padding: 2.222vw 3.333vw;
     }
     .reg_container{
         padding: 5.556vw;
+        box-sizing: border-box;
     }
     .reg_container .water_reg{
         width: 100%;
@@ -960,27 +998,22 @@ select{
     .reg_container th{
         font-size: 3.333vw;
         padding: 2.222vw;
-        word-break: keep-all;
-    }
-    .measure_reg td{
-        width: 27%;
-        text-align: center;
     }
     .bt_box button{
         padding: 2.222vw 4.444vw;
         font-size: 4.444vw;
     }
-    #measure th{
-        padding: 2.222vw 0;
-        font-size: 4.444vw;
-    }
-    #measure td:first-child,#measure th:first-child{
-        display: revert;
-        font-size: 4.444vw;
-    }
     .onoff_box input+label{
         font-size: 4.444vw;
         margin-left: 2.222vw;
+        width: auto;
+        font-size: 3.889vw;
+    }
+    .top_radio input+label{
+        font-size: 3.889vw;
+    }
+    .top_radio>p{
+        font-size: 3.889vw;
     }
     .reg_container .reg_agency{
         width: 100%;

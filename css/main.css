@@ -255,7 +255,7 @@
 @media screen and (max-width: 800px) {
   header{
     position: relative;
-    z-index: 3;
+    z-index: 100;
   }
   .main {
     display: none;
@@ -403,7 +403,7 @@
     );
   }
   .m_main .side_body .list .top h5 {
-    font-size: 4.444vw;
+    font-size: 3.889vw;
     font-weight: bold;
     color: #fff;
   }
@@ -434,7 +434,7 @@
     margin-right: 2.778vw;
   }
   .m_main .side_body .list .top > div strong {
-    font-size: 5vw;
+    font-size: 3.889vw;
     font-weight: bold;
   }
   .m_main .side_body .list .mid {
