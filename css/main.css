@@ -283,13 +283,14 @@
     box-sizing: border-box;
   }
   .m_main .search select {
-    width: auto;
+    width: 35%;
     border: 1px solid #117757;
     border-radius: 4px;
     padding: 1.667vw 5.556vw;
     color: #117757;
     margin-right: 10px;
     box-sizing: border-box;
+    text-overflow: ellipsis;
   }
   .m_main .search button {
     display: flex;
@@ -453,6 +454,9 @@
     justify-content: space-between;
     text-align: center;
     font-size: 3.333vw;
+  }
+  .m_main .side_body .list .mid ul:nth-child(2){
+    justify-content: space-around;
   }
   .m_main .side_body .list .mid p {
     color: #828382;

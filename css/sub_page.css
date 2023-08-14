@@ -918,7 +918,7 @@ select{
     .measure_reg{border-bottom: 1px solid #a2cdc1;}
     .measure_reg th{border-right: 0;border-bottom: 0;box-sizing: border-box;}
     .measure_reg td{border-bottom: 0;box-sizing: border-box;}
-    .measure_reg td input{padding: 0;}
+    .measure_reg td input{padding: 0 1.111vw;}
 
     .sub_page .print{
         display: none;
@@ -993,7 +993,7 @@ select{
         width: 100%;
     }
     .reg_container th{
-        font-size: 3.333vw;
+        font-size: 3.889vw;
         padding: 2.222vw;
     }
     .bt_box button{
