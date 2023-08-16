@@ -1100,4 +1100,16 @@ select{
         font-size: 3.889vw;
         padding: 2.222vw 3.333vw;
     }
+    .measure td{
+        padding: 2.222vw;
+    }
+    .measure select{
+        border: 1px solid #6666;
+        padding: 1.111vw 4.444vw 1.111vw 1.111vw;
+        text-align: center;
+        font-size: 3.889vw;
+    }
+    .onoff_box label:nth-of-type(1){
+        margin-left: 0;
+    }
 }
