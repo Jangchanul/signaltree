@@ -789,6 +789,29 @@ select{
 .measure td{
     text-align: center;
 }
+.list_box2 .name{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 500px;
+    margin: 0 auto 16px;
+    border: 1px solid #c4cbd6;
+    border-radius: 8px;
+    padding: 8px 10px;
+}
+.list_box2 .name strong{
+    background-color: #188764;
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 8px 24px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+.list_box2 .name span{
+    font-weight: bold;
+    font-size: 18px;
+}
 /* ------------------------------------------------------------------------ */
 
 
@@ -1111,5 +1134,17 @@ select{
     }
     .onoff_box label:nth-of-type(1){
         margin-left: 0;
+    }
+    .list_box2 .name{
+        width: 100%;
+        padding: 2.222vw;
+        box-sizing: border-box;
+    }
+    .list_box2 .name strong{
+        font-size: 5vw;
+        padding: 2.222vw 4.444vw;
+    }
+    .list_box2 .name span{
+        font-size: 5vw;
     }
 }
