@@ -12,6 +12,9 @@
 .type2{
   background-image: url(../img/bg_3.jpg);
 }
+.type3{
+  background-image: url(../img/login_bg2.jpg);
+}
 .type1 figure{
   display: none;
 }
@@ -84,14 +87,14 @@
 .login input.text_id {
   background-image: url(../img/id.png);
   background-repeat: no-repeat;
-  background-position: 0.833vw;
-  background-size: 0.833vw;
+  background-position: 14px;
+  background-size: 14px;
 }
 .login input.text_pw {
   background-image: url(../img/pw.png);
   background-repeat: no-repeat;
-  background-position: 0.833vw;
-  background-size: 0.833vw;
+  background-position: 14px;
+  background-size: 14px;
 }
 .login input[type="submit"] {
   cursor: pointer;
@@ -175,7 +178,15 @@
   right: -32px;
   z-index: 1;
 }
-
+.type3 .flex{
+  position: relative;
+}
+.type3 .container{
+  position: fixed;
+  left: 20%;
+  top: 50%;
+  transform: translate(-20%,-50%);
+}
 @media screen and (max-width: 800px) {
   .logo {
     display: none;

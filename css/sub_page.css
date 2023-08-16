@@ -807,10 +807,18 @@ select{
     padding: 8px 24px;
     box-sizing: border-box;
     border-radius: 8px;
+    display: block;
+    white-space: nowrap;
 }
-.list_box2 .name span{
+.list_box2 .name input{
+    display: block;
     font-weight: bold;
     font-size: 18px;
+    width: 60%;
+    text-align: center;
+}
+.list_box table td a{
+    color: #6a6a6a;
 }
 /* ------------------------------------------------------------------------ */
 
@@ -886,20 +894,23 @@ select{
     .search_box li>div{
         display: flex;
         align-items: center;
+        width: 78%;
     }
     .search_box strong{
         font-size: 3.889vw;
+        width: 20%;
+        padding: 0;
     }
     .search_box select{
-        width: 100%;
-        padding: 1.667vw 4.444vw;
+        width: 78%;
+        padding: 1.111vw;
         font-size: 3.889vw;
+        height: 8.333vw;
     }
     .search_box input[type='date']{
-        width: 27.778vw;
         font-size: 3.333vw;
-        padding: 1.667vw 2.778vw;
-        height: auto;
+        padding: 1.111vw;
+        height: 8.333vw;
     }
     .search_box .m_bt .bt_ser{display: flex;width: 100%;margin: 0;font-size: 4.444vw;height: auto;padding: 2.222vw 0;}
     .search_box .bt_ser i{margin-right: 1.111vw;}
@@ -943,6 +954,12 @@ select{
     .measure_reg td{border-bottom: 0;box-sizing: border-box;}
     .measure_reg td input{padding: 0 1.111vw;}
 
+    .reg_container select, .search_box select{
+        height: 8.333vw;
+    }
+    .reg_container input, .search_box input{
+        height: 8.333vw;
+    }
     .sub_page .print{
         display: none;
     }
@@ -1144,7 +1161,11 @@ select{
         font-size: 5vw;
         padding: 2.222vw 4.444vw;
     }
-    .list_box2 .name span{
+    .list_box2 .name input{
         font-size: 5vw;
+        font-weight: bold;
+    }
+    .reg_container textarea{
+        padding: 1.111vw;
     }
 }
