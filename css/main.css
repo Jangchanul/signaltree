@@ -381,6 +381,7 @@
     border: none;
     font-weight: bold;
     margin: 0 5vw 2.778vw auto;
+    color: #000;
   }
   .m_main .side_body button img {
     width: 4.167vw;

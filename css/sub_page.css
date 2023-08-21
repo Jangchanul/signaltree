@@ -1168,4 +1168,7 @@ select{
     .reg_container textarea{
         padding: 1.111vw;
     }
+    .site_reg tr:nth-of-type(3) td{
+        min-height: 20vh;
+    }
 }
