@@ -136,6 +136,7 @@
 .main .side_body {
   padding: 10px 0;
   overflow-y: scroll;
+  height: 100%;
 }
 .main .side_body .bt_guide {
   display: flex;
