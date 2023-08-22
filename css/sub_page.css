@@ -389,8 +389,32 @@
     border-bottom: 1px solid #c4cbd6;
     padding: 10px 0;
 }
-.bt_line .print{
-    margin-left: auto;
+.bt_line2{
+    width: 96%;
+    margin: 0 auto 12px;
+    border-bottom: 1px solid #c4cbd6;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bt_line2 h5{
+    display: flex;
+    align-items: center;
+}
+.bt_line2 h5 strong{
+    font-weight: bold;
+}
+.bt_line2 .ex{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    color: #6a6a6a;
+}
+.bt_line2 .ex img{
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
 }
 
 .reg_container{
