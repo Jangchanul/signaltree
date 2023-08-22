@@ -926,6 +926,7 @@ select{
         font-size: 3.889vw;
         width: 20%;
         padding: 0;
+        text-align: center;
     }
     .search_box select{
         width: 78%;
