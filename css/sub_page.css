@@ -671,7 +671,7 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
     display: none;
 }
 .highchart .highcharts-data-labels{
-    display: none;
+    display: block;
 }
 .highchart .highcharts-credits{
     display: none;
