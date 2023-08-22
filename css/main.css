@@ -487,6 +487,8 @@
     width: 92%;
     padding: 5.556vw;
     box-sizing: border-box;
+    max-height: 70%;
+    overflow-y: scroll;
   }
   .guide_pop h4{
     display: none;
