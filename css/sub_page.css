@@ -91,16 +91,18 @@
     font-size: 16px;
     padding: 4px 12px;
     box-sizing: border-box;
+    height: 30px;
 }
 .search_box input{
     border: 1px solid #c4cbd6;
     padding: 4px 12px;
     box-sizing: border-box;
     font-size: 16px;
+    height: 30px;
 }
 .search_box input[type='date']{
     width: 180px;
-    height: 36px;
+    height: 30px;
 }
 .search_box .bt_ser{
     display: flex;
@@ -112,7 +114,7 @@
     box-sizing: border-box;
     white-space: nowrap;
     width: 80px;
-    height: 36px;
+    height: 30px;
     align-items: center;
     justify-content: center;
     margin-left: 4px;
