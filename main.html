@@ -153,7 +153,7 @@
          <div class="side_bar">
           <div class="side_head">
             <script>
-              $.getJSON('https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=2355c1bea3d756761ef492f906823870', function(result){
+              $.getJSON('https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=2355c1bea3d756761ef492f906823870&units=metric&lang=kr', function(result){
                 $('.lowtemp').append(result.main.temp_min);
                 $('.highttemp').append(result.main.temp_max);
                 var wiconUrl = '<img src="http://openweathermap.org/img/wn/'+result.weather[0].icon+'.png" alt="'+result.weather[0].desciption+'">'
