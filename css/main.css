@@ -253,10 +253,14 @@
 .m_main {
   display: none;
 }
-.weather{
+.weather .temp{
   display: flex;
   align-items: center;
   font-weight: bold;
+}
+.weather .water{
+  font-weight: bold;
+  color: blue;
 }
 
 @media screen and (max-width: 800px) {
