@@ -53,6 +53,7 @@
                     <figure><img src="img/watering.png" alt="" /></figure>
                     <ul class="dep2">
                         <li onclick="location.href='water_list.html'">관수정보데이터</li>
+                        <li onclick="location.href='water_list2.html'">유량정보</li>
                     </ul>
                   </li>
                   <li class="nav_set">
@@ -106,6 +107,7 @@
                           <div>관수<img src="./img/arrow_down2.png" alt=""></div>
                           <ul class="dep2">
                             <li><a href="water_list.html">관수정보데이터</a></li>
+                            <li><a href="water_list2.html">유량정보</a></li>
                           </ul>
                         </li>
                         <li>
@@ -280,33 +282,35 @@
                 plotBackgroundImage: null,
                 plotBorderWidth: 0,
                 plotShadow: false,
-                height: '85%'
+                height: '80%'
             },
-
+            title : {
+                    text:"foo"
+            },
             pane: {
                 startAngle: -90,
                 endAngle: 89.9,
                 background: null,
                 center: [
-                    '50%', '90%'
+                    '50%', '75%'
                 ],
-                size: '100%'
+                size: '110%'
             },
 
             // the value axis
             yAxis: {
                 min: 0,
                 max: 200,
-                tickPixelInterval: 60,
+                tickPixelInterval: 72,
                 tickPosition: 'inside',
                 tickColor: Highcharts.defaultOptions.chart.backgroundColor || '#FFFFFF',
                 tickLength: 20,
                 tickWidth: 2,
                 minorTickInterval: null,
                 labels: {
-                    distance: 15,
+                    distance: 13,
                     style: {
-                        fontSize: '10px'
+                        fontSize: '14px'
                     }
                 },
                 lineWidth: 0,
@@ -342,6 +346,7 @@
 
             series: [
                 {
+                    name:'bar',
                     data: [100],
                     tooltip: {
                         valueSuffix: '%'

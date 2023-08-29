@@ -253,6 +253,12 @@
 .m_main {
   display: none;
 }
+.weather{
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+}
+
 @media screen and (max-width: 800px) {
   header{
     position: relative;

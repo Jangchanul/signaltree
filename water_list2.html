@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시그널트리</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/nav.css" />
+    <link rel="stylesheet" href="./css/sub_page.css" />
+    <script src="./js/script.js"></script>
+    
+    <script src="https://kit.fontawesome.com/512286d077.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+        <nav class="pc_nav">
+          <h1 class="logo" onclick="location.href='main.html'"><img src="img/logo2.png" alt="" /></h1>
+          <ul class="dep1">
+              <li class="nav_site">
+                <figure><img src="img/site.png" alt="" /></figure>
+                <ul class="dep2">
+                    <li onclick="location.href='main.html'">현장정보</li>
+                </ul>
+              </li>
+              <li class="nav_data">
+                <figure><img src="img/data.png" alt="" /></figure>
+                <ul class="dep2">
+                    <li onclick="location.href='data_list.html'">전체현장</li>
+                    <li onclick="location.href='data_chart.html'">전체데이터</li>
+                    <li onclick="location.href='data_detail.html'">상세 데이터</li>
+                </ul>
+              </li>
+              <li class="nav_sensor">
+                <figure><img src="img/sensor.png" alt="" /></figure>
+                <ul class="dep2">
+                    <li onclick="location.href='measure_reg.html'">계측기 등록</li>
+                </ul>
+              </li>
+              <li class="nav_irr">
+                <figure><img src="img/watering.png" alt="" /></figure>
+                <ul class="dep2">
+                    <li onclick="location.href='water_list.html'">관수정보데이터</li>
+                    <li onclick="location.href='water_list2.html'">유량정보</li>
+                </ul>
+              </li>
+              <li class="nav_set">
+              <figure><img src="img/setting.png" alt="" /></figure>
+              <ul class="dep2">
+                  <li onclick="location.href='measure_reg.html'">계측기등록</li>
+                  <li onclick="location.href='agency_reg.html'">기관등록</li>
+                  <li onclick="location.href='site_reg.html'">현장등록</li>
+                  <li onclick="location.href='manager_reg.html'">하위관리자 등록</li>
+                  <li onclick="location.href='measure_set.html'">계측기 설정</li>
+                  <li onclick="location.href='water_set.html'">관수조건 설정</li>
+              </ul>
+              </li>
+          </ul>
+        </nav>
+        <!-- ------------------------------------------------------------ -->
+        <div class="m_head">
+          <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" />
+              <span class="a"></span>
+              <span class="b"></span>
+              <span class="c"></span>
+              <div class="m_menu">
+                <div>
+                  <div class="head">
+                    <button class="logout" type="button" onclick="location.href='index.html'">로그아웃</button>
+                  </div>
+                  <ul class="mid">
+                    <li>
+                      <div>
+                        현장
+                        <img src="./img/arrow_down2.png" alt="">
+                      </div>
+                      <ul class="dep2">
+                        <li onclick="location.href='main.html'">현장정보</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div>
+                        데이터
+                        <img src="./img/arrow_down2.png" alt="">
+                      </div>
+                      <ul class="dep2">
+                        <li onclick="location.href='data_list.html'">계측기 리스트</li>
+                        <li onclick="location.href='data_chart.html'">계측기 차트</li>
+                        <li onclick="location.href='data_detail.html'">계측기 상세 데이터</li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div>관수<img src="./img/arrow_down2.png" alt=""></div>
+                      <ul class="dep2">
+                        <li><a href="water_list.html">관수정보데이터</a></li>
+                        <li><a href="water_list2.html">유량정보</a></li>
+                      </ul>
+                    </li>
+                    <li>
+                      <div>설정<img src="./img/arrow_down2.png" alt=""></div>
+                      <ul class="dep2">
+                        <li><a href="measure_reg.html">계측기등록</a></li>
+                        <li><a href="agency_reg.html">기관등록</a></li>
+                        <li><a href="site_reg.html">현장등록</a></li>
+                        <li><a href="manager_reg.html">하위관리자 등록</a></li>
+                        <li><a href="measure_set.html">계측기 설정</a></li>
+                        <li><a href="water_set.html">관수조건 설정</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bot">
+                  <h5>(주)성하</h5>
+                  <ul>
+                    <li>대표이사 : 조정윤</li>
+                    <li>사업자등록번호 : 705-86-01108</li>
+                    <li>대표번호 : 02-596-2200</li>
+                    <li>팩스번호 : 02-512-5161</li>
+                    <li>이메일: sungha0405@hanmail.net</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="bg"></div>
+            </div>
+          </nav>
+          <h1 class="m_logo"><img src="./img/logo-horizontal-white.png" alt=""></h1>
+          <div class="et_box"></div>
+        </div>
+      </header>
+    
+    <section class="sub_list sub_page">
+        <div class="sub_title">
+            <h2><img src="./img/tit_line.png" alt="">유량정보</h2>
+        </div>
+        <div class="search_box">
+            <ul>
+                <li>
+                    <strong>기관명</strong>
+                    <select>
+                        <option value="">전체</option>
+                    </select>
+                </li>
+                <li>
+                    <strong>현장명</strong>
+                    <select>
+                        <option value="">전체</option>
+                    </select>
+                </li>
+                <li>
+                    <strong>계측기</strong>
+                    <select>
+                        <option value="">전체</option>
+                    </select>
+                </li>
+                <li class="m_bt">
+                    <button class="bt_ser" type="button">
+                      <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                        검색
+                    </button>
+                </li>
+            </ul>
+        </div>
+        <style>
+          @media screen and (max-width: 800px) {
+            .water_list td:nth-of-type(1)::before{content: '번호';}
+            .water_list td:nth-of-type(2)::before{content: '현장';}
+            .water_list td:nth-of-type(3)::before{content: '계측기';}
+            .water_list td:nth-of-type(4)::before{content: '관수명';}
+            .water_list td:nth-of-type(5)::before{content: '시작시간';}
+            .water_list td:nth-of-type(6)::before{content: '종료시간';}
+            .water_list td:nth-of-type(7)::before{content: '유량';line-height: 8.333vw;}
+          }
+        </style>
+        <div class="list_box">
+            <button class="download" type="button">
+                <img src="./img/plus.png" alt="">
+                엑셀 다운로드
+            </button>
+            <table class="water_list water_list2">
+                <thead>
+                    <tr>
+                        <th>번호</th>
+                        <th>현장</th>
+                        <th>계측기</th>
+                        <th>관수명</th>
+                        <th>시작시간</th>
+                        <th>종료시간</th>
+                        <th>유량</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>어린이대공원</td>
+                        <td>STGS71C600001</td>
+                        <td>커피앤티_01</td>
+                        <td>
+                            <div class="flex">
+                                <select name="" id="">
+                                    <option value="">00:00</option>
+                                    <option value="">01:00</option>
+                                    <option value="">02:00</option>
+                                    <option value="">03:00</option>
+                                    <option value="">04:00</option>
+                                    <option value="">05:00</option>
+                                    <option value="">06:00</option>
+                                </select>
+                                <span>:</span>
+                                <select name="" id="">
+                                    <option value="">10</option>
+                                    <option value="">20</option>
+                                    <option value="">30</option>
+                                    <option value="">40</option>
+                                    <option value="">50</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="flex">
+                                <select name="" id="">
+                                    <option value="">00:00</option>
+                                    <option value="">01:00</option>
+                                    <option value="">02:00</option>
+                                    <option value="">03:00</option>
+                                    <option value="">04:00</option>
+                                    <option value="">05:00</option>
+                                    <option value="">06:00</option>
+                                </select>
+                                <span>:</span>
+                                <select name="" id="">
+                                    <option value="">10</option>
+                                    <option value="">20</option>
+                                    <option value="">30</option>
+                                    <option value="">40</option>
+                                    <option value="">50</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>어린이대공원</td>
+                        <td>STGS71C600001</td>
+                        <td>커피앤티_01</td>
+                        <td>
+                            <div class="flex">
+                                <select name="" id="">
+                                    <option value="">00:00</option>
+                                    <option value="">01:00</option>
+                                    <option value="">02:00</option>
+                                    <option value="">03:00</option>
+                                    <option value="">04:00</option>
+                                    <option value="">05:00</option>
+                                    <option value="">06:00</option>
+                                </select>
+                                <span>:</span>
+                                <select name="" id="">
+                                    <option value="">10</option>
+                                    <option value="">20</option>
+                                    <option value="">30</option>
+                                    <option value="">40</option>
+                                    <option value="">50</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="flex">
+                                <select name="" id="">
+                                    <option value="">00:00</option>
+                                    <option value="">01:00</option>
+                                    <option value="">02:00</option>
+                                    <option value="">03:00</option>
+                                    <option value="">04:00</option>
+                                    <option value="">05:00</option>
+                                    <option value="">06:00</option>
+                                </select>
+                                <span>:</span>
+                                <select name="" id="">
+                                    <option value="">10</option>
+                                    <option value="">20</option>
+                                    <option value="">30</option>
+                                    <option value="">40</option>
+                                    <option value="">50</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>어린이대공원</td>
+                        <td>STGS71C600001</td>
+                        <td>커피앤티_01</td>
+                        <td>
+                            <div class="flex">
+                                <select name="" id="">
+                                    <option value="">00:00</option>
+                                    <option value="">01:00</option>
+                                    <option value="">02:00</option>
+                                    <option value="">03:00</option>
+                                    <option value="">04:00</option>
+                                    <option value="">05:00</option>
+                                    <option value="">06:00</option>
+                                </select>
+                                <span>:</span>
+                                <select name="" id="">
+                                    <option value="">10</option>
+                                    <option value="">20</option>
+                                    <option value="">30</option>
+                                    <option value="">40</option>
+                                    <option value="">50</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="flex">
+                                <select name="" id="">
+                                    <option value="">00:00</option>
+                                    <option value="">01:00</option>
+                                    <option value="">02:00</option>
+                                    <option value="">03:00</option>
+                                    <option value="">04:00</option>
+                                    <option value="">05:00</option>
+                                    <option value="">06:00</option>
+                                </select>
+                                <span>:</span>
+                                <select name="" id="">
+                                    <option value="">10</option>
+                                    <option value="">20</option>
+                                    <option value="">30</option>
+                                    <option value="">40</option>
+                                    <option value="">50</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>어린이대공원</td>
+                        <td>STGS71C600001</td>
+                        <td>커피앤티_01</td>
+                        <td>
+                            <div class="flex">
+                                <select name="" id="">
+                                    <option value="">00:00</option>
+                                    <option value="">01:00</option>
+                                    <option value="">02:00</option>
+                                    <option value="">03:00</option>
+                                    <option value="">04:00</option>
+                                    <option value="">05:00</option>
+                                    <option value="">06:00</option>
+                                </select>
+                                <span>:</span>
+                                <select name="" id="">
+                                    <option value="">10</option>
+                                    <option value="">20</option>
+                                    <option value="">30</option>
+                                    <option value="">40</option>
+                                    <option value="">50</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="flex">
+                                <select name="" id="">
+                                    <option value="">00:00</option>
+                                    <option value="">01:00</option>
+                                    <option value="">02:00</option>
+                                    <option value="">03:00</option>
+                                    <option value="">04:00</option>
+                                    <option value="">05:00</option>
+                                    <option value="">06:00</option>
+                                </select>
+                                <span>:</span>
+                                <select name="" id="">
+                                    <option value="">10</option>
+                                    <option value="">20</option>
+                                    <option value="">30</option>
+                                    <option value="">40</option>
+                                    <option value="">50</option>
+                                </select>
+                            </div>
+                        </td>
+                        <td>1</td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- <div class="bt_box">
+                <button class="bt_reg" type="button" onclick="location.href='water_reg.html'">등 록</button>
+            </div> -->
+            <div class="paging">
+                <i class="fa-solid fa-angles-left" id="first_page"></i>
+                <i class="fa-solid fa-angle-left" id="prev_page"></i>
+                <div class="pages">
+                    <span class="active">1</span>
+                    <span>2</span>
+                    <span>3</span>
+                    <span>4</span>
+                    <span>5</span>
+                </div>
+                <i class="fa-solid fa-angle-right" id="next_page"></i>
+                <i class="fa-solid fa-angles-right" id="last_page"></i>
+            </div>
+        </div>
+    </section>
+    <footer class="sub_footer">
+        <ul>
+          <li><strong>(주)성하</strong>  대표이사: 조정윤</li>
+          <li>사업자등록번호: 705-86-01108</li>
+          <li>대표번호: 02-596-2200</li>
+          <li>팩스번호: 02-512-5161</li>
+          <li>이메일: sungha0405@hanmail.net</li>
+        </ul>
+      </footer>
+  </body>
+</html>

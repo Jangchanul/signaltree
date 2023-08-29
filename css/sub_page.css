@@ -676,6 +676,9 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
 .highchart .highcharts-credits{
     display: none;
 }
+g.highcharts-label.highcharts-tooltip.highcharts-color-0{
+    opacity: 1 !important;
+}
 .highchart h5{
     text-align: center;
     font-weight: bold;
@@ -845,6 +848,18 @@ select{
 }
 .list_box table td a{
     color: #6a6a6a;
+}
+.water_list .flex select{
+    border: 1px solid #666;
+    padding: 4px 24px;
+    font-weight: bold;
+}
+.water_list .flex span{
+    padding: 0 2px;
+}
+.measure select{
+    border: 1px solid #666;
+    padding: 4px 24px;
 }
 /* ------------------------------------------------------------------------ */
 
@@ -1040,6 +1055,9 @@ select{
     .water_list .flex{
         padding: 0;
         justify-content: space-between;
+    }
+    .water_list2 .flex{
+        justify-content: flex-start;
     }
     .water_list .flex>div{
         display: flex;
