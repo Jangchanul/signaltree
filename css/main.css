@@ -192,7 +192,6 @@
 .main .side_body .list .top > div {
   display: flex;
   color: #fff;
-  font-size: 12px;
 }
 .main .side_body .list .top > div img {
   width: 18px;
@@ -261,6 +260,10 @@
 .weather .water{
   font-weight: bold;
   color: blue;
+}
+.side_body .top i{
+  margin-right: 5px;
+  transform: rotate(-90deg);
 }
 
 @media screen and (max-width: 800px) {
