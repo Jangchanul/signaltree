@@ -159,7 +159,7 @@
                   /
                   <span class="highttemp"></span>&#8451;
                 </div>
-                <div class="icon"></div>
+                <div class="icon"><img src="./img/weather1.png" alt=""></div>
               </div>
               <h2 class="water">
                 강수확률 : 56%
@@ -427,7 +427,7 @@
                 /
                 <span class="highttemp"></span>&#8451;
               </div>
-              <div class="icon"></div>
+              <div class="icon"><img src="./img/weather1.png" alt=""></div>
             </div>
             <h2 class="water">
               강수확률 : 56%
@@ -609,8 +609,8 @@
       $.getJSON('https://api.openweathermap.org/data/2.5/weather?q=Seoul&appid=2355c1bea3d756761ef492f906823870&units=metric&lang=kr', function(result){
         $('.lowtemp').append(result.main.temp_min);
         $('.highttemp').append(result.main.temp_max);
-        var wiconUrl = '<img src="http://openweathermap.org/img/wn/'+result.weather[0].icon+'.png" alt="'+result.weather[0].desciption+'">'
-        $('.icon').html(wiconUrl);
+        // var wiconUrl = '<img src="http://openweathermap.org/img/wn/'+result.weather[0].icon+'.png" alt="'+result.weather[0].desciption+'">'
+        // $('.icon').html(wiconUrl);
       });
     </script>
   </body>
