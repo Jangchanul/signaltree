@@ -431,11 +431,13 @@
     border: 1px solid #a2cdc1;
     font-size: 18px;
     font-weight: bold;
+    padding: 10px;
 }
 .reg_container td{
     border: 1px solid #a2cdc1;
     text-align: center;
     padding: 8px;
+    padding: 10px;
 }
 .reg_container td input{
     border: 1px solid #c4cbd6;
@@ -860,6 +862,17 @@ select{
 .measure select{
     border: 1px solid #666;
     padding: 4px 24px;
+}
+.measure_reg td{
+    padding: 10px;
+}
+.bt_add{
+    display: block;
+    padding: 12px 24px;
+    font-weight: bold;
+    border: 1px solid #6a6a6a;
+    color: #6a6a6a;
+    margin: 0 auto;
 }
 /* ------------------------------------------------------------------------ */
 
