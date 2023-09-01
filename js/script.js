@@ -1,10 +1,16 @@
+window.onload = function(){
+  $(".modal_box").load("modal.html");
+};
+
+function openModal(modalname) {
+  document.get
+  $("." + modalname).fadeIn(300);
+};
+
 $(function () {
   $(".bg").click(function(){
-    $(".modal").hide();  
+    $(".modal").fadeOut(300);  
     $("#menuToggle input:checkbox").prop("checked", false);
-  });
-  $(".bt_ok").click(function(){
-    $(".modal").hide();
   });
   $(".dep1>li").hover(function () {
     $(this).toggleClass("active");
@@ -15,13 +21,10 @@ $(function () {
     $(this).siblings().toggleClass("active");
   });
   $(".bt_guide").click(function(){
-    $(".modal").show();
+    $(".modal").fadeIn(300);
   });
   $(".bt_ok").click(function(){
-    $(".modal").hide();
-  });
-  $(".bt_close").click(function(){
-    $(".modal").hide();
+    $(".modal").fadeOut(300);
   });
   $(".m_menu .mid>li div").click(function(){
     $(this).toggleClass("active");
@@ -32,10 +35,10 @@ $(function () {
     $(this).siblings().slideToggle();
   });
   $(".agree1").click(function(){
-    $(".terms_a").fadeIn();
+    $(".terms_a").fadeIn(300);
   });
   $(".agree2").click(function(){
-    $(".terms_b").fadeIn();
+    $(".terms_b").fadeIn(300);
   });
   $("#all_ck").change(function(){
     if($(this).is(":checked")){
@@ -83,5 +86,14 @@ $(function () {
   $("#file").on('change',function(){
     var fileName = $("#file").val();
     $(".upload-name").val(fileName);
+  });
+  $(".bt_close").on('click',function(){
+    $(".modal").fadeOut(300);
+  });
+  $(".bt_ok").on('click',function(){
+    $(".modal").fadeOut(300);
+  });
+  $(".bt_no").on('click',function(){
+    $(".modal").fadeOut(300);
   });
 });
