@@ -1,12 +1,3 @@
-window.onload = function(){
-  $(".modal_box").load("modal.html");
-};
-
-function openModal(modalname) {
-  document.get
-  $("." + modalname).fadeIn(300);
-};
-
 $(function () {
   $(".bg").click(function(){
     $(".modal").fadeOut(300);  
@@ -19,12 +10,6 @@ $(function () {
   $(".tg_bt").click(function(){
     $(this).toggleClass("active");
     $(this).siblings().toggleClass("active");
-  });
-  $(".bt_guide").click(function(){
-    $(".modal").fadeIn(300);
-  });
-  $(".bt_ok").click(function(){
-    $(".modal").fadeOut(300);
   });
   $(".m_menu .mid>li div").click(function(){
     $(this).toggleClass("active");
@@ -86,14 +71,5 @@ $(function () {
   $("#file").on('change',function(){
     var fileName = $("#file").val();
     $(".upload-name").val(fileName);
-  });
-  $(".bt_close").on('click',function(){
-    $(".modal").fadeOut(300);
-  });
-  $(".bt_ok").on('click',function(){
-    $(".modal").fadeOut(300);
-  });
-  $(".bt_no").on('click',function(){
-    $(".modal").fadeOut(300);
   });
 });
