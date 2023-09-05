@@ -28,7 +28,7 @@
 	left: 50%;
 	transform: translateX(-50%);
 	bottom: 0;
-	height: 60px;
+	height: 40px;
 	background-color: #fff;
  }
  .footer-reg>ul{
@@ -50,11 +50,12 @@
 	width: 620px;
 	margin: 0 auto;
  }
- .register .top{display: flex;align-items: flex-end;justify-content: space-between;padding-bottom: 20px;margin-bottom: 20px;border-bottom: 1px solid #000;}
- .register .top h2{font-size: 24px;font-weight: bold;color: #4d555f;}
+ .register .top{display: flex;align-items: flex-end;justify-content: space-between;padding-bottom: 30px;}
+ .register .top h2{font-size: 30px;font-weight: bold;}
  .register .top p{font-size: 16px;}
  .register .star{color: #188764;font-size: 18px;font-weight: bold;vertical-align: middle;padding: 0 5px;}
- .register .mid table{width: 100%;border-bottom: 1px solid #c4cbd6;}
+ .register .mid{border-top: 1px solid #000;border-bottom: 1px solid #000;padding: 30px 0;}
+ .register .mid table{width: 100%;}
 .register .mid th{font-size: 16px;font-weight: bold;text-align: start;width: 150px;}
 .register .mid table{border-spacing: 15px;border-collapse: separate;}
 .register .mid table select,.register .mid table input{
@@ -62,9 +63,10 @@
 	border: 1px solid #e0e4ea;
 	background-color: #f8f9fb;
 	width: 100%;
-	padding: 8px 10px;
+	padding: 0 10px;
 	box-sizing: border-box;
 	font-size: 16px;
+	height: 40px;
 }
 .register .mid .flex{
 	display: flex;
@@ -91,7 +93,7 @@
 }
 .register .mid .line{display: block;width: 10px;height: 2px;background-color: #000;margin: 0 5px 0 5px;}
 .register .mid .at{display: block;margin: 0 5px 0 5px;font-size: 18px;}
-.register .ck_box{padding: 30px 0;border-bottom: 1px solid #4d555f;font-size: 16px;font-weight: bold;margin-bottom: 30px;}
+.register .ck_box{padding: 30px 0;font-size: 16px;font-weight: bold;}
 .register .ck_box .all{margin-bottom: 15px;}
 .register .ck_list{padding: 15px;background-color: #f8f9fb;}
 .register .ck_list>.flex:first-child{margin-bottom: 10px;}
@@ -100,6 +102,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 30px 0;
 }
 .register .bot button{
 	padding: 12px 40px;
@@ -112,7 +115,16 @@
 background-color: #188764;
 color: #fff;
 }
+.register .bot .yes{
+background-color: #188764;
+color: #fff;
+}
 .register .bot .bt_cancel{
+	color: #188764;
+	border: 1px solid #188764;
+	margin-left: 12px;
+}
+.register .bot .no{
 	color: #188764;
 	border: 1px solid #188764;
 	margin-left: 12px;
@@ -154,4 +166,11 @@ color: #fff;
 	font-size: 18px;
 	font-weight: bold;
 	margin: 0 auto;
+}
+
+.register>h3{
+	font-size: 40px;
+	font-weight: bold;
+	text-align: center;
+	padding-bottom: 30px;
 }

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>시그널트리</title>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/register.css" />
+    <script src="./js/script.js"></script>
+    
+    <script src="https://kit.fontawesome.com/512286d077.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header class="header-reg">
+        <div class="head-reg"><a class="logo-reg" id="logo_reg" href="index.html"></a></div>
+    </header>
+    
+    <section class="register">
+        <h3>아이디 찾기</h3>
+        <div class="mid">
+            <form action="#">
+              <table>
+                <tr>
+                  <th>사용자명</th>
+                  <td>
+                    <input type="text" placeholder="이름을 입력해주세요">
+                  </td>
+                </tr>
+                <tr>
+                  <th>연락처</th>
+                  <td>
+                    <div class="flex">
+                      <input type="number" value="010">
+                      <span class="line"></span>
+                      <input type="number">
+                      <span class="line"></span>
+                      <input type="number">
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>이메일</th>
+                  <td>
+                    <div class="flex">
+                      <input type="text">
+                      <span class="at">@</span>
+                      <input type="text">
+                      <select name="" id="">
+                        <option value="">직접입력</option>
+                        <option value="">naver.com</option>
+                        <option value="">daum.net</option>
+                        <option value="">gmail.com</option>
+                      </select>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th></th>
+                  <td><input type="button" value="인증번호 요청"></td>
+                </tr>
+                <tr>
+                  <th>이메일 인증번호 <span class="star">*</span></th>
+                  <td>
+                    <div class="flex">
+                      <input type="text">
+                      <input type="button" value="인증번호 확인">
+                    </div>
+                  </td>
+                </tr>
+              </table>
+            </form>
+          </div>
+          <div class="bot">
+            <button type="button" class="yes">확인</button>
+            <button type="button" class="no" onclick="location.href='index.html'">취소</button>
+          </div>
+        
+    </section>
+    
+    <footer class="footer-reg">
+        <ul>
+            <li><strong>(주)성하</strong>  대표이사: 조정윤</li>
+            <li>사업자등록번호: 705-86-01108</li>
+            <li>대표번호: 02-596-2200</li>
+            <li>팩스번호: 02-512-5161</li>
+            <li>이메일: sungha0405@hanmail.net</li>
+        </ul>
+    </footer>
+    <div class="modal_box"></div>
+  </body>
+</html>
