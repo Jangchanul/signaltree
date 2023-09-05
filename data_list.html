@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="./css/sub_page.css" />
     <script src="./js/script.js"></script>
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   </head>
   <body>
     <header>
@@ -156,9 +158,9 @@
                 <li>
                     <strong>계측일자</strong>
                     <div>
-                        <input type="date" data-placeholder="날짜 선택">
+                        <input type="text" id="from" placeholder="날짜선택">
                         <span>~</span>
-                        <input type="date">
+                        <input type="text" id="to" placeholder="날짜선택">
                     </div>
                 </li>
                 <li class="m_bt">
@@ -300,6 +302,25 @@
         </ul>
       </footer>
       <div class="modal_box"></div>
+      <script>
+        $(function(){
+          $.datepicker.setDefaults({
+            onSelect: function(date){
+              $("#to").datepicker('setDate','+31D');
+            },
+            dateFormat: 'yy-mm-dd',
+            constrainInput: true
+          })
+          $("#from").datepicker();
+          $("#to").datepicker();
+
+          
+          $("#from").change(function(){
+            console.log($(this).val());
+          });
+          
+          
+        });        
+      </script>
   </body>
-  
 </html>
