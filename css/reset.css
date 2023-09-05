@@ -49,8 +49,6 @@ a {
 }
 input {
     /*ios대응*/
-    appearance: none;
-    -webkit-appearance: none;
     -webkit-border-radius: 0;
 }
 select {

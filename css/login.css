@@ -229,4 +229,5 @@
   .info_box {
     width: 83.333vw;
   }
+  input[type="checkbox"] {display:block;}
 }
