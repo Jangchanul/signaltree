@@ -7,7 +7,6 @@
 }
 
 .head-reg{
-	height: 80px;
 	padding: 20px 40px;
 	box-sizing: border-box;
 	background: linear-gradient(90.94deg, #18A7A1 1.24%, #60C276 100%);
@@ -173,4 +172,101 @@ color: #fff;
 	font-weight: bold;
 	text-align: center;
 	padding-bottom: 30px;
+}
+
+@media screen and (max-width: 800px){
+	.head-reg{
+		padding: 2.778vw 5.556vw;
+	}
+	.logo-reg{
+		width: 22.222vw;
+		margin: 0 auto;
+		background-size: 100%;
+		background-repeat: no-repeat;
+		height: 8.333vw;
+	}
+	.register{
+		width: 100%;
+		padding-top: 13.889vw;
+		padding-bottom: 13.889vw;
+	}
+	.register>h3{
+		font-size: 6.667vw;
+		padding: 8.333vw 0;
+	}
+	.register .mid{
+		width: 92%;
+		margin: 0 auto;
+	}
+	.register .mid th{
+		width: 30%;
+		font-size: 3.889vw;
+		word-break: keep-all;
+	}
+	.register .mid table select, .register .mid table input{
+		font-size: 3.889vw;
+		height: 9.723vw;
+		padding: 0 2.778vw;
+	}
+	.register .mid .at{
+		font-size: 3.333vw;
+	}
+	.register .wrap{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.register .mid .mail input{
+		width: 40%;
+	}
+	.register .mail select{
+		margin-top: 3.333vw;
+	}
+	.register .mid table input[type='button']{
+		display: block;
+		width: 100%;
+	}
+	.register .mid .pad input[type='button']{
+		margin-top: 3.333vw;
+	}
+	.footer-reg{
+		display: none;
+	}
+	.register .bot{
+		padding: 8.333vw 0;
+	}
+	.register .bot button{
+		padding: 3.333vw 11.111vw;
+		font-size: 4.444vw;
+	}
+	.register .top{
+		width: 92%;
+		margin: 0 auto;
+		padding-top: 8.333vw;
+		padding-bottom: 4.444vw;
+	}
+	.register .top h2{
+		font-size: 6.667vw;
+	}
+	.register .top p{
+		font-size: 3.889vw;
+	}
+	.register .mid .ex{
+		font-size: 3.333vw;
+	}
+	.register .mid .ex img{
+		width: 3.333vw;
+		height: 3.333vw;
+	}
+	.terms_a>div, .terms_b>div{
+		width: 92%;
+		box-sizing: border-box;
+		padding: 3.333vw;
+	}
+	.terms_a .text, .terms_b .text{
+		font-size: 3.889vw;
+	}
+	.terms_a h3, .terms_b h3{
+		font-size: 5.556vw;
+		margin-bottom: 2.222vw;
+	}
 }
