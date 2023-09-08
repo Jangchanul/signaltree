@@ -87,12 +87,14 @@
     padding: 0 8px;
 }
 .search_box select{
-    width: 200px;
+    width: 180px;
     border: 1px solid #c4cbd6;
     font-size: 16px;
     padding: 4px 12px;
     box-sizing: border-box;
     height: 30px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .search_box input{
     border: 1px solid #c4cbd6;
@@ -953,6 +955,7 @@ select{
         height: 8.333vw;
     }
     .search_box input[type='date']{
+        width: 100%;
         font-size: 3.333vw;
         padding: 1.111vw;
         height: 8.333vw;
