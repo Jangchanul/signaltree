@@ -656,13 +656,14 @@ input[type="date"].after::-webkit-calendar-picker-indicator{
     padding: 4px;
     font-size: 18px;
     font-weight: bold;
-    border: 1px solid #464a69;
-    border-radius: 2px;
+    border: 1px solid #55BF3B;
+    border-radius: 4px;
     margin-left: 12px;
-    color: #464a69;
+    color: #55BF3B;
 }
 .onoff_box input:checked+label{
-    color: #c51a08;
+    color: #fff;
+    background-color: #c51a08;
     border-color: #c51a08;
 }
 .measure td{
