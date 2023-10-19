@@ -1,3 +1,6 @@
+window.onload = function(){
+  $(".modal_box").load("modal.html");
+};
 $(function () {
   $(".bg").click(function(){
     $(".modal").fadeOut(300);  
@@ -88,3 +91,4 @@ $(function () {
     $(".modal").fadeOut(300);
   });
 });
+
