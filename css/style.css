@@ -99,7 +99,7 @@ img {
 }
 .guide_pop .sup_box{
   display: flex;
-  font-size: 8px;
+  font-size: 12px;
   margin-bottom: 24px;
 }
 .guide_pop .sup_box>ul{

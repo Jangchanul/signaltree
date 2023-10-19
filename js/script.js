@@ -19,9 +19,9 @@ window.onload = function(){
       $(this).toggleClass("active");
       $(this).siblings().toggleClass("active");
     });
-    $(".bt_guide").click(function(){
-      $(".modal").fadeIn(300);
-    });
+    // $(".bt_guide").click(function(){
+    //   $(".modal").fadeIn(300);
+    // });
     $(".bt_ok").click(function(){
       $(".modal").fadeOut(300);
     });
