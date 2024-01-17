@@ -1,62 +1,409 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>시그널트리</title>
-    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="./css/login.css" />
-    <script src="./js/script.js"></script>
-  </head>
-  <body>
-    <section class="login type1">
-      <h1 class="logo">
-        <img src="./img/logo-horizontal-white.png" alt="" />
-        <div class="line"></div>
-      </h1>
-      <div class="flex">
-        <figure>
-          <div class="tree"><img src="./img/tree2.png" alt="" /></div>
-        </figure>
-        <div class="container">
-          <p>IOT 토양센서와 기상데이터 연계하여 관수시점을 스스로 판단하는</p>
-          <h3>관수시스템 <span>시그널트리</span></h3>
-          <form action="main.html">
-            <input type="email" class="text_id" placeholder="ID(E-mail)"" />
-            <input type="password" class="text_pw" placeholder="PASSWORD" />
-            <input type="submit" value="LOGIN" />
-            <div class="ck_id">
-              <input type="checkbox" id="id_ck">
-              <label for="id_ck">아이디 저장</label>
-            </div>
-          </form>
-          <div class="info_box">
-            <div class="find">
-              <a href="find_id.html" class="w_dot">아이디 찾기</a>
-              <a href="find_pw.html" class="w_dot">비밀번호 찾기</a>
-            </div>
-            <a href="register.html" class="w_dot">회원가입</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- 아뒤비번틀렸을때 -->
-    <div class="modal">
-      <div class="bg"></div>
-      <div class="wrong_pop">
-        <button class="bt_close" type="button"><img src="./img/close.png" alt=""></button>
-        <figure><img src="./img/wrong.png" alt=""></figure>
-        <p>아이디 또는 비밀번호를<br>잘못 입력했습니다.</p>
-        <button class="bt_ok" type="button">확인</button>
-      </div>
-    </div>
-    <!-- 아뒤비번틀렸을때 -->
-  </body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>건강 돋보기</title>
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <main class="wrap">
+            <section class="container m1">
+                <div class="text">
+                    <h1>건강 돋보기 어플리케이션(App)</h1>
+                    <p>
+                        노인 및 고령자의 기본 건강 상태를 정밀하고 측정하고 모니터링 하며 건강 악화의 조기 징후를 식별하여 응급 상황 발생 시 신속한 대응이 가능한
+                        모바일 서비스와 기술
+                    </p>
+                </div>
+                <div class="pos_img"><img src="img/m1_2.png" alt=""></div>
+            </section>
+            <section class="container m2">
+                <div class="head">
+                    <p>비 접촉 디바이스 프리(Non-contact Device Free) 바이탈 사인(Vital Sign) 검출</p>
+                    <p>모바일 건강관리 “건강 돋보기” 어플리케이션</p>
+                </div>
+                <div class="m2_img"><img src="img/m2.png" alt=""></div>
+                <p class="ex">
+                    <strong>* rPPG(remote photoplethysmography)</strong>
+                    : 심장박동에 의해 발생하는 빛의 파장 변화를 감지. 심장의 활동을 추정하는 기술이며, R, G, B 색상 채널 값의 변화를 분석하는 기술</p>
+            </section>
+            <section class="container m3">
+                <div class="sub_h">
+                    <h3>서비스 필요성</h3>
+                    <p>고령인구 증가는 단순히 인구 증가 문제만 있지 않음</p>
+                </div>
+                <div class="sub_m">
+                    <p>고령인구 증가는 돌봄 수요 증가 외에
+                        <span>의료, 안전등 사회적 비용 지출과 고령자의 사회 참여가 낮아지는 현상</span>으로 이어짐</p>
+                    <ul>
+                        <li><img src="img/m3_1.jpg" alt=""></li>
+                        <li><img src="img/m3_2.png" alt=""></li>
+                        <li><img src="img/m3_3.png" alt=""></li>
+                    </ul>
+                    <small>출처 : 분당서울대학교병원 건강문화 매거진, 최정연 교수</small>
+                    <div class="l_a"><img src="img/arrow_d.png" alt=""></div>
+                    <p>초고령사회 진입과 동시에 노인 1인 가구 증가
+                        <span>돌봄 공백지수 매년 증가 추세 (사회적 위험 노출)</span></p>
+                </div>
+            </section>
+            <section class="container m4">
+                <div class="sub_h">
+                    <h3>서비스 필요성</h3>
+                    <p>매년 증가하고 있는 장기요양보험 인정자 ‘22년 고령인구 대비 13%가 장기요양 급여이용자로 등록 되었음</p>
+                </div>
+                <div class="sub_m">
+                    <div class="chart"><img src="img/m4_1.jpg" alt=""></div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>
+                                    년도
+                                </th>
+                                <th>
+                                    <p>급여이용자(명)</p>
+                                    <p>Beneficiaries</p>
+                                </th>
+                                <th>
+                                    <p>요양보호사(명)</p>
+                                    <p>Caregivers</p>
+                                </th>
+                                <th>
+                                    <p>재가급여비용(억원)</p>
+                                    <p>Homecare Expense</p>
+                                </th>
+                                <th>
+                                    <p>방문요양 이용금액(억원)</p>
+                                    <p>Visiting Care Expense</p>
+                                </th>
+                                <th>
+                                    <p>장기요양기관(개소)</p>
+                                    <p>Long-term Care Facilities</p>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2020년</td>
+                                <td>857,984</td>
+                                <td>450,970</td>
+                                <td>52,302</td>
+                                <td>35,889</td>
+                                <td>25,385</td>
+                            </tr>
+                            <tr>
+                                <td>2021년</td>
+                                <td>953,511</td>
+                                <td>507,473</td>
+                                <td>61,907</td>
+                                <td>42,145</td>
+                                <td>26,558</td>
+                            </tr>
+                            <tr>
+                                <td>2022년</td>
+                                <td>1,019,130</td>
+                                <td>564,243</td>
+                                <td>70,922</td>
+                                <td>48,095</td>
+                                <td>27,515</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="f_sb ma_1">
+                        <p>A. 재가급여 항목 : 방문요양, 방문목욕, 방문간호, 주야간보호, 단기보호, 복지용구</p>
+                        <p>A. 급여인정자 증가율 : 9%</p>
+                    </div>
+                    <div class="f_sb ma_1">
+                        <p>B. 시설급여 항목 : 노인요양시설, 노인요양공동생활가정</p>
+                        <p>B. 장기요양기관 증가율 : 3.8%</p>
+                    </div>
+                    <div class="f_sb">
+                        <p>C. 통합재가서비스</p>
+                        <p>C. 요양 보호사 증가율 : 11.9%</p>
+                    </div>
+                </div>
+            </section>
+            <section class="container m5">
+                <div class="sub_h">
+                    <h3>사업 소개</h3>
+                    <p>재가방문 요양 서비스를 받고 있는 노인을 위한 건강 모니터링 사업</p>
+                </div>
+                <div class="sub_m">
+                    <ul class="dep1">
+                        <li>
+                            <div class="flex">
+                                <p>
+                                    <strong>01</strong>
+                                    <span>사업의 중요성 및 목적</span></p>
+                                <p>AI기반 비 접촉 건강 정보 검출 모바일 앱은 노인의 응급 및 지속적인 건강 상태를 모니터링 하여 노인 복지 향상과 안전한 지역 사회로
+                                    전환을 촉진</p>
+                            </div>
+                        </li>
+                        <li>
+                            <p>
+                                <strong>02</strong>
+                                <span>사업효과</span></p>
+                            <ul class="f_sb dep2">
+                                <li>
+                                    <figure><img src="img/img7.jpg" alt=""></figure>
+                                    <figcaption>
+                                        <p>노인</p>
+                                        상시적인 건강 모니터링을 통해 건강독립 획득과 응급대응 가능
+                                    </figcaption>
+                                </li>
+                                <li>
+                                    <figure><img src="img/img2.jpg" alt=""></figure>
+                                    <figcaption>
+                                        <p>가족</p>
+                                        노인의 자발적 건강 관리와 모니터링은 가족에게는 안정감을 제공하고 건강관리 비용을 절약하게 됨
+                                    </figcaption>
+                                </li>
+                                <li>
+                                    <figure><img src="img/img9.jpg" alt=""></figure>
+                                    <figcaption>
+                                        <p>요양사</p>
+                                        건강모니터링 사업참여는 방문요양사의 전문직으로 인식 개선가능
+                                    </figcaption>
+                                </li>
+                                <li>
+                                    <figure><img src="img/img4.jpg" alt=""></figure>
+                                    <figcaption>
+                                        <p>지자체</p>
+                                        지역내 노인 가구를 위한 맞춤형 복지행정 서비스 실현과 지자체 만족도를 높이는 효과
+                                    </figcaption>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div><img src="img/arrow_d.png" alt=""></div>
+                    <p>노인의 삶의 질 향상, 건강관리 혁신 및 지역사회의 안전한 환경조성,
+                        <span>지자체 복지행정 서비스 만족도를 높이는 효과</span></p>
+                </div>
+            </section>
+            <section class="container m6">
+                <div class="sub_h">
+                    <h3>서비스 개요</h3>
+                    <p>고령자 및 1인 고령자 가구, 재가 방문요양 서비스를 받고 있는 고령자 응급, 위기 대응 건강 모니터링</p>
+                </div>
+                <div class="sub_m">
+                    <div class="m6_1"><img src="img/m6_1.png" alt=""></div>
+                    <div class="m6_2">
+                        <p>[헬스체크 앱을 사용한 건강관리 모니터링]</p>
+                        <table class="ta1">
+                            <tr>
+                                <th><img src="img/6_1.png" alt=""></th>
+                                <th rowspan="2" class="ar"><img src="img/arrow.png" alt=""></th>
+                                <th><img src="img/6_2.png" alt=""></th>
+                                <th rowspan="2" class="ar"><img src="img/arrow.png" alt=""></th>
+                                <th><img src="img/6_3.png" alt=""></th>
+                                <th rowspan="2" class="ar"><img src="img/arrow.png" alt=""></th>
+                                <th><img src="img/6_4.png" alt=""></th>
+                                <th rowspan="2" class="ar"><img src="img/arrow.png" alt=""></th>
+                                <th><img src="img/6_5.png" alt=""></th>
+                                <th rowspan="2" class="ar"><img src="img/arrow.png" alt=""></th>
+                                <th><img src="img/6_6.png" alt=""></th>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <p>요양보호사 건강 돋보기 앱 활성화</p>
+                                </td>
+                                <td>
+                                    <p>앱 클릭</p>
+                                </td>
+                                <td>
+                                    <p>어르신 얼굴인식</p>
+                                </td>
+                                <td>
+                                    <p>측정완료</p>
+                                </td>
+                                <td>
+                                    <p>측정결과</p>
+                                </td>
+                                <td>
+                                    <p>카카오 알림톡 및 지자체, 가족정보 공유</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="ta2">
+                            <tr>
+                                <th><img src="img/6_1.png" alt=""></th>
+                                <td>
+                                    <p>요양보호사 건강 돋보기 앱 활성화</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><img src="img/6_2.png" alt=""></th>
+                                <td>
+                                    <p>앱 클릭</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><img src="img/6_3.png" alt=""></th>
+                                <td>
+                                    <p>어르신 얼굴인식</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><img src="img/6_4.png" alt=""></th>
+                                <td>
+                                    <p>측정완료</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><img src="img/6_5.png" alt=""></th>
+                                <td>
+                                    <p>측정결과</p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><img src="img/6_6.png" alt=""></th>
+                                <td>
+                                    <p>카카오 알림톡 및 지자체, 가족정보 공유</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <p>생리학적 데이터
+                            <span>원격 프리미엄 건강관리</span></p>
+                    </div>
+                </div>
+            </section>
+            <section class="container m7">
+                <div class="sub_h">
+                    <h3>시스템 주요 기능</h3>
+                    <p>모바일 앱으로 활력징후 측정 및 분석을 통한 대화형(양방향) 인지학습 프로그램 제공</p>
+                </div>
+                <div class="sub_m">
+                    <table class="ta1">
+                        <tr>
+                            <th class="img"><img src="img/4_1.png" alt=""></th>
+                            <th rowspan="2" class="ar"><img src="img/arrow2.png" alt=""></th>
+                            <th class="img"><img src="img/4_2.png" alt=""></th>
+                            <th rowspan="2" class="ar"><img src="img/arrow2.png" alt=""></th>
+                            <th class="img"><img src="img/4_3.png" alt=""></th>
+                            <th rowspan="2" class="ar"><img src="img/arrow2.png" alt=""></th>
+                            <th class="img"><img src="img/4_4.png" alt=""></th>
+                            <th rowspan="2" class="ar"><img src="img/arrow2.png" alt=""></th>
+                            <th class="img"><img src="img/4_5.png" alt=""></th>
+                            <th rowspan="2" class="ar"><img src="img/arrow2.png" alt=""></th>
+                            <th class="img"><img src="img/4_6.png" alt=""></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>앱 활성화</p>
+                            </td>
+                            <td>
+                                <p>바이탈 사인 측정</p>
+                            </td>
+                            <td>
+                                <p>GPT 파인튜닝</p>
+                                <p>바이탈 사인 분석</p>
+                            </td>
+                            <td>
+                                <p>건강 데이터 검출 및</p>
+                                <p>
+                                    <span>건강 모니터링을 통한 위험상황 인지 가족, 지자체 정보 공유</span></p>
+                            </td>
+                            <td>
+                                <p>개인의 생리학적 맞춤형</p>
+                                <p>
+                                    <span>대화형 서비스</span></p>
+                            </td>
+                            <td>
+                                <p>생리학적 건강 맞춤 서비스</p>
+                                <p>
+                                    <span>건강기반 카테고리 추천</span></p>
+                                <small>(생활정보, 건강, 보험, 금융, 건기식 등)</small>
+                            </td>
+                        </tr>
+                    </table>
+                    <table class="ta2">
+                        <tr>
+                            <th class="img"><img src="img/4_1.png" alt=""></th>
+                            <td>
+                                <p>앱 활성화</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="img"><img src="img/4_2.png" alt=""></th>
+                            <td>
+                                <p>바이탈 사인 측정</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="img"><img src="img/4_3.png" alt=""></th>
+                            <td>
+                                <p>GPT 파인튜닝</p>
+                                <p>바이탈 사인 분석</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="img"><img src="img/4_4.png" alt=""></th>
+                            <td>
+                                <p>건강 데이터 검출 및</p>
+                                <p>
+                                    <span>건강 모니터링을 통한 위험상황 인지 가족, 지자체 정보 공유</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="img"><img src="img/4_5.png" alt=""></th>
+                            <td>
+                                <p>개인의 생리학적 맞춤형</p>
+                                <p>
+                                    <span>대화형 서비스</span></p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="img"><img src="img/4_6.png" alt=""></th>
+                            <td>
+                                <p>생리학적 건강 맞춤 서비스</p>
+                                <p>
+                                    <span>건강기반 카테고리 추천</span></p>
+                                <small>(생활정보, 건강, 보험, 금융, 건기식 등)</small>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <p class="ex">
+                    <strong>* Signal Strength-Based Filtering</strong>
+                    : 신호 강도 기반 필터링. 조도, 흔들림, 페이셜 컬러 등을 불필요한 신호를 감소시키는 알고리즘 적용을 통해 안정적인 건강 정보를 추출하는
+                    기술 적용
+                </p>
+            </section>
+            <section class="container m8">
+                <div class="text">
+                    <h6>'기초 건강 확인 모바일 앱'</h6>
+                    <h1>건강 돋보기 어플리케이션(App)</h1>
+                    <p>
+                        어르신 건강 모니터링 및 위기대응을 위한 고도화된 비 접촉 웰니스 솔루션으로서 통합된 노인 건강, 위기대응 모니터링 시스템을 제공합니다. 노인
+                        복지 및 지역사회 안전의 향상에 중점을 둡니다.</p>
+                </div>
+            </section>
+        </main>
+    </body>
+    <script>
+        const wrap = document.getElementsByClassName('wrap')[0]; // 보일 영역
+        const container = document.getElementsByClassName('container');
+        let page = 0; // 영역 포지션 초기값
+        const lastPage = container.length - 1; // 마지막 페이지
+
+        window.addEventListener('wheel', (e) => {
+            e.preventDefault();
+            if (e.deltaY > 0) {
+                page++;
+            } else if (e.deltaY < 0) {
+                page--;
+            }
+            if (page < 0) {
+                page = 0;
+            } else if (page > lastPage) {
+                page = lastPage;
+            }
+            console.log(e.deltaY)
+            wrap.style.top = page * -100 + 'vh';
+        }, {passive: false});
+    </script>
 </html>
