@@ -1,447 +1,214 @@
 @import "reset.css";
-html{
-    height: 100%;
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-body{
-    font-family: 'Noto Sans', sans-serif;
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    height: 100%;
-    /* overflow: hidden; */
-}
-main{
-    height: 100%;
-}
-.wrap{
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    transition: 0.5s;
-}
-.container{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-}
-.m1{
-    background: url(../img/m1.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.text{
-    position: absolute;
-    z-index: 10;
-    left: 60px;
-    bottom: 200px;
-    color: #FFF;
-    width: 800px;
-}
-.text h1{
-    font-size: 50px;
-    font-weight: 800;
-    word-break: keep-all;
-}
-.text h6{
-    font-size: 40px;
-    white-space: nowrap;
-}
-.text p{
-    font-size: 24px;
-    white-space: pre-line;
-    word-break: keep-all;
-    line-height: 2;
-}
-.m1{
-    width: 100%;
-    height: 100%;
-}
-.m1 .pos_img{
-    position: absolute;
-    right: 60px;
-    top: 100px;
-    width: 40%;
-}
-.m2 .head{
-    background: url(../img/m2_t.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 100px 0;
-}
-.m2 .head p{
-    width: 92%;
-    margin: 0 auto;
-    color: #FFF;
-    font-size: 30px;
-    font-weight: 600;
-    word-break: keep-all;
-    line-height: 1.5;
-}
-.m2_img{
-    margin-bottom: 50px;
-}
-.ex{
-    width: 92%;
-    margin: 0 auto;
-    font-size: 18px;
-    color: #666;
-    word-break: keep-all;
-}
-.ex strong{
-    color: #000;
-    font-weight: 900;
-}
-.container .sub_h{
-    display: flex;
-    align-items: center;
-    width: 92%;
-    margin: 0 auto;
-    padding: 50px 0;
-    border-bottom: 3px solid #333;
-    word-break: keep-all;
-}
-.container .sub_h h3{
-    font-size: 30px;
-    font-weight: 600;
-}
-.container .sub_h p{
-    font-size: 24px;
-    color: #333;
-    margin-left: 100px;
-}
-.container .sub_m{
-    width: 92%;
-    margin: 0 auto;
-    padding: 50px 0;
-}
-.m3 .sub_m>ul{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 50px 0;
-}
-.m3 .sub_m>ul>li:nth-child(1),.m3 .sub_m>ul>li:nth-child(3){
-    width: 28%;
-}
-.m3 .sub_m>ul>li:nth-child(2){
-    width: 30%;
-}
-.m3 .sub_m p{
-    text-align: center;
-    font-size: 24px;
-    word-break: keep-all;
-}
-.m3 .sub_m p span{
-    color: #807bc5;
-    font-weight: 600;
-}
-.m3 .sub_m>small{
-    display: block;
-    text-align: center;
-    margin-bottom: 24px;
-    font-weight: bold;
-}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 
-.f_sb{
-    display: flex;
-    justify-content: space-between;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 14px;
+  font-family: "Noto Sans KR", sans-serif;
 }
-.ma_1{
-    margin-bottom: 12px;
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
-.m4 table{
-    width: 100%;
-    border: 4px solid #000;
-    word-break: keep-all;
-    margin-bottom: 24px;
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
 }
-.m4 table td,.m4 table th{
-    border: 1px solid #666;
-    padding: 12px 24px;
-    font-size: 24px;
+.modal .bg {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.6;
 }
-.m4 table th{
-    background-color: #999;
-    color: #FFF;
-    font-weight: 600;
-    vertical-align: middle;
+.modal .bt_close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 24px;
+  height: 24px;
 }
-.m4 table th p{
-    white-space: nowrap;
+.guide_pop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 785px;
+  border-radius: 8px;
+  padding: 40px 20px 20px 20px;
+  background-color: #fff;
 }
-.m4 table th p:nth-child(1){
-    margin-bottom: 12px;
+.guide_pop h3 {
+  font-size: 24px;
+  font-weight: bold;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #000;
 }
-.m4 table td{
-    text-align: end;
+.guide_pop h4 {
+  color: #188764;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #39b48e;
+  text-align: left;
+  margin-bottom: 20px;
 }
-.m4 table td:nth-child(1){
-    text-align: center;
+.guide_pop>ul {
+  border-bottom: 1px solid #4d555f;
+  margin-bottom: 20px;
 }
-.m4 .f_sb{
-    font-size: 18px;
-    font-weight: 600;
+.guide_pop li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
 }
-.m4 .chart{
-    width: 60%;
-    margin: 0 auto;
+.guide_pop li div {
+  width: 20%;
+  display: flex;
+  align-items: center;
 }
-.m5 .dep1{
-    margin-bottom: 80px;
+.guide_pop li div sup{
+  font-size: 8px;
+  margin-bottom: auto;
 }
-.m5 .dep1 .flex{
-    display: flex;
+.guide_pop li div p{
+  font-size: 16px;
+  margin-left: 20px;
 }
-.m5 .dep1>li p:first-child{
-    white-space: nowrap;
+.guide_pop .dot {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  background-color: #188764;
+  margin-right: 5px;
 }
-.m5 .dep1>li p{
-    font-size: 24px;
-    margin-bottom: 24px;
+.guide_pop .sup_box{
+  display: flex;
+  font-size: 12px;
+  margin-bottom: 24px;
 }
-.m5 .dep1>li p strong{
-    font-weight: 900;
-    color: #138f96;
-    font-size: 30px;
+.guide_pop .sup_box>ul{
+  margin-left: 30px;
 }
-.m5 .dep1>li p span{
-    font-size: 30px;
-    margin-left: 12px;
-    margin-right: 36px;
-    white-space: nowrap;
+.guide_pop strong {
+  font-size: 16px;
+  font-weight: bold;
 }
-.m5 .dep2 li{
-    width: 23%;
-    text-align: center;
+.guide_pop .bt_ok {
+  display: block;
+  width: 130px;
+  padding: 12px 40px;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #188764;
+  margin: 0 auto;
+  font-size: 18px;
+  font-weight: bold;
 }
-.m5 .dep2 figure{
-    margin-bottom: 24px;
+.wrong_pop{
+  width: 480px;
+  border-radius: 8px;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding: 40px 70px;
 }
-.m5 .dep2 figcaption{
-    font-size: 24px;
-    word-break: keep-all;
-    line-height: 1.3;
+.wrong_pop .bt_close{
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  right: 15px;
+  top: 15px;
 }
-.m5 .dep2 figcaption>p{
-    font-weight: 700;
-    font-size: 30px;
+.wrong_pop figure{
+  width: 78px;
+  margin: 0 auto;
 }
-.m5 .sub_m>p{
-    font-size: 24px;
-    text-align: center;
-    word-break: keep-all;
+.wrong_pop p{text-align: center;font-size: 20px;font-weight: bold;color: #4d555f;margin-bottom: 20px;padding: 20px 0;}
+.wrong_pop .bt_ok{
+  border-radius: 4px;
+  padding: 12px 32px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #117757;
+  display: block;
+  margin: 0 auto;
 }
-.m5 .sub_m>p span{
-    color: #2580ee;
-    font-weight: 600;
+.modal .basic{
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  width: 30%;
 }
-.m6 .m6_1{
-    margin-bottom: 36px;
+.modal .basic .top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
 }
-.m6 .m6_2>p{
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 36px;
+.modal .basic .top h5{
+  font-weight: bold;
+  font-size: 18px;
 }
-.m6 .m6_2>table{
-    width: 100%;
-    margin-bottom: 72px;
+.modal .bt_close{
+  width: 24px;
+  height: 24px;
 }
-.m6 .m6_2>table th{
-    padding: 24px;
+.modal .basic .mid{
+  padding: 50px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  margin-bottom: 12px;
 }
-.m6 .m6_2>table th:nth-child(1){
-    width: 15%;
+.modal .basic .mid p{
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
 }
-.m6 .m6_2>table td{
-    font-size: 24px;
-    text-align: center;
-    padding: 24px 0;
-    word-break: keep-all;
-    vertical-align: middle;
+.modal .basic .bot{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.m6 .m6_2>ul p{
-    font-size: 18px;
-    text-align: center;
+.modal .basic .bot button{
+  width: 100px;
+  padding: 12px 0;
+  border-radius: 8px;
+  font-weight: bold;
 }
-.m6 .m6_2>p:nth-of-type(2){
-    font-size: 30px;
+.modal .bt_ok{
+  background-color: #188764;
+  color: #fff;
 }
-.m6 .m6_2>p span{
-    color: #2580ee;
-    font-weight: 600;
+.modal .bt_no{
+  background-color: #fff;
+  color: #188764;
+  border: 1px solid #188764;
 }
-.m7 table{
-    width: 100%;
-    margin-bottom: 72px;
-}
-.m7 table th{
-    padding: 24px;
-    vertical-align: middle;
-}
-.m7 table td{
-    font-size: 18px;
-    text-align: center;
-    padding: 24px 0;
-    word-break: keep-all;
-    vertical-align: middle;
-}
-.m7 table td span{
-    color: #2580ee;
-    font-weight: 600;
-}
-.m7 table td small{
-    font-size: 80%;
-    white-space: nowrap;
-}
-.m8{
-    background: url(../img/m8.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-.m8 .text{
-    width: 70%;
-}
-.m8 .text h6{
-    margin-bottom: 40px;
-}
-.ta2{
-    display: none;
-}
-.m7 .ex{
-    margin: 0 auto 24px;
-}
-@media (max-width:1600px){
-    .m4 table td, .m4 table th{
-        font-size: 18px;
-        padding: 8px 12px;
-    }
-}
-@media (max-width:1200px){
-    .m2 .head{
-        padding: 50px 0;
-    }
-    .m2 .head p{
-        font-size: 24px;
-    }
-    .m4 table thead{display: none;}
-    .m4 table tr{display: block;}
-    .m4 table tbody td{display: grid;grid-template-columns: 1fr 2fr;text-align: center;}
-    .m4 table tbody td::before{font-weight: 600;}
-    .m4 table tbody td:nth-of-type(1)::before{content: '년도';}
-    .m4 table tbody td:nth-of-type(2)::before{content: '급여이용자(명)';}
-    .m4 table tbody td:nth-of-type(3)::before{content: '요양보호사(명)';}
-    .m4 table tbody td:nth-of-type(4)::before{content: '재가급여비용(억원)';}
-    .m4 table tbody td:nth-of-type(5)::before{content: '방문요양 이용금액(억원)';}
-    .m4 table tbody td:nth-of-type(6)::before{content: '장기요양기관(개소)';}
-    .f_sb{
-        flex-wrap: wrap;
-    }
-    .m4 .f_sb p{
-        width: 48%;
-    }
-    .m4 .f_sb p:nth-child(2){
-        text-align: end;
-    }
-}
-@media (max-width:880px){
-    .container{
-        height: unset;
-    }
-    .pos_img{
-        display: none;
-    }
-    .text{
-        position: unset;
-        width: 86%;
-        margin: 0 auto;
-        padding: 24px 0;
-    }
-    .container .sub_h h3{
-        font-size: 24px;
-    }
-    .container .sub_h p{
-        font-size: 18px;
-    }
-    .m3 .sub_m p{
-        font-size: 18px;
-    }
-    .m3 .sub_m>ul{
-        flex-wrap: wrap;
-    }
-    .m3 .sub_m>ul>li:nth-child(1), .m3 .sub_m>ul>li:nth-child(3){
-        width: 60%;
-        margin: 0 auto;
-    }
-    .m3 .sub_m>ul>li:nth-child(2){
-        width: 60%;
-        margin: 24px auto;
-    }
-    .m5 .dep1 .flex{
-        flex-wrap: wrap;
-    }
-    .m5 .dep2 li{
-        width: 86%;
-        margin: 0 auto 24px;
-    }
-    .m5 .dep2 figcaption{
-        font-size: 16px;
-    }
-    .m6 .m6_2>table th:nth-child(1){
-        width: auto;
-    }
-    /* .m6 .m6_2>table .ar{display: none;}
-    .m7 .ar{display: none;}
-    .m6 .m6_2>table tbody{display: none;}
-    .m6 .m6_2>table tr{display: block;}
-    .m6 .m6_2>table thead th{display: flex;flex-wrap:wrap;text-align: center;justify-content: center;padding: 0;margin-bottom: 24px;}
-    .m6 .m6_2>table th::after{font-weight: 600;padding: 24px 0;font-size: 18px;}
-    .m6 .m6_2>table th:nth-of-type(1)::after{content: '요양보호사 건강 돋보기 앱 활성화';}
-    .m6 .m6_2>table th:nth-of-type(3)::after{content: '앱 클릭';}
-    .m6 .m6_2>table th:nth-of-type(5)::after{content: '어르신 얼굴인식';}
-    .m6 .m6_2>table th:nth-of-type(7)::after{content: '측정완료';}
-    .m6 .m6_2>table th:nth-of-type(9)::after{content: '측정결과';}
-    .m6 .m6_2>table th:nth-of-type(11)::after{content: '카카오 알림톡 및 지자체, 가족정보 공유';} */
-    .m6 .m6_2>p:nth-of-type(2){font-size: 24px;}
-    .ta1{display: none;}
-    .ta2{display: block;}
-    .m7 .ta2 td{font-size: 18px;}
-    .m4 .chart{
-        width: 100%;
-    }
-}
-@media (max-width:580px){
-    .m2 .head{
-        padding: 12px 0;
-    }
-    .m2 .head p{
-        font-size: 18px;
-    }
-    .ex{
-        font-size: 14px;
-    }
-    .container{
-        height: auto;
-    }
-    .text h1{
-        font-size: 18px;
-    }
-    .text p{
-        font-size: 14px;
-        line-height: 1.2;
-    }
-    .m8 .text h6{
-        font-size: 16px;
-    }
-    .m3 .sub_m>ul>li:nth-child(1), .m3 .sub_m>ul>li:nth-child(3){
-        width: 80%;
-    }
-    .m3 .sub_m>ul>li:nth-child(2){
-        width: 80%;
-    }
+@media screen and (max-width : 800px) {
+  .modal .basic{
+    width: 80%;
+  }
 }

@@ -66,8 +66,3 @@ select::-ms-expand {
     display: none;
     /* 화살표 없애기 for IE10, 11*/
 }
-img{
-    display: block;
-    width: 100%;
-    height: 100%;
-}
